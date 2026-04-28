@@ -56,12 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\EngineerShift.cs" />
-    <Compile Include="Classes\JobRecord.cs" />
-    <Compile Include="Classes\Staff.cs" />
-    <Compile Include="Classes\Turbine.cs" />
-    <Compile Include="Classes\Windfarm.cs" />
-    <Compile Include="Database\ATSDbContext.cs" />
+    <Compile Include="Models\ATSContext.cs" />
+    <Compile Include="Models\EngineerShift.cs" />
+    <Compile Include="Models\JobRecord.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Turbine.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Windfarm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
