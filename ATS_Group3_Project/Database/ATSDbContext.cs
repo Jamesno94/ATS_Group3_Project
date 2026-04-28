@@ -8,7 +8,7 @@ using ATS_Group3_Project.ATS_Group3_Project;
 
 namespace ATS_Group3_Project
 {
-    public class ATLDbContext : DbContext
+    public class ATSDbContext : DbContext
     {
         public DbSet<JobRecord> JobRecords { get; set; }
 
@@ -21,15 +21,15 @@ namespace ATS_Group3_Project
         public DbSet<EngineerShift> EngineerShifts { get; set; }
 
 
-        public ATLDbContext() : base("ATLDbContext")
+        public ATSDbContext() : base("ATSDbContext")
         {
-            Database.SetInitializer(new ATLDbInitialiser());
+            Database.SetInitializer(new ATSDbInitialiser());
         }
     }
 
-    public class ATLDbInitialiser : DropCreateDatabaseAlways<ATLDbContext>
+    public class ATSDbInitialiser : DropCreateDatabaseAlways<ATSDbContext>
     {
-        protected override void Seed(ATLDbContext context)
+        protected override void Seed(ATSDbContext context)
         {
             base.Seed(context);
 
