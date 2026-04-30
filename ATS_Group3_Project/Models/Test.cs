@@ -8,8 +8,6 @@ namespace ATS_Group3_Project.Models
 {
     public class Test
     {
-        public string Testing { get; set; }
-
-        Testing = "THis is a test of github";
+        public string Testing { get; set; } = "This is a test of GitHub";
     }
 }
