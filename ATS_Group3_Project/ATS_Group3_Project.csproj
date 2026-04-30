@@ -62,7 +62,8 @@
     <Compile Include="Controllers\TurbineManager.cs" />
     <Compile Include="Controllers\UserManager.cs" />
     <Compile Include="Controllers\WindFarmManager.cs" />
-    <Compile Include="Models\ATSContext.cs" />
+    <Compile Include="Data\ATSContext.cs" />
+    <Compile Include="Data\ATSDbInititaliser.cs" />
     <Compile Include="Models\EngineerShift.cs" />
     <Compile Include="Models\JobRecord.cs" />
     <Compile Include="Models\PasswordHelper.cs" />
