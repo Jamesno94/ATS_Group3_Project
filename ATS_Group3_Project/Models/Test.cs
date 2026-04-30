@@ -11,5 +11,7 @@ namespace ATS_Group3_Project.Models
         public string Testing { get; set; }
 
         Testing = "THis is a test of github";
+
+            public int IDTest { get; set; }
     }
 }
