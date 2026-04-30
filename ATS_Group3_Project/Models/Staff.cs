@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using ATS_Group3_Project;
+
 
 public class Staff
 {
@@ -12,13 +15,24 @@ public class Staff
     [Required]
     public string LastName { get; set; }
 
-    public string HomeMobile { get; set; }
-
     [Required]
     public string WorkMobile { get; set; }
 
+    public string HomeMobile { get; set; }
+
     [Required]
     public string Email { get; set; }
+
+    [Required]
+    public string Address1 { get; set; }
+
+    public string Address2 { get; set; }
+
+    [Required]
+    public string City { get; set; }
+
+    [Required]
+    public string Postcode { get; set; }
 
     [Required]
     public decimal Salary { get; set; }
@@ -26,7 +40,7 @@ public class Staff
     [Required]
     public string Role { get; set; }
 
-    public virtual EngineerShift Shift { get; set; }
+    public virtual EngineerShift EngineerShift { get; set; }
 
     public virtual ICollection<JobRecord> Jobs { get; set; }
 

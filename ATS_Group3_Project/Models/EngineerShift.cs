@@ -3,14 +3,16 @@ using System.ComponentModel.DataAnnotations;
 using ATS_Group3_Project;
 using System.Data.Entity;
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 public class EngineerShift
 {
     [Key]
-    public int ShiftId { get; set; }
-
+    [ForeignKey("Staff")]
     public string StaffId { get; set; }
 
-    public string ShiftType { get; set; }
+    [Required]
+    public string ShiftType { get; set; }  // Early or Late
 
     public bool Monday { get; set; }
     public bool Tuesday { get; set; }
