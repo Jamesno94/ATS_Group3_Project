@@ -23,9 +23,36 @@ namespace ATS_Group3_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.ShowDialog();
-            this.Close();
+      
+            string staffId = txtStaffId.Text.Trim();
+            string password = txtPassword.Text;
+
+            UserManager userManager = new UserManager();
+
+            User user = userManager.Login(staffId, password);
+
+            if (user == null)
+            {
+                MessageBox.Show("Invalid Staff ID or Password.");
+                return;
+            }
+
+            MessageBox.Show("Login successful!");
+
+            // Navigate based on role
+            if (user.Staff.Role == "Engineer")
+            {
+                EngineerDashboardForm form = new EngineerDashboardForm(user.StaffId);
+                form.Show();
+                this.Hide();
+            }
+            else if (user.Staff.Role == "Call Handler")
+            {
+                CallHandlerDashboardForm form = new CallHandlerDashboardForm();
+                form.Show();
+                this.Hide();
+            }
         }
+    
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.Entity;
 using System.Windows.Forms;
 
@@ -18,7 +18,7 @@ namespace ATS_Group3_Project
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin()); // need to connect this to login form and then set to main via project properties 
+            Application.Run(new frmLogin()); // James - need to connect this to login form and then set to main via project properties 
         }
     }
 }
