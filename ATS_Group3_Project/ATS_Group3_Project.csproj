@@ -67,6 +67,7 @@
     <Compile Include="Models\JobRecord.cs" />
     <Compile Include="Models\PasswordHelper.cs" />
     <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Turbine.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Windfarm.cs" />
