@@ -56,22 +56,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\JobManager.cs" />
+    <Compile Include="Controllers\ShiftManager.cs" />
+    <Compile Include="Controllers\StaffManager.cs" />
+    <Compile Include="Controllers\TurbineManager.cs" />
+    <Compile Include="Controllers\UserManager.cs" />
+    <Compile Include="Controllers\WindFarmManager.cs" />
     <Compile Include="Models\ATSContext.cs" />
     <Compile Include="Models\EngineerShift.cs" />
     <Compile Include="Models\JobRecord.cs" />
+    <Compile Include="Models\PasswordHelper.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Turbine.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Windfarm.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Turbine Simulation Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turbine Simulation Data.Designer.cs">
+      <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -83,6 +102,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Login.resx" />
+    <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
+      <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
