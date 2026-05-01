@@ -19,9 +19,16 @@ namespace ATS_Group3_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+           
+        
+            string staffId = txtStaffId.Text.Trim();
+            string password = txtPassword.Text;
+
             UserManager manager = new UserManager();
 
-            var user = manager.Login(txtStaffId.Text, txtPassword.Text);
+            User user = manager.Login(staffId, password);
+
+            MessageBox.Show("Users in DB: " + manager.CountUsers());
 
             if (user == null)
             {
@@ -29,19 +36,19 @@ namespace ATS_Group3_Project
                 return;
             }
 
+            MessageBox.Show("Login successful. Role: " + user.Staff.Role);
+
             if (user.Staff.Role == "Engineer")
             {
-                new EngineerDashboardForm(user.StaffId).Show();
+                // new EngineerDashboardForm(user.StaffId).Show();
             }
-            else
+            else if (user.Staff.Role == "Call Handler")
             {
-                new CallHandlerDashboardForm().Show();
+                // new CallHandlerDashboardForm(user.StaffId).Show();
             }
             else if (user.Staff.Role == "Admin")
             {
-                //AdminDashboardForm form = new AdminDashboardForm(user.StaffId);
-                //form.Show();
-                //this.Hide();
+                // new AdminDashboardForm(user.StaffId).Show();
             }
 
             this.Hide();
