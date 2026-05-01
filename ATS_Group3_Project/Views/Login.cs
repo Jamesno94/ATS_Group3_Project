@@ -47,6 +47,12 @@ namespace ATS_Group3_Project
                 //form.Show();
                 //this.Hide();
             }
+            else if (user.Staff.Role == "Admin")
+            {
+                //AdminDashboardForm form = new AdminDashboardForm(user.StaffId);
+                //form.Show();
+                //this.Hide();
+            }
 
         }
 
