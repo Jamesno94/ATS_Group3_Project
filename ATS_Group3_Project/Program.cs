@@ -13,7 +13,7 @@ namespace ATS_Group3_Project
 
             using (var db = new ATSContext())
             {
-                db.Database.Initialize(true);
+                db.Database.Initialize(false);
             }
 
             Application.EnableVisualStyles();
