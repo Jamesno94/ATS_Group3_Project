@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project
 {
-    public partial class Turbine_Simulation_Data : Form
+    public partial class frmTurSimData : Form
     {
         private User _user;
 
-        public Turbine_Simulation_Data()
+        public frmTurSimData()
         {
             InitializeComponent();
         }
@@ -24,6 +24,16 @@ namespace ATS_Group3_Project
             frmLogin login = new frmLogin();
             login.ShowDialog();
             this.Hide();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string windFarm = txtWindFarm.Text;
+            string trubineID = txtTurbine.Text;
+            string currentRunHrs = txtCurrentHr.Text;
+            string lastSimRecord = txtLastRecord.Text;
+            string newRunHrs = txtNewHr.Text;
+            DateTime date = dtpDateRecorded.Value;
         }
     }
 }
