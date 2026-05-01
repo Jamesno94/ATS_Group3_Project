@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project
 {
-    public partial class Form1 : Form
+    partial class Form1
     {
         public Form1()
         {

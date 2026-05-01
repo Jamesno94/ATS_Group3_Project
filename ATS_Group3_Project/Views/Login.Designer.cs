@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,15 +64,15 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // txtUsername
+            // txtStaffId
             // 
-            this.txtUsername.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(925, 182);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(270, 45);
-            this.txtUsername.TabIndex = 2;
+            this.txtStaffId.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffId.Location = new System.Drawing.Point(925, 182);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.Size = new System.Drawing.Size(270, 45);
+            this.txtStaffId.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -90,9 +90,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(920, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 29);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Email Address:";
+            this.label1.Text = "Staff Id:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -154,7 +154,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtStaffId);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Name = "Login";
@@ -168,7 +168,7 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

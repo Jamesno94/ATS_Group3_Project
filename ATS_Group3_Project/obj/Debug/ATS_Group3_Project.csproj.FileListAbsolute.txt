@@ -47,3 +47,9 @@ D:\Garry\Professional Practice\Project\30_04\ATS_Group3_Project\ATS_Group3_Proje
 D:\Garry\Professional Practice\Project\30_04\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.pdb
 D:\Garry\Professional Practice\Project\30_04\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.Turbine_Simulation_Data.resources
 D:\Garry\Professional Practice\Project\30_04\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.Views.Login.resources
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.csproj.AssemblyReference.cache
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.exe.config
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.Form1.resources
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.Properties.Resources.resources
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.csproj.GenerateResource.cache
+C:\Users\yello\source\repos\ATS_Group3_Project\ATS_Group3_Project\obj\Debug\ATS_Group3_Project.csproj.CoreCompileInputs.cache
