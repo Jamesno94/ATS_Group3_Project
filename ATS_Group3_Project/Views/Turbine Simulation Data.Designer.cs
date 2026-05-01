@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class Turbine_Simulation_Data
+    partial class frmTurSimData
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Turbine_Simulation_Data));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTurSimData));
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,16 +41,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtWindFarm = new System.Windows.Forms.TextBox();
+            this.txtCurrentHr = new System.Windows.Forms.TextBox();
+            this.txtLastRecord = new System.Windows.Forms.TextBox();
+            this.txtNewHr = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtServiceInfo = new System.Windows.Forms.TextBox();
+            this.txtAutoJobService = new System.Windows.Forms.TextBox();
+            this.txtTurbine = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.dtpDateRecorded = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,17 +78,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1180, 716);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.Tomato;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(1180, 716);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(124, 30);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Cancel";
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -146,9 +146,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(268, 505);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 25);
+            this.label6.Size = new System.Drawing.Size(201, 25);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Date Recorded ";
+            this.label6.Text = "Date & Time Recorded ";
             // 
             // label7
             // 
@@ -198,116 +198,115 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Turbine";
             // 
-            // textBox1
+            // txtWindFarm
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(272, 115);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 38);
-            this.textBox1.TabIndex = 19;
+            this.txtWindFarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWindFarm.Location = new System.Drawing.Point(272, 115);
+            this.txtWindFarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtWindFarm.Name = "txtWindFarm";
+            this.txtWindFarm.Size = new System.Drawing.Size(178, 38);
+            this.txtWindFarm.TabIndex = 19;
             // 
-            // textBox2
+            // txtCurrentHr
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(272, 275);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 38);
-            this.textBox2.TabIndex = 20;
+            this.txtCurrentHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentHr.Location = new System.Drawing.Point(272, 275);
+            this.txtCurrentHr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCurrentHr.Name = "txtCurrentHr";
+            this.txtCurrentHr.Size = new System.Drawing.Size(178, 38);
+            this.txtCurrentHr.TabIndex = 20;
             // 
-            // textBox3
+            // txtLastRecord
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(272, 364);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 38);
-            this.textBox3.TabIndex = 21;
+            this.txtLastRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastRecord.Location = new System.Drawing.Point(272, 364);
+            this.txtLastRecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLastRecord.Name = "txtLastRecord";
+            this.txtLastRecord.Size = new System.Drawing.Size(178, 38);
+            this.txtLastRecord.TabIndex = 21;
             // 
-            // textBox4
+            // txtNewHr
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(272, 449);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 38);
-            this.textBox4.TabIndex = 22;
+            this.txtNewHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewHr.Location = new System.Drawing.Point(272, 449);
+            this.txtNewHr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewHr.Name = "txtNewHr";
+            this.txtNewHr.Size = new System.Drawing.Size(178, 38);
+            this.txtNewHr.TabIndex = 22;
             // 
-            // textBox5
+            // txtTime
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(272, 530);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 38);
-            this.textBox5.TabIndex = 23;
+            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTime.Location = new System.Drawing.Point(272, 618);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(178, 38);
+            this.txtTime.TabIndex = 24;
             // 
-            // textBox6
+            // txtServiceInfo
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(272, 618);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 38);
-            this.textBox6.TabIndex = 24;
+            this.txtServiceInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceInfo.Location = new System.Drawing.Point(862, 115);
+            this.txtServiceInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtServiceInfo.Name = "txtServiceInfo";
+            this.txtServiceInfo.Size = new System.Drawing.Size(294, 38);
+            this.txtServiceInfo.TabIndex = 25;
             // 
-            // textBox7
+            // txtAutoJobService
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(862, 115);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(294, 38);
-            this.textBox7.TabIndex = 25;
+            this.txtAutoJobService.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutoJobService.Location = new System.Drawing.Point(862, 364);
+            this.txtAutoJobService.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAutoJobService.Name = "txtAutoJobService";
+            this.txtAutoJobService.Size = new System.Drawing.Size(277, 38);
+            this.txtAutoJobService.TabIndex = 26;
             // 
-            // textBox8
+            // txtTurbine
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(862, 364);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(277, 38);
-            this.textBox8.TabIndex = 26;
+            this.txtTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTurbine.Location = new System.Drawing.Point(272, 194);
+            this.txtTurbine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTurbine.Name = "txtTurbine";
+            this.txtTurbine.Size = new System.Drawing.Size(178, 38);
+            this.txtTurbine.TabIndex = 27;
             // 
-            // textBox9
+            // btnSave
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(272, 194);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(178, 38);
-            this.textBox9.TabIndex = 27;
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(18, 716);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(137, 30);
+            this.btnSave.TabIndex = 28;
+            this.btnSave.Text = "Save Changes";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // dtpDateRecorded
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(18, 716);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 30);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Save Changes";
-            this.button2.UseVisualStyleBackColor = false;
+            this.dtpDateRecorded.Location = new System.Drawing.Point(272, 533);
+            this.dtpDateRecorded.Name = "dtpDateRecorded";
+            this.dtpDateRecorded.Size = new System.Drawing.Size(178, 22);
+            this.dtpDateRecorded.TabIndex = 29;
             // 
-            // Turbine_Simulation_Data
+            // frmTurSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1314, 755);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpDateRecorded);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtTurbine);
+            this.Controls.Add(this.txtAutoJobService);
+            this.Controls.Add(this.txtServiceInfo);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtNewHr);
+            this.Controls.Add(this.txtLastRecord);
+            this.Controls.Add(this.txtCurrentHr);
+            this.Controls.Add(this.txtWindFarm);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -317,12 +316,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Turbine_Simulation_Data";
-            this.Text = "Turbine_Simulation_Data";
+            this.Name = "frmTurSimData";
+            this.Text = "Turbine Simulation Data";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,7 +332,7 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -343,15 +342,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtWindFarm;
+        private System.Windows.Forms.TextBox txtCurrentHr;
+        private System.Windows.Forms.TextBox txtLastRecord;
+        private System.Windows.Forms.TextBox txtNewHr;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtServiceInfo;
+        private System.Windows.Forms.TextBox txtAutoJobService;
+        private System.Windows.Forms.TextBox txtTurbine;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DateTimePicker dtpDateRecorded;
     }
 }
