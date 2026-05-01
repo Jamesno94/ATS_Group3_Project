@@ -371,3 +371,15 @@ FodyWeavers.xsd
 /ATS_Group3_Project/Views/Login.cs
 /.gitignore
 /.gitignore
+/ATS_Group3_Project/bin/Debug/ATS_Group3_Project.exe
+/ATS_Group3_Project/bin/Debug/ATS_Group3_Project.pdb
+/ATS_Group3_Project/Controllers/UserManager.cs
+/ATS_Group3_Project/Data/ATSDbInititaliser.cs
+/ATS_Group3_Project/Models/Staff.cs
+/ATS_Group3_Project/obj/Debug/ATS_Group3_Project.csproj.AssemblyReference.cache
+/ATS_Group3_Project/obj/Debug/ATS_Group3_Project.csproj.GenerateResource.cache
+/ATS_Group3_Project/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/ATS_Group3_Project/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+/ATS_Group3_Project/Views/Login.Designer.cs
+/ATS_Group3_Project/Views/Turbine Simulation Data.cs
+/ATS_Group3_Project/Program.cs
