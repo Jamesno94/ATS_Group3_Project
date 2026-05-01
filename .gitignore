@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ATS_Group3_Project/obj/Debug/ATS_Group3_Project.csproj.FileListAbsolute.txt
+/ATS_Group3_Project/obj/Debug/ATS_Group3_Project.csproj.CoreCompileInputs.cache
+/ATS_Group3_Project/obj/Debug/ATS_Group3_Project.csproj.AssemblyReference.cache
+/.gitignore
+/.gitignore
+/.gitignore
