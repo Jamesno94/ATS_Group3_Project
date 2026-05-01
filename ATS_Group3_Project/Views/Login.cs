@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,39 +18,6 @@ namespace ATS_Group3_Project
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            UserManager manager = new UserManager();
-
-            var user = manager.Login(txtStaffId.Text, txtPassword.Text);
-
-            if (user == null)
-            {
-                MessageBox.Show("Invalid login.");
-                return;
-            }
-
-            if (user.Staff.Role == "Engineer")
-            {
-                //EngineerDashboardForm form = new EngineerDashboardForm(user.StaffId);
-                //form.Show();
-                //this.Hide();
-            }
-            else if (user.Staff.Role == "Call Handler")
-            {
-                //CallHandlerDashboardForm form = new CallHandlerDashboardForm(user.StaffId);
-                //form.Show();
-                //this.Hide();
-            }
-            else if (user.Staff.Role == "Admin")
-            {
-                //AdminDashboardForm form = new AdminDashboardForm(user.StaffId);
-                //form.Show();
-                //this.Hide();
-            }
-
-            this.Hide();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -63,9 +31,47 @@ namespace ATS_Group3_Project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //Register register = new Register();
-            //register.ShowDialog();
-            //this.Close();
+            string staffId = txtStaffId.Text.Trim();
+            frmTest registerForm = new frmTest(staffId);
+            registerForm.Show();
+            this.Hide();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+          string staffId = txtStaffId.Text.Trim();
+            string password = txtPassword.Text;
+
+            UserManager manager = new UserManager();
+
+            MessageBox.Show("Users in DB: " + manager.CountUsers());
+
+            User user = manager.Login(staffId, password);
+
+            if (user == null)
+            {
+                MessageBox.Show("Invalid login.");
+                return;
+            }
+
+            MessageBox.Show("Login successful. Role: " + user.Staff.Role);
+
+            if (user.Staff.Role == "Engineer")
+            {
+                 new frmTest(user.StaffId).Show();
+                this.Hide();
+            }
+            else if (user.Staff.Role == "Call Handler")
+            {
+                // new CallHandlerDashboardForm(user.StaffId).Show();
+            }
+            else if (user.Staff.Role == "Admin")
+            {
+                // new AdminDashboardForm(user.StaffId).Show();
+            }
+
+            this.Hide();
+        }
+    
     }
 }

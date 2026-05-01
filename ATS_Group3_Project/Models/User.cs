@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
-using ATS_Group3_Project;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class User
 {
     [Key]
     public int UserId { get; set; }
 
+    [Required]
     public string StaffId { get; set; }
 
     [Required]
@@ -15,5 +15,6 @@ public class User
     [Required]
     public string PasswordSalt { get; set; }
 
+    [ForeignKey("StaffId")]
     public virtual Staff Staff { get; set; }
 }

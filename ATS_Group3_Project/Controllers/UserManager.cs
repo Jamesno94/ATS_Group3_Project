@@ -34,6 +34,21 @@ public class UserManager
         }
     }
 
+
+
+
+    public int CountUsers()
+    {
+        using (var db = new ATSContext())
+        {
+            return db.Users.Count();
+        }
+    }
+
+
+
+
+
     public bool CreateUser(string staffId, string password)
     {
         if (!IsPasswordComplex(password))
