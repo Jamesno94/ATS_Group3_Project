@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -36,6 +36,12 @@ namespace ATS_Group3_Project
             else
             {
                 new CallHandlerDashboardForm().Show();
+            }
+            else if (user.Staff.Role == "Admin")
+            {
+                //AdminDashboardForm form = new AdminDashboardForm(user.StaffId);
+                //form.Show();
+                //this.Hide();
             }
 
             this.Hide();

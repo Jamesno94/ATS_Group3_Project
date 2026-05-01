@@ -19,7 +19,7 @@ namespace ATS_Group3_Project
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            frmLogin login = new frmLogin();
             login.ShowDialog();
             this.Hide();
         }
