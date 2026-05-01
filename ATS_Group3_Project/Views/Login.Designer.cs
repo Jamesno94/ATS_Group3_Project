@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtStaffId = new System.Windows.Forms.TextBox();
@@ -140,7 +140,7 @@
             this.label4.TabIndex = 8;
             this.label4.Text = resources.GetString("label4.Text");
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +157,7 @@
             this.Controls.Add(this.txtStaffId);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.Text = "Login Form";
             this.ResumeLayout(false);
             this.PerformLayout();
