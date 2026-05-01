@@ -12,6 +12,8 @@ namespace ATS_Group3_Project
 {
     public partial class Turbine_Simulation_Data : Form
     {
+        private User _user;
+
         public Turbine_Simulation_Data()
         {
             InitializeComponent();

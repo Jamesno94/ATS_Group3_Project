@@ -37,6 +37,14 @@ public class Staff
     [Required]
     public decimal Salary { get; set; }
 
+    
+    //public enum StaffRole
+    //{
+    //    Engineer,
+    //    CallHandler,
+    //    Admin
+    //}
+
     [Required]
     public string Role { get; set; }
 
