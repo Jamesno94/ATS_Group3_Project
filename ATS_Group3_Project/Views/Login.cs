@@ -31,11 +31,15 @@ namespace ATS_Group3_Project
 
             if (user.Staff.Role == "Engineer")
             {
-                new EngineerDashboardForm(user.StaffId).Show();
+                //EngineerDashboardForm form = new EngineerDashboardForm(user.StaffId);
+                //form.Show();
+                //this.Hide();
             }
-            else
+            else if (user.Staff.Role == "Call Handler")
             {
-                new CallHandlerDashboardForm().Show();
+                //CallHandlerDashboardForm form = new CallHandlerDashboardForm(user.StaffId);
+                //form.Show();
+                //this.Hide();
             }
             else if (user.Staff.Role == "Admin")
             {
