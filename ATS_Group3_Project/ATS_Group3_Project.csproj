@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\JobManager.cs" />
+    <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
     <Compile Include="Controllers\StaffManager.cs" />
     <Compile Include="Controllers\TurbineManager.cs" />
