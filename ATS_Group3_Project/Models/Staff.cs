@@ -18,8 +18,6 @@ public class Staff
     [Required]
     public string WorkMobile { get; set; }
 
-    public string HomeMobile { get; set; }
-
     [Required]
     public string Email { get; set; }
 
