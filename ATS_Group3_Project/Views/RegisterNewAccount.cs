@@ -35,5 +35,50 @@ namespace ATS_Group3_Project
                 this.Hide();
             }
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            StaffManager manager = new StaffManager();
+
+            bool success = manager.RegisterStaffAccount(
+                txtStaffId.Text, 
+                txtFirstName.Text,
+                txtLastName.Text,
+                txtWorkNumber.Text,
+                txtHomeNumber.Text,
+                txtWorkEmail.Text,
+                txtAddressLine1.Text,
+                txtAddressLine2.Text,
+                txtCity.Text,
+                txtPostcode.Text,
+                decimal.Parse(txtSalary.Text),
+                cboRole.Text,
+                txtPassword.Text
+            );
+
+            if (success)
+            {
+                MessageBox.Show("Staff account created successfully.");
+
+                // Optionally, clear the form fields after successful registration
+                txtStaffId.Clear();
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtWorkNumber.Clear();
+                txtHomeNumber.Clear();
+                txtWorkEmail.Clear();
+                txtAddressLine1.Clear();
+                txtAddressLine2.Clear();
+                txtCity.Clear();
+                txtPostcode.Clear();
+                txtSalary.Clear();
+                cboRole.SelectedIndex = -1;
+                txtPassword.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Account could not be created. Check all details and make sure the Staff ID is unique.");
+            }
+        }
     }
 }

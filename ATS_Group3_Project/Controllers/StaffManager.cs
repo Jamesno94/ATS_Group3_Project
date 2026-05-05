@@ -8,7 +8,7 @@ namespace ATS_Group3_Project
     public class StaffManager
     {
         public bool RegisterStaffAccount(string staffId, string firstName, string lastName, string workMobile, string homeMobile, string email, string address1,
-    string address2, string city, string postcode, decimal salary, string role, string password)
+                                         string address2, string city, string postcode, decimal salary, string role, string password)
         {
             using (var db = new ATSContext())
             {
