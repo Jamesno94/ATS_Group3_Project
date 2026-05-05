@@ -43,7 +43,7 @@ namespace ATS_Group3_Project
             {
                 new frmEngineerDashboard(user.StaffId).Show();
             }
-            else if (user.Staff.Role == "Call Handler")
+            else if (user.Staff.Role == "CallHandler")
             {
                 new frmCallHandler(user.StaffId).Show();
             }
