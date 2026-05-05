@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class AddFaultJob
+    partial class frmAddFaultJob
     {
         /// <summary>
         /// Required designer variable.
@@ -274,7 +274,7 @@
             this.lblCompanyName.TabIndex = 22;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
-            // AddFaultJob
+            // frmAddFaultJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -304,8 +304,8 @@
             this.Controls.Add(this.lblTurbine);
             this.Controls.Add(this.lblWindfarm);
             this.Controls.Add(this.lblJobType);
-            this.Name = "AddFaultJob";
-            this.Text = "AddFaultJob";
+            this.Name = "frmAddFaultJob";
+            this.Text = "Add Fault Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
             this.ResumeLayout(false);

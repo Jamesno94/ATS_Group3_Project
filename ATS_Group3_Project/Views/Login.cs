@@ -67,9 +67,9 @@ namespace ATS_Group3_Project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //Register register = new Register();
-            //register.ShowDialog();
-            //this.Close();
+            frmRegisterNewAccount register = new frmRegisterNewAccount();
+            register.ShowDialog();
+            this.Hide();
         }
     }
 }
