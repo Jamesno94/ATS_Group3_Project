@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.txtStaffId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +44,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(694, 310);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(129, 25);
             this.btnLogin.TabIndex = 0;
@@ -53,24 +52,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRegister.Location = new System.Drawing.Point(827, 310);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(69, 25);
-            this.btnRegister.TabIndex = 1;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // txtStaffId
             // 
             this.txtStaffId.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffId.Location = new System.Drawing.Point(694, 148);
-            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffId.Name = "txtStaffId";
             this.txtStaffId.Size = new System.Drawing.Size(204, 38);
             this.txtStaffId.TabIndex = 2;
@@ -79,7 +66,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(694, 232);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(204, 38);
             this.txtPassword.TabIndex = 3;
@@ -161,9 +148,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtStaffId);
-            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Login Form";
             this.ResumeLayout(false);
@@ -174,7 +160,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;

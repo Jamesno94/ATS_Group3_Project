@@ -38,24 +38,73 @@ namespace ATS_Group3_Project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+   private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtStaffId.Text) ||
+                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtWorkMobile.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtAddress1.Text) ||
+                string.IsNullOrWhiteSpace(txtCity.Text) ||
+                string.IsNullOrWhiteSpace(txtPostcode.Text) ||
+                string.IsNullOrWhiteSpace(txtSalary.Text) ||
+                string.IsNullOrWhiteSpace(cboRole.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Please complete all required fields.");
+                return;
+            }
+
+            decimal salary;
+
+            if (!decimal.TryParse(txtSalary.Text, out salary))
+            {
+                MessageBox.Show("Please enter a valid salary.");
+                return;
+            }
+
+            if (salary <= 0)
+            {
+                MessageBox.Show("Salary must be greater than 0.");
+                return;
+            }
+
+            if (cboRole.Text != "Engineer" &&
+                cboRole.Text != "Call Handler" &&
+                cboRole.Text != "Admin")
+            {
+                MessageBox.Show("Please select a valid role.");
+                return;
+            }
+
+            if (txtPassword.Text.Length < 8 ||
+                !txtPassword.Text.Any(char.IsUpper) ||
+                !txtPassword.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Password must be at least 8 characters long and contain at least 1 uppercase letter and 1 number.");
+                return;
+            }
+
             StaffManager manager = new StaffManager();
 
             bool success = manager.RegisterStaffAccount(
-                txtStaffId.Text, 
-                txtFirstName.Text,
-                txtLastName.Text,
-                txtWorkNumber.Text,
-                txtHomeNumber.Text,
-                txtWorkEmail.Text,
-                txtAddressLine1.Text,
-                txtAddressLine2.Text,
-                txtCity.Text,
-                txtPostcode.Text,
-                decimal.Parse(txtSalary.Text),
-                cboRole.Text,
+                txtStaffId.Text.Trim(),
+                txtFirstName.Text.Trim(),
+                txtLastName.Text.Trim(),
+                txtWorkMobile.Text.Trim(),
+                txtHomeMobile.Text.Trim(),
+                txtEmail.Text.Trim(),
+                txtAddress1.Text.Trim(),
+                txtAddress2.Text.Trim(),
+                txtCity.Text.Trim(),
+                txtPostcode.Text.Trim(),
+                salary,
+                cboRole.Text.Trim(),
                 txtPassword.Text
             );
 
+            
             if (success)
             {
                 MessageBox.Show("Staff account created successfully.");
@@ -77,7 +126,7 @@ namespace ATS_Group3_Project
             }
             else
             {
-                MessageBox.Show("Account could not be created. Check all details and make sure the Staff ID is unique.");
+                MessageBox.Show("Account could not be created. Check all details and make sure the Staff ID and Email are unique.");
             }
         }
     }
