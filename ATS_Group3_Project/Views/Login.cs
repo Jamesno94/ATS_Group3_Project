@@ -68,7 +68,7 @@ namespace ATS_Group3_Project
         {
             frmRegisterNewAccount register = new frmRegisterNewAccount();
             register.ShowDialog();
-            this.Close();
+            this.Hide();
         }
     }
 }
