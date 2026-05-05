@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class Dashboard
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -118,7 +118,7 @@
             this.btnRegisterNewAccount.UseVisualStyleBackColor = true;
             this.btnRegisterNewAccount.Click += new System.EventHandler(this.btnRegisterNewAccount_Click);
             // 
-            // Dashboard
+            // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +133,7 @@
             this.Controls.Add(this.btnViewAssignedJobs);
             this.Controls.Add(this.btnAddFaultJob);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Dashboard";
+            this.Name = "frmDashboard";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
