@@ -94,9 +94,9 @@
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(122, 77);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(42, 16);
+            this.lblRole.Size = new System.Drawing.Size(39, 16);
             this.lblRole.TabIndex = 5;
-            this.lblRole.Text = "Role: ";
+            this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
