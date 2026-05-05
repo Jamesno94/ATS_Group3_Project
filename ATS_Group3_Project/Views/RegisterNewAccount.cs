@@ -36,16 +36,17 @@ namespace ATS_Group3_Project
             }
         }
 
+        
         private void btnRegister_Click(object sender, EventArgs e)
-        {
-   private void btnRegister_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtStaffId.Text) ||
                 string.IsNullOrWhiteSpace(txtFirstName.Text) ||
                 string.IsNullOrWhiteSpace(txtLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtWorkMobile.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtAddress1.Text) ||
+                string.IsNullOrWhiteSpace(txtWorkNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtHomeNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtWorkEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtAddressLine1.Text) ||
+                string.IsNullOrWhiteSpace(txtAddressLine2.Text) ||
                 string.IsNullOrWhiteSpace(txtCity.Text) ||
                 string.IsNullOrWhiteSpace(txtPostcode.Text) ||
                 string.IsNullOrWhiteSpace(txtSalary.Text) ||
@@ -92,11 +93,11 @@ namespace ATS_Group3_Project
                 txtStaffId.Text.Trim(),
                 txtFirstName.Text.Trim(),
                 txtLastName.Text.Trim(),
-                txtWorkMobile.Text.Trim(),
-                txtHomeMobile.Text.Trim(),
-                txtEmail.Text.Trim(),
-                txtAddress1.Text.Trim(),
-                txtAddress2.Text.Trim(),
+                txtWorkNumber.Text.Trim(),
+                txtHomeNumber.Text.Trim(),
+                txtWorkEmail.Text.Trim(),
+                txtAddressLine1.Text.Trim(),
+                txtAddressLine2.Text.Trim(),
                 txtCity.Text.Trim(),
                 txtPostcode.Text.Trim(),
                 salary,
