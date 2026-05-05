@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project
 {
-    public partial class frmTurSimData : Form
+    public partial class frmTurbSimData : Form
     {
         private User _user;
 
-        public frmTurSimData()
+        public frmTurbSimData()
         {
             InitializeComponent();
         }

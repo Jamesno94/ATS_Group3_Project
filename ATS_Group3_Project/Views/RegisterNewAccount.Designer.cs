@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class RegisterNewAccount
+    partial class frmRegisterNewAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -246,7 +246,7 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             // 
-            // RegisterNewAccount
+            // frmRegisterNewAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -274,8 +274,8 @@
             this.Controls.Add(this.lblWorkMobileNumber);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
-            this.Name = "RegisterNewAccount";
-            this.Text = "RegisterNewAccount";
+            this.Name = "frmRegisterNewAccount";
+            this.Text = "Register New Account";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

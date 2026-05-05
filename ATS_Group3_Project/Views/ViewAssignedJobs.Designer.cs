@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class ViewAssignedJobs
+    partial class frmViewAssignedJobs
     {
         /// <summary>
         /// Required designer variable.
@@ -110,7 +110,7 @@
             this.lblCompanyName.TabIndex = 7;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
-            // ViewAssignedJobs
+            // frmViewAssignedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,8 +124,8 @@
             this.Controls.Add(this.lblCompletedJobs);
             this.Controls.Add(this.lblAvailableJobs);
             this.Controls.Add(this.lstAvailableJobs);
-            this.Name = "ViewAssignedJobs";
-            this.Text = "ViewAssignedJobs";
+            this.Name = "frmViewAssignedJobs";
+            this.Text = "View Assigned Jobs";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
