@@ -50,7 +50,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Register New Account Form instance
-                RegisterNewAccount registerNewAccount = new RegisterNewAccount();
+                Register registerNewAccount = new Register();
 
                 // 3. Show the Register New Account Form
                 registerNewAccount.Show();

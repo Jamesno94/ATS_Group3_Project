@@ -86,17 +86,18 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\Turbine History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\Turbine History.Designer.cs">
+      <DependentUpon>Turbine History.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmTest.cs">
+    <Compile Include="Views\Job Details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <Compile Include="Views\.Designer.cs">
+      <DependentUpon>Job Details.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -104,11 +105,11 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\RegisterNewAccount.cs">
+    <Compile Include="Views\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\RegisterNewAccount.Designer.cs">
-      <DependentUpon>RegisterNewAccount.cs</DependentUpon>
+    <Compile Include="Views\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Turbine Simulation Data.cs">
       <SubType>Form</SubType>
@@ -116,11 +117,11 @@
     <Compile Include="Views\Turbine Simulation Data.Designer.cs">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ViewAssignedJobs.cs">
+    <Compile Include="Views\View Assigned Jobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ViewAssignedJobs.Designer.cs">
-      <DependentUpon>ViewAssignedJobs.cs</DependentUpon>
+    <Compile Include="Views\View Assigned Jobs.Designer.cs">
+      <DependentUpon>View Assigned Jobs.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,23 +139,23 @@
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Turbine History.resx">
+      <DependentUpon>Turbine History.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Job Details.resx">
+      <DependentUpon>Job Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\RegisterNewAccount.resx">
-      <DependentUpon>RegisterNewAccount.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ViewAssignedJobs.resx">
-      <DependentUpon>ViewAssignedJobs.cs</DependentUpon>
+    <EmbeddedResource Include="Views\View Assigned Jobs.resx">
+      <DependentUpon>View Assigned Jobs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
