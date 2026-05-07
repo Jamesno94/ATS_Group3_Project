@@ -38,6 +38,8 @@
             this.btnLogFaultJob = new System.Windows.Forms.Button();
             this.btnAddShifts = new System.Windows.Forms.Button();
             this.btnViewAllJobs = new System.Windows.Forms.Button();
+            this.btnManageAccount = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +136,27 @@
             this.btnViewAllJobs.Text = "View All Jobs";
             this.btnViewAllJobs.UseVisualStyleBackColor = true;
             // 
+            // btnManageAccount
+            // 
+            this.btnManageAccount.Location = new System.Drawing.Point(635, 568);
+            this.btnManageAccount.Name = "btnManageAccount";
+            this.btnManageAccount.Size = new System.Drawing.Size(274, 80);
+            this.btnManageAccount.TabIndex = 10;
+            this.btnManageAccount.Text = "Manage Account ";
+            this.btnManageAccount.UseVisualStyleBackColor = true;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Red;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogOut.Location = new System.Drawing.Point(1370, 891);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(100, 50);
+            this.btnLogOut.TabIndex = 11;
+            this.btnLogOut.Text = "LOG OUT";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // frmCallHandler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,6 +164,8 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.btnManageAccount);
             this.Controls.Add(this.btnViewAllJobs);
             this.Controls.Add(this.btnAddShifts);
             this.Controls.Add(this.btnLogFaultJob);
@@ -172,5 +197,7 @@
         private System.Windows.Forms.Button btnLogFaultJob;
         private System.Windows.Forms.Button btnAddShifts;
         private System.Windows.Forms.Button btnViewAllJobs;
+        private System.Windows.Forms.Button btnManageAccount;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

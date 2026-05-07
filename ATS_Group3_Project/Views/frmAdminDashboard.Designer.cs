@@ -37,6 +37,7 @@
             this.btnEditAllStaff = new System.Windows.Forms.Button();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.btnUnlockAccount = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -124,6 +125,18 @@
             this.btnUnlockAccount.Text = "Unlock Account";
             this.btnUnlockAccount.UseVisualStyleBackColor = true;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Red;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogOut.Location = new System.Drawing.Point(1370, 891);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(100, 50);
+            this.btnLogOut.TabIndex = 12;
+            this.btnLogOut.Text = "LOG OUT";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // frmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,6 +144,7 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnUnlockAccount);
             this.Controls.Add(this.btnDeleteStaff);
             this.Controls.Add(this.btnEditAllStaff);
@@ -160,5 +174,6 @@
         private System.Windows.Forms.Button btnEditAllStaff;
         private System.Windows.Forms.Button btnDeleteStaff;
         private System.Windows.Forms.Button btnUnlockAccount;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
