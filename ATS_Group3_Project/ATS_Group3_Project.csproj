@@ -107,6 +107,9 @@
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Turbine History.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Turbine History.Designer.cs">
       <DependentUpon>Turbine History.cs</DependentUpon>
     </Compile>
@@ -177,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turbine History.resx">
+      <DependentUpon>Turbine History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
