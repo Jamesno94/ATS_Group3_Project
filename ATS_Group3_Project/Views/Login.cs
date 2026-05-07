@@ -64,11 +64,11 @@ namespace ATS_Group3_Project
 
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
             frmRegisterNewAccount register = new frmRegisterNewAccount();
-            register.ShowDialog();
-            this.Hide();
+            register.Show();
+            this.Close();
         }
     }
 }

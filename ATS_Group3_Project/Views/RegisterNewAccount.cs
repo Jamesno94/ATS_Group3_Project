@@ -39,24 +39,22 @@ namespace ATS_Group3_Project
         
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtStaffId.Text) ||
-                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+            //Cheaking For Blank Fields
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
                 string.IsNullOrWhiteSpace(txtLastName.Text) ||
                 string.IsNullOrWhiteSpace(txtWorkNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtHomeNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtWorkEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtAddressLine1.Text) ||
-                string.IsNullOrWhiteSpace(txtAddressLine2.Text) ||
                 string.IsNullOrWhiteSpace(txtCity.Text) ||
                 string.IsNullOrWhiteSpace(txtPostcode.Text) ||
                 string.IsNullOrWhiteSpace(txtSalary.Text) ||
-                string.IsNullOrWhiteSpace(cboRole.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text))
+                string.IsNullOrWhiteSpace(cboRole.Text))
             {
                 MessageBox.Show("Please complete all required fields.");
                 return;
             }
 
+            // Validate salary input
             decimal salary;
 
             if (!decimal.TryParse(txtSalary.Text, out salary))
@@ -71,6 +69,7 @@ namespace ATS_Group3_Project
                 return;
             }
 
+            // Validate role selection
             if (cboRole.Text != "Engineer" &&
                 cboRole.Text != "Call Handler" &&
                 cboRole.Text != "Admin")
@@ -79,6 +78,9 @@ namespace ATS_Group3_Project
                 return;
             }
 
+            txtPassword.Text = "Password1"; // Default password for new accounts
+
+            // Validate password complexity
             if (txtPassword.Text.Length < 8 ||
                 !txtPassword.Text.Any(char.IsUpper) ||
                 !txtPassword.Text.Any(char.IsDigit))
@@ -87,10 +89,33 @@ namespace ATS_Group3_Project
                 return;
             }
 
+            string staffId;
+
             StaffManager manager = new StaffManager();
 
-            bool success = manager.RegisterStaffAccount(
-                txtStaffId.Text.Trim(),
+            if (cboRole.Text == "Engineer")
+            {
+                staffId = manager.GenerateID("Engineer");
+                txtStaffId.Text = staffId;
+            }
+            else if (cboRole.Text == "Call Handler")
+            {
+                staffId = manager.GenerateID("Call Handler");
+                txtStaffId.Text = staffId;
+            }
+            else if (cboRole.Text == "Admin")
+            {
+                staffId = manager.GenerateID("Admin");
+                txtStaffId.Text = staffId;
+            }
+            else
+            {
+                staffId = txtStaffId.Text.Trim();
+            }
+
+            // If all validations pass, attempt to register the staff account
+            bool success = new StaffManager().RegisterStaffAccount(
+                staffId,
                 txtFirstName.Text.Trim(),
                 txtLastName.Text.Trim(),
                 txtWorkNumber.Text.Trim(),
@@ -105,12 +130,12 @@ namespace ATS_Group3_Project
                 txtPassword.Text
             );
 
-            
+            // Provide feedback to the user based on the success of the registration
             if (success)
             {
                 MessageBox.Show("Staff account created successfully.");
 
-                // Optionally, clear the form fields after successful registration
+                //Clear the form fields after successful registration
                 txtStaffId.Clear();
                 txtFirstName.Clear();
                 txtLastName.Clear();
@@ -124,6 +149,10 @@ namespace ATS_Group3_Project
                 txtSalary.Clear();
                 cboRole.SelectedIndex = -1;
                 txtPassword.Clear();
+
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Close();
             }
             else
             {
