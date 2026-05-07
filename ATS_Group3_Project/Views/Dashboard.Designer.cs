@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class Dashboard
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -98,9 +98,9 @@
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(137, 96);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(50, 20);
+            this.lblRole.Size = new System.Drawing.Size(42, 16);
             this.lblRole.TabIndex = 5;
-            this.lblRole.Text = "Role: ";
+            this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
@@ -124,7 +124,7 @@
             this.btnRegisterNewAccount.UseVisualStyleBackColor = true;
             this.btnRegisterNewAccount.Click += new System.EventHandler(this.btnRegisterNewAccount_Click);
             // 
-            // Dashboard
+            // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,6 @@
             this.Controls.Add(this.btnViewAssignedJobs);
             this.Controls.Add(this.btnAddFaultJob);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

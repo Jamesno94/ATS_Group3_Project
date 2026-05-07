@@ -86,7 +86,25 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Turbine History.cs">
+    <Compile Include="Views\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCallHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCallHandler.Designer.cs">
+      <DependentUpon>frmCallHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmEngineerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmEngineerDashboard.Designer.cs">
+      <DependentUpon>frmEngineerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Turbine History.Designer.cs">
@@ -139,8 +157,17 @@
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Turbine History.resx">
-      <DependentUpon>Turbine History.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCallHandler.resx">
+      <DependentUpon>frmCallHandler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmEngineerDashboard.resx">
+      <DependentUpon>frmEngineerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Job Details.resx">
       <DependentUpon>Job Details.cs</DependentUpon>

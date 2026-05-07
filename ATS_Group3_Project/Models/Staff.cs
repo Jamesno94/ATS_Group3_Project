@@ -38,12 +38,12 @@ public class Staff
     public decimal Salary { get; set; }
 
     
-    //public enum StaffRole
-    //{
-    //    Engineer,
-    //    CallHandler,
-    //    Admin
-    //}
+    public enum StaffRole
+    {
+        Engineer,
+        CallHandler,
+        Admin
+    }
 
     [Required]
     public string Role { get; set; }
@@ -51,6 +51,24 @@ public class Staff
     public virtual EngineerShift EngineerShift { get; set; }
 
     public virtual ICollection<JobRecord> Jobs { get; set; }
+
+    //Constructors
+    public Staff(string staffId, string firstName, string lastName, string workMobile, string homeMobile, string email,
+                 string address1, string address2, string city, string postcode, decimal salary, string role)
+    {
+        StaffId = staffId;
+        FirstName = firstName;
+        LastName = lastName;
+        WorkMobile = workMobile;
+        HomeMobile = homeMobile;
+        Email = email;
+        Address1 = address1;
+        Address2 = address2;
+        City = city;
+        Postcode = postcode;
+        Salary = salary;
+        Role = role;
+    }
 
     public Staff()
     {

@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project
 {
-    partial class frmTurSimData
+    partial class frmTurbSimData
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTurSimData));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTurbSimData));
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
@@ -290,7 +290,7 @@
             this.dtpDateRecorded.Size = new System.Drawing.Size(178, 22);
             this.dtpDateRecorded.TabIndex = 29;
             // 
-            // frmTurSimData
+            // frmTurbSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -320,7 +320,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmTurSimData";
+            this.Name = "frmTurbSimData";
             this.Text = "Turbine Simulation Data";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

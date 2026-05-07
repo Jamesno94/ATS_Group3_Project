@@ -30,7 +30,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Dashboard form instance
-                Dashboard dash = new Dashboard();
+                frmDashboard dash = new frmDashboard();
 
                 // 3. Show the dashboard
                 dash.Show();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,17 +41,17 @@ namespace ATS_Group3_Project
 
             if (user.Staff.Role == "Engineer")
             {
-                // new EngineerDashboardForm(user.StaffId).Show();
+                new frmEngineerDashboard(user.StaffId).Show();
             }
-            else if (user.Staff.Role == "Call Handler")
+            else if (user.Staff.Role == "CallHandler")
             {
-                // new CallHandlerDashboardForm(user.StaffId).Show();
+                new frmCallHandler(user.StaffId).Show();
             }
             else if (user.Staff.Role == "Admin")
             {
-                // new AdminDashboardForm(user.StaffId).Show();
+                new frmAdminDashboard(user.StaffId).Show();
             }
-
+            
             this.Hide();
         }
 
@@ -66,9 +67,9 @@ namespace ATS_Group3_Project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //Register register = new Register();
-            //register.ShowDialog();
-            //this.Close();
+            frmRegisterNewAccount register = new frmRegisterNewAccount();
+            register.ShowDialog();
+            this.Hide();
         }
     }
 }

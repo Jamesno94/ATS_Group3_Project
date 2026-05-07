@@ -214,7 +214,7 @@ public class ATSDbInitializer : DropCreateDatabaseIfModelChanges<ATSContext>
         new Staff { StaffId = "ENG-019", FirstName = "Grant", LastName = "Morrison", WorkMobile = "0712345619", HomeMobile = "07711223319", Email = "eng019@ats.com", Address1 = "62 Bath Street", Address2 = null, City = "Glasgow", Postcode = "G2 2HG", Salary = 45000, Role = "Engineer" },
         new Staff { StaffId = "ENG-020", FirstName = "Freya", LastName = "Cunningham", WorkMobile = "0712345620", HomeMobile = "01415551020", Email = "eng020@ats.com", Address1 = "20 Miller Street", Address2 = "Suite 4", City = "Glasgow", Postcode = "G1 1DT", Salary = 45000, Role = "Engineer" },
 
-        new Staff { StaffId = "CALL-001", FirstName = "Callum", LastName = "Hoodlum", WorkMobile = "0712345701", HomeMobile = "01415559999", Email = "call001@ats.com", Address1 = "1 Control Centre", Address2 = "George Square", City = "Glasgow", Postcode = "G2 1DU", Salary = 32000, Role = "CallHandler" }
+        new Staff { StaffId = "CALL-001", FirstName = "Callum", LastName = "Hoodlum", WorkMobile = "0712345701", HomeMobile = "01415559999", Email = "call001@ats.com", Address1 = "1 Control Centre", Address2 = "George Square", City = "Glasgow", Postcode = "G2 1DU", Salary = 32000, Role = "Call Handler" }
         });
 
         context.SaveChanges();
