@@ -13,8 +13,11 @@ namespace ATS_Group3_Project.Views
     public partial class frmCallHandler : Form
     {
         private string StaffId;
-        public frmCallHandler(string StaffId)
+        public frmCallHandler(string StaffId, string firstName, string role)
         {
+            lblGreetings.Text = $"Greetings, {firstName}";
+            lblRole.Text = $"Role: {role}";
+
             InitializeComponent();
             this.StaffId = StaffId;
         }

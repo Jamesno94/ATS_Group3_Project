@@ -34,6 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnViewJobs = new System.Windows.Forms.Button();
             this.btnJobDiary = new System.Windows.Forms.Button();
+            this.btnCompleteJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,18 +54,16 @@
             this.lblGreetings.AutoSize = true;
             this.lblGreetings.Location = new System.Drawing.Point(122, 48);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
+            this.lblGreetings.Size = new System.Drawing.Size(0, 16);
             this.lblGreetings.TabIndex = 1;
-            this.lblGreetings.Text = "Greetings, ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(122, 77);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(39, 16);
+            this.lblRole.Size = new System.Drawing.Size(0, 16);
             this.lblRole.TabIndex = 2;
-            this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
@@ -78,7 +77,7 @@
             // 
             // btnViewJobs
             // 
-            this.btnViewJobs.Location = new System.Drawing.Point(278, 451);
+            this.btnViewJobs.Location = new System.Drawing.Point(278, 328);
             this.btnViewJobs.Name = "btnViewJobs";
             this.btnViewJobs.Size = new System.Drawing.Size(274, 80);
             this.btnViewJobs.TabIndex = 4;
@@ -94,20 +93,30 @@
             this.btnJobDiary.Text = "View Job Diary";
             this.btnJobDiary.UseVisualStyleBackColor = true;
             // 
-            // EngineerDashboard
+            // btnCompleteJob
+            // 
+            this.btnCompleteJob.Location = new System.Drawing.Point(278, 451);
+            this.btnCompleteJob.Name = "btnCompleteJob";
+            this.btnCompleteJob.Size = new System.Drawing.Size(274, 80);
+            this.btnCompleteJob.TabIndex = 6;
+            this.btnCompleteJob.Text = "Complete Job";
+            this.btnCompleteJob.UseVisualStyleBackColor = true;
+            // 
+            // frmEngineerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.Controls.Add(this.btnCompleteJob);
             this.Controls.Add(this.btnJobDiary);
             this.Controls.Add(this.btnViewJobs);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "EngineerDashboard";
+            this.Name = "frmEngineerDashboard";
             this.Text = "EngineerDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -124,5 +133,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnViewJobs;
         private System.Windows.Forms.Button btnJobDiary;
+        private System.Windows.Forms.Button btnCompleteJob;
     }
 }

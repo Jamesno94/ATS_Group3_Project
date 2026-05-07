@@ -32,7 +32,12 @@
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAssignEngineer = new System.Windows.Forms.Button();
+            this.btnSimulationDashboard = new System.Windows.Forms.Button();
+            this.btnAddTurbine = new System.Windows.Forms.Button();
+            this.btnAddWindFarm = new System.Windows.Forms.Button();
+            this.btnLogFaultJob = new System.Windows.Forms.Button();
+            this.btnAddShifts = new System.Windows.Forms.Button();
+            this.btnViewAllJobs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -75,14 +80,59 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // btnAssignEngineer
+            // btnSimulationDashboard
             // 
-            this.btnAssignEngineer.Location = new System.Drawing.Point(285, 331);
-            this.btnAssignEngineer.Name = "btnAssignEngineer";
-            this.btnAssignEngineer.Size = new System.Drawing.Size(274, 80);
-            this.btnAssignEngineer.TabIndex = 4;
-            this.btnAssignEngineer.Text = "Assign Engineer";
-            this.btnAssignEngineer.UseVisualStyleBackColor = true;
+            this.btnSimulationDashboard.Location = new System.Drawing.Point(283, 211);
+            this.btnSimulationDashboard.Name = "btnSimulationDashboard";
+            this.btnSimulationDashboard.Size = new System.Drawing.Size(274, 80);
+            this.btnSimulationDashboard.TabIndex = 4;
+            this.btnSimulationDashboard.Text = "Simulation Dashboard";
+            this.btnSimulationDashboard.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTurbine
+            // 
+            this.btnAddTurbine.Location = new System.Drawing.Point(283, 451);
+            this.btnAddTurbine.Name = "btnAddTurbine";
+            this.btnAddTurbine.Size = new System.Drawing.Size(274, 80);
+            this.btnAddTurbine.TabIndex = 5;
+            this.btnAddTurbine.Text = "Add Turbine";
+            this.btnAddTurbine.UseVisualStyleBackColor = true;
+            // 
+            // btnAddWindFarm
+            // 
+            this.btnAddWindFarm.Location = new System.Drawing.Point(283, 326);
+            this.btnAddWindFarm.Name = "btnAddWindFarm";
+            this.btnAddWindFarm.Size = new System.Drawing.Size(274, 80);
+            this.btnAddWindFarm.TabIndex = 6;
+            this.btnAddWindFarm.Text = "Add Windfarm";
+            this.btnAddWindFarm.UseVisualStyleBackColor = true;
+            // 
+            // btnLogFaultJob
+            // 
+            this.btnLogFaultJob.Location = new System.Drawing.Point(982, 211);
+            this.btnLogFaultJob.Name = "btnLogFaultJob";
+            this.btnLogFaultJob.Size = new System.Drawing.Size(274, 80);
+            this.btnLogFaultJob.TabIndex = 7;
+            this.btnLogFaultJob.Text = "Log Fault Job";
+            this.btnLogFaultJob.UseVisualStyleBackColor = true;
+            // 
+            // btnAddShifts
+            // 
+            this.btnAddShifts.Location = new System.Drawing.Point(982, 326);
+            this.btnAddShifts.Name = "btnAddShifts";
+            this.btnAddShifts.Size = new System.Drawing.Size(274, 80);
+            this.btnAddShifts.TabIndex = 8;
+            this.btnAddShifts.Text = "Add Shifts";
+            this.btnAddShifts.UseVisualStyleBackColor = true;
+            // 
+            // btnViewAllJobs
+            // 
+            this.btnViewAllJobs.Location = new System.Drawing.Point(982, 451);
+            this.btnViewAllJobs.Name = "btnViewAllJobs";
+            this.btnViewAllJobs.Size = new System.Drawing.Size(274, 80);
+            this.btnViewAllJobs.TabIndex = 9;
+            this.btnViewAllJobs.Text = "View All Jobs";
+            this.btnViewAllJobs.UseVisualStyleBackColor = true;
             // 
             // frmCallHandler
             // 
@@ -91,7 +141,12 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 953);
-            this.Controls.Add(this.btnAssignEngineer);
+            this.Controls.Add(this.btnViewAllJobs);
+            this.Controls.Add(this.btnAddShifts);
+            this.Controls.Add(this.btnLogFaultJob);
+            this.Controls.Add(this.btnAddWindFarm);
+            this.Controls.Add(this.btnAddTurbine);
+            this.Controls.Add(this.btnSimulationDashboard);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
@@ -111,6 +166,11 @@
         private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnAssignEngineer;
+        private System.Windows.Forms.Button btnSimulationDashboard;
+        private System.Windows.Forms.Button btnAddTurbine;
+        private System.Windows.Forms.Button btnAddWindFarm;
+        private System.Windows.Forms.Button btnLogFaultJob;
+        private System.Windows.Forms.Button btnAddShifts;
+        private System.Windows.Forms.Button btnViewAllJobs;
     }
 }

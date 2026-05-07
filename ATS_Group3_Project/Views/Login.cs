@@ -41,15 +41,15 @@ namespace ATS_Group3_Project
 
             if (user.Staff.Role == "Engineer")
             {
-                new frmEngineerDashboard(user.StaffId).Show();
+                new frmEngineerDashboard(user.Staff.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
             }
             else if (user.Staff.Role == "CallHandler")
             {
-                new frmCallHandler(user.StaffId).Show();
+                new frmCallHandler(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
             }
             else if (user.Staff.Role == "Admin")
             {
-                new frmAdminDashboard(user.StaffId).Show();
+                new frmAdminDashboard(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
             }
             
             this.Hide();

@@ -32,6 +32,11 @@
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnViewAllStaff = new System.Windows.Forms.Button();
+            this.btnCreateNewStaff = new System.Windows.Forms.Button();
+            this.btnEditAllStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.btnUnlockAccount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +79,51 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // btnViewAllStaff
+            // 
+            this.btnViewAllStaff.Location = new System.Drawing.Point(278, 211);
+            this.btnViewAllStaff.Name = "btnViewAllStaff";
+            this.btnViewAllStaff.Size = new System.Drawing.Size(274, 80);
+            this.btnViewAllStaff.TabIndex = 4;
+            this.btnViewAllStaff.Text = "View All Staff";
+            this.btnViewAllStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateNewStaff
+            // 
+            this.btnCreateNewStaff.Location = new System.Drawing.Point(278, 451);
+            this.btnCreateNewStaff.Name = "btnCreateNewStaff";
+            this.btnCreateNewStaff.Size = new System.Drawing.Size(274, 80);
+            this.btnCreateNewStaff.TabIndex = 5;
+            this.btnCreateNewStaff.Text = "Create Staff";
+            this.btnCreateNewStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnEditAllStaff
+            // 
+            this.btnEditAllStaff.Location = new System.Drawing.Point(278, 333);
+            this.btnEditAllStaff.Name = "btnEditAllStaff";
+            this.btnEditAllStaff.Size = new System.Drawing.Size(274, 80);
+            this.btnEditAllStaff.TabIndex = 6;
+            this.btnEditAllStaff.Text = "Edit All Staff";
+            this.btnEditAllStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteStaff
+            // 
+            this.btnDeleteStaff.Location = new System.Drawing.Point(981, 211);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(274, 80);
+            this.btnDeleteStaff.TabIndex = 7;
+            this.btnDeleteStaff.Text = "Delete Staff";
+            this.btnDeleteStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnUnlockAccount
+            // 
+            this.btnUnlockAccount.Location = new System.Drawing.Point(981, 333);
+            this.btnUnlockAccount.Name = "btnUnlockAccount";
+            this.btnUnlockAccount.Size = new System.Drawing.Size(274, 80);
+            this.btnUnlockAccount.TabIndex = 8;
+            this.btnUnlockAccount.Text = "Unlock Account";
+            this.btnUnlockAccount.UseVisualStyleBackColor = true;
+            // 
             // frmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -81,6 +131,11 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.Controls.Add(this.btnUnlockAccount);
+            this.Controls.Add(this.btnDeleteStaff);
+            this.Controls.Add(this.btnEditAllStaff);
+            this.Controls.Add(this.btnCreateNewStaff);
+            this.Controls.Add(this.btnViewAllStaff);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
@@ -100,5 +155,10 @@
         private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnViewAllStaff;
+        private System.Windows.Forms.Button btnCreateNewStaff;
+        private System.Windows.Forms.Button btnEditAllStaff;
+        private System.Windows.Forms.Button btnDeleteStaff;
+        private System.Windows.Forms.Button btnUnlockAccount;
     }
 }
