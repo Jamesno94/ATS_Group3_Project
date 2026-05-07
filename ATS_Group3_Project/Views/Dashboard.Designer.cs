@@ -43,18 +43,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(606, 211);
+            this.pictureBox1.Location = new System.Drawing.Point(682, 264);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 320);
+            this.pictureBox1.Size = new System.Drawing.Size(371, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnAddFaultJob
             // 
-            this.btnAddFaultJob.Location = new System.Drawing.Point(285, 211);
+            this.btnAddFaultJob.Location = new System.Drawing.Point(321, 264);
+            this.btnAddFaultJob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddFaultJob.Name = "btnAddFaultJob";
-            this.btnAddFaultJob.Size = new System.Drawing.Size(274, 80);
+            this.btnAddFaultJob.Size = new System.Drawing.Size(308, 100);
             this.btnAddFaultJob.TabIndex = 1;
             this.btnAddFaultJob.Text = "Add Fault Jobs";
             this.btnAddFaultJob.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // btnViewAssignedJobs
             // 
-            this.btnViewAssignedJobs.Location = new System.Drawing.Point(285, 328);
+            this.btnViewAssignedJobs.Location = new System.Drawing.Point(321, 410);
+            this.btnViewAssignedJobs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnViewAssignedJobs.Name = "btnViewAssignedJobs";
-            this.btnViewAssignedJobs.Size = new System.Drawing.Size(274, 80);
+            this.btnViewAssignedJobs.Size = new System.Drawing.Size(308, 100);
             this.btnViewAssignedJobs.TabIndex = 2;
             this.btnViewAssignedJobs.Text = "View Assigned Jobs";
             this.btnViewAssignedJobs.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@
             // 
             // btnAddTurbineSimulationData
             // 
-            this.btnAddTurbineSimulationData.Location = new System.Drawing.Point(285, 445);
+            this.btnAddTurbineSimulationData.Location = new System.Drawing.Point(321, 556);
+            this.btnAddTurbineSimulationData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddTurbineSimulationData.Name = "btnAddTurbineSimulationData";
-            this.btnAddTurbineSimulationData.Size = new System.Drawing.Size(274, 80);
+            this.btnAddTurbineSimulationData.Size = new System.Drawing.Size(308, 100);
             this.btnAddTurbineSimulationData.TabIndex = 3;
             this.btnAddTurbineSimulationData.Text = "Add Turbine Simulation Data";
             this.btnAddTurbineSimulationData.UseVisualStyleBackColor = true;
@@ -83,36 +87,38 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
-            this.lblGreetings.Location = new System.Drawing.Point(122, 48);
+            this.lblGreetings.Location = new System.Drawing.Point(137, 60);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
+            this.lblGreetings.Size = new System.Drawing.Size(87, 20);
             this.lblGreetings.TabIndex = 4;
             this.lblGreetings.Text = "Greetings, ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(122, 77);
+            this.lblRole.Location = new System.Drawing.Point(137, 96);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(39, 16);
+            this.lblRole.Size = new System.Drawing.Size(42, 16);
             this.lblRole.TabIndex = 5;
             this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(112, 125);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // btnRegisterNewAccount
             // 
-            this.btnRegisterNewAccount.Location = new System.Drawing.Point(969, 328);
+            this.btnRegisterNewAccount.Location = new System.Drawing.Point(1090, 410);
+            this.btnRegisterNewAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegisterNewAccount.Name = "btnRegisterNewAccount";
-            this.btnRegisterNewAccount.Size = new System.Drawing.Size(274, 80);
+            this.btnRegisterNewAccount.Size = new System.Drawing.Size(308, 100);
             this.btnRegisterNewAccount.TabIndex = 7;
             this.btnRegisterNewAccount.Text = "Register New Account";
             this.btnRegisterNewAccount.UseVisualStyleBackColor = true;
@@ -120,11 +126,11 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1478, 944);
             this.Controls.Add(this.btnRegisterNewAccount);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
@@ -133,7 +139,7 @@
             this.Controls.Add(this.btnViewAssignedJobs);
             this.Controls.Add(this.btnAddFaultJob);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmDashboard";
+            this.Name = "Dashboard";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

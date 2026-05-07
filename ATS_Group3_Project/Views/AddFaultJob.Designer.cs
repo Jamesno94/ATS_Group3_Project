@@ -60,9 +60,9 @@
             this.lblJobType.AutoSize = true;
             this.lblJobType.BackColor = System.Drawing.Color.Transparent;
             this.lblJobType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblJobType.Location = new System.Drawing.Point(308, 189);
+            this.lblJobType.Location = new System.Drawing.Point(346, 236);
             this.lblJobType.Name = "lblJobType";
-            this.lblJobType.Size = new System.Drawing.Size(65, 16);
+            this.lblJobType.Size = new System.Drawing.Size(73, 20);
             this.lblJobType.TabIndex = 0;
             this.lblJobType.Text = "Job Type";
             // 
@@ -71,9 +71,9 @@
             this.lblWindfarm.AutoSize = true;
             this.lblWindfarm.BackColor = System.Drawing.Color.Transparent;
             this.lblWindfarm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblWindfarm.Location = new System.Drawing.Point(309, 253);
+            this.lblWindfarm.Location = new System.Drawing.Point(348, 316);
             this.lblWindfarm.Name = "lblWindfarm";
-            this.lblWindfarm.Size = new System.Drawing.Size(64, 16);
+            this.lblWindfarm.Size = new System.Drawing.Size(77, 20);
             this.lblWindfarm.TabIndex = 1;
             this.lblWindfarm.Text = "Windfarm";
             // 
@@ -82,9 +82,9 @@
             this.lblTurbine.AutoSize = true;
             this.lblTurbine.BackColor = System.Drawing.Color.Transparent;
             this.lblTurbine.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTurbine.Location = new System.Drawing.Point(310, 318);
+            this.lblTurbine.Location = new System.Drawing.Point(349, 398);
             this.lblTurbine.Name = "lblTurbine";
-            this.lblTurbine.Size = new System.Drawing.Size(53, 16);
+            this.lblTurbine.Size = new System.Drawing.Size(62, 20);
             this.lblTurbine.TabIndex = 2;
             this.lblTurbine.Text = "Turbine";
             // 
@@ -93,9 +93,9 @@
             this.lblFaultDate.AutoSize = true;
             this.lblFaultDate.BackColor = System.Drawing.Color.Transparent;
             this.lblFaultDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultDate.Location = new System.Drawing.Point(308, 383);
+            this.lblFaultDate.Location = new System.Drawing.Point(346, 479);
             this.lblFaultDate.Name = "lblFaultDate";
-            this.lblFaultDate.Size = new System.Drawing.Size(68, 16);
+            this.lblFaultDate.Size = new System.Drawing.Size(84, 20);
             this.lblFaultDate.TabIndex = 3;
             this.lblFaultDate.Text = "Fault Date";
             // 
@@ -104,9 +104,9 @@
             this.lblFaultTime.AutoSize = true;
             this.lblFaultTime.BackColor = System.Drawing.Color.Transparent;
             this.lblFaultTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultTime.Location = new System.Drawing.Point(309, 450);
+            this.lblFaultTime.Location = new System.Drawing.Point(348, 562);
             this.lblFaultTime.Name = "lblFaultTime";
-            this.lblFaultTime.Size = new System.Drawing.Size(70, 16);
+            this.lblFaultTime.Size = new System.Drawing.Size(83, 20);
             this.lblFaultTime.TabIndex = 4;
             this.lblFaultTime.Text = "Fault Time";
             // 
@@ -115,9 +115,9 @@
             this.lblFaultDescription.AutoSize = true;
             this.lblFaultDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblFaultDescription.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultDescription.Location = new System.Drawing.Point(931, 189);
+            this.lblFaultDescription.Location = new System.Drawing.Point(1047, 236);
             this.lblFaultDescription.Name = "lblFaultDescription";
-            this.lblFaultDescription.Size = new System.Drawing.Size(107, 16);
+            this.lblFaultDescription.Size = new System.Drawing.Size(129, 20);
             this.lblFaultDescription.TabIndex = 5;
             this.lblFaultDescription.Text = "Fault Description";
             // 
@@ -126,9 +126,9 @@
             this.lblAssignedEngineer.AutoSize = true;
             this.lblAssignedEngineer.BackColor = System.Drawing.Color.Transparent;
             this.lblAssignedEngineer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAssignedEngineer.Location = new System.Drawing.Point(931, 253);
+            this.lblAssignedEngineer.Location = new System.Drawing.Point(1047, 316);
             this.lblAssignedEngineer.Name = "lblAssignedEngineer";
-            this.lblAssignedEngineer.Size = new System.Drawing.Size(121, 16);
+            this.lblAssignedEngineer.Size = new System.Drawing.Size(143, 20);
             this.lblAssignedEngineer.TabIndex = 6;
             this.lblAssignedEngineer.Text = "Assigned Engineer";
             // 
@@ -137,9 +137,9 @@
             this.lblPriority.AutoSize = true;
             this.lblPriority.BackColor = System.Drawing.Color.Transparent;
             this.lblPriority.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPriority.Location = new System.Drawing.Point(931, 318);
+            this.lblPriority.Location = new System.Drawing.Point(1047, 398);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(48, 16);
+            this.lblPriority.Size = new System.Drawing.Size(56, 20);
             this.lblPriority.TabIndex = 7;
             this.lblPriority.Text = "Priority";
             // 
@@ -148,82 +148,92 @@
             this.lblNotes.AutoSize = true;
             this.lblNotes.BackColor = System.Drawing.Color.Transparent;
             this.lblNotes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNotes.Location = new System.Drawing.Point(931, 383);
+            this.lblNotes.Location = new System.Drawing.Point(1047, 479);
             this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(43, 16);
+            this.lblNotes.Size = new System.Drawing.Size(51, 20);
             this.lblNotes.TabIndex = 8;
             this.lblNotes.Text = "Notes";
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(311, 207);
+            this.txtJobTitle.Location = new System.Drawing.Point(350, 259);
+            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(167, 22);
+            this.txtJobTitle.Size = new System.Drawing.Size(187, 26);
             this.txtJobTitle.TabIndex = 9;
             // 
             // txtWindfarm
             // 
-            this.txtWindfarm.Location = new System.Drawing.Point(313, 272);
+            this.txtWindfarm.Location = new System.Drawing.Point(352, 340);
+            this.txtWindfarm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWindfarm.Name = "txtWindfarm";
-            this.txtWindfarm.Size = new System.Drawing.Size(167, 22);
+            this.txtWindfarm.Size = new System.Drawing.Size(187, 26);
             this.txtWindfarm.TabIndex = 10;
             // 
             // txtTurbine
             // 
-            this.txtTurbine.Location = new System.Drawing.Point(312, 337);
+            this.txtTurbine.Location = new System.Drawing.Point(351, 421);
+            this.txtTurbine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTurbine.Name = "txtTurbine";
-            this.txtTurbine.Size = new System.Drawing.Size(167, 22);
+            this.txtTurbine.Size = new System.Drawing.Size(187, 26);
             this.txtTurbine.TabIndex = 11;
             // 
             // txtFaultDate
             // 
-            this.txtFaultDate.Location = new System.Drawing.Point(311, 402);
+            this.txtFaultDate.Location = new System.Drawing.Point(350, 502);
+            this.txtFaultDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFaultDate.Name = "txtFaultDate";
-            this.txtFaultDate.Size = new System.Drawing.Size(167, 22);
+            this.txtFaultDate.Size = new System.Drawing.Size(187, 26);
             this.txtFaultDate.TabIndex = 12;
             // 
             // txtFaultTime
             // 
-            this.txtFaultTime.Location = new System.Drawing.Point(311, 469);
+            this.txtFaultTime.Location = new System.Drawing.Point(350, 586);
+            this.txtFaultTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFaultTime.Name = "txtFaultTime";
-            this.txtFaultTime.Size = new System.Drawing.Size(167, 22);
+            this.txtFaultTime.Size = new System.Drawing.Size(187, 26);
             this.txtFaultTime.TabIndex = 13;
             // 
             // txtFaultDescription
             // 
-            this.txtFaultDescription.Location = new System.Drawing.Point(934, 208);
+            this.txtFaultDescription.Location = new System.Drawing.Point(1051, 260);
+            this.txtFaultDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFaultDescription.Name = "txtFaultDescription";
-            this.txtFaultDescription.Size = new System.Drawing.Size(167, 22);
+            this.txtFaultDescription.Size = new System.Drawing.Size(187, 26);
             this.txtFaultDescription.TabIndex = 14;
             // 
             // txtAssignedEngineer
             // 
-            this.txtAssignedEngineer.Location = new System.Drawing.Point(934, 272);
+            this.txtAssignedEngineer.Location = new System.Drawing.Point(1051, 340);
+            this.txtAssignedEngineer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAssignedEngineer.Name = "txtAssignedEngineer";
-            this.txtAssignedEngineer.Size = new System.Drawing.Size(167, 22);
+            this.txtAssignedEngineer.Size = new System.Drawing.Size(187, 26);
             this.txtAssignedEngineer.TabIndex = 15;
             // 
             // txtPriority
             // 
-            this.txtPriority.Location = new System.Drawing.Point(934, 337);
+            this.txtPriority.Location = new System.Drawing.Point(1051, 421);
+            this.txtPriority.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(167, 22);
+            this.txtPriority.Size = new System.Drawing.Size(187, 26);
             this.txtPriority.TabIndex = 16;
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(934, 402);
+            this.txtNotes.Location = new System.Drawing.Point(1051, 502);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(167, 22);
+            this.txtNotes.Size = new System.Drawing.Size(187, 26);
             this.txtNotes.TabIndex = 17;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(541, 189);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 236);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 320);
+            this.pictureBox1.Size = new System.Drawing.Size(371, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -232,9 +242,10 @@
             // 
             this.btnSaveChanges.BackColor = System.Drawing.Color.Lime;
             this.btnSaveChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveChanges.Location = new System.Drawing.Point(1350, 993);
+            this.btnSaveChanges.Location = new System.Drawing.Point(1519, 1241);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(120, 50);
+            this.btnSaveChanges.Size = new System.Drawing.Size(135, 62);
             this.btnSaveChanges.TabIndex = 19;
             this.btnSaveChanges.Text = "SAVE CHANGES";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
@@ -243,7 +254,8 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancel.Location = new System.Drawing.Point(12, 491);
+            this.btnCancel.Location = new System.Drawing.Point(14, 614);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(0, 0);
             this.btnCancel.TabIndex = 20;
@@ -255,9 +267,10 @@
             // 
             this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
             this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.DashboardLogoClick.Location = new System.Drawing.Point(1320, 12);
+            this.DashboardLogoClick.Location = new System.Drawing.Point(1485, 15);
+            this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DashboardLogoClick.Name = "DashboardLogoClick";
-            this.DashboardLogoClick.Size = new System.Drawing.Size(150, 150);
+            this.DashboardLogoClick.Size = new System.Drawing.Size(169, 188);
             this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DashboardLogoClick.TabIndex = 21;
             this.DashboardLogoClick.TabStop = false;
@@ -268,19 +281,19 @@
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.BackColor = System.Drawing.Color.Transparent;
             this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(12, 12);
+            this.lblCompanyName.Location = new System.Drawing.Point(14, 15);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(216, 32);
+            this.lblCompanyName.Size = new System.Drawing.Size(250, 38);
             this.lblCompanyName.TabIndex = 22;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
             // frmAddFaultJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1478, 944);
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.DashboardLogoClick);
             this.Controls.Add(this.btnCancel);
