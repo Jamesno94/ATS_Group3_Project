@@ -20,8 +20,6 @@ namespace ATS_Group3_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
-        
             string staffId = txtStaffId.Text.Trim();
             string password = txtPassword.Text;
 
@@ -29,11 +27,23 @@ namespace ATS_Group3_Project
 
             User user = manager.Login(staffId, password);
 
-            MessageBox.Show("Users in DB: " + manager.CountUsers());
-
             if (user == null)
             {
-                MessageBox.Show("Invalid login.");
+                using (var db = new ATSContext())
+                {
+                    var existingUser = db.Users
+                        .FirstOrDefault(u => u.StaffId == staffId);
+
+                    if (existingUser != null && existingUser.IsLocked)
+                    {
+                        MessageBox.Show("Your account is locked. Contact administrator.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid login details.");
+                    }
+                }
+
                 return;
             }
 
@@ -41,17 +51,29 @@ namespace ATS_Group3_Project
 
             if (user.Staff.Role == "Engineer")
             {
-                new frmEngineerDashboard(user.Staff.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                new frmEngineerDashboard(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role
+                ).Show();
             }
-            else if (user.Staff.Role == "CallHandler")
+            else if (user.Staff.Role == "Call Handler")
             {
-                new frmCallHandler(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                new frmCallHandler(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role
+                ).Show();
             }
             else if (user.Staff.Role == "Admin")
             {
-                new frmAdminDashboard(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                new frmAdminDashboard(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role
+                ).Show();
             }
-            
+
             this.Hide();
         }
 

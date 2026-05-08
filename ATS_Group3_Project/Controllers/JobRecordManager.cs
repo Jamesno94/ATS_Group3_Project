@@ -117,7 +117,7 @@ namespace ATS_Group3_Project
 
                 job.JobDate = updatedJob.JobDate;
                 job.JobTime = updatedJob.JobTime;
-                job.FarmId = updatedJob.FarmId;
+                job.WindFarmId = updatedJob.WindFarmId;
                 job.TurbineId = updatedJob.TurbineId;
                 job.StaffId = updatedJob.StaffId;
                 job.JobType = updatedJob.JobType;

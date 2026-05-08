@@ -22,6 +22,7 @@ public class Turbine
     // Foreign Key
     public string WindFarmId { get; set; }
 
-    [ForeignKey("FarmId")]
+    [ForeignKey("WindFarmId")]
     public virtual WindFarm WindFarm { get; set; }
+
 }

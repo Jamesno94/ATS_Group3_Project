@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATS_WindSyncDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\DispatchManager.cs" />
     <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
@@ -184,6 +189,17 @@
     <EmbeddedResource Include="Views\View Assigned Jobs.resx">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ATS_WindSyncDBDataSet.xsc">
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATS_WindSyncDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet.xss">
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

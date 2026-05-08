@@ -60,7 +60,7 @@ namespace ATS_Group3_Project
         public string JobComplete { get; set; }
         // Awaiting Engineer or Complete
 
-        [ForeignKey("FarmId")]
+        [ForeignKey("WindFarmId")]
         public virtual WindFarm WindFarm { get; set; }
 
         [ForeignKey("TurbineId")]
@@ -69,7 +69,7 @@ namespace ATS_Group3_Project
         [ForeignKey("StaffId")]
         public virtual Staff Staff { get; set; }
 
-        public JobRecord(int jobId, DateTime jobDate, string jobTime, int farmId, string turbineId, string staffId, string jobType,
+        public JobRecord(int jobId, DateTime jobDate, string jobTime, string windFarmId, string turbineId, string staffId, string jobType,
                          string faultDescription, bool mainGeneratorServiced, bool gearboxServiced, bool yawMotorServiced,
                          bool internalPassengerLiftServiced, bool mainGeneratorReplaced, bool gearboxReplaced,
                          bool yawMotorReplaced, bool internalPassengerLiftReplaced, string jobComplete)

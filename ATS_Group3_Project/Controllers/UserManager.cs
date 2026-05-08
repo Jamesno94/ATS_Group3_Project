@@ -20,6 +20,12 @@ public class UserManager
                 return null;
             }
 
+            if (user.IsLocked)
+            {
+                
+                return null;
+            }
+
             bool passwordCorrect = PasswordHelper.VerifyPassword(
                 password,
                 user.PasswordHash,
@@ -28,8 +34,22 @@ public class UserManager
 
             if (!passwordCorrect)
             {
+                user.FailedLoginAttempts++;
+
+                if (user.FailedLoginAttempts >= 3)
+                {
+                    user.IsLocked = true;
+                    
+                    db.SaveChanges();
+                    return null;
+                }
+
+                db.SaveChanges();
                 return null;
             }
+
+            user.FailedLoginAttempts = 0;
+            db.SaveChanges();
 
             return user;
         }
@@ -132,4 +152,22 @@ public class UserManager
 
         return hasMinimumLength && hasUppercase && hasNumber;
     }
+
+    public bool UnlockUser(string staffId)
+    {
+        using (var db = new ATSContext())
+        {
+            var user = db.Users.FirstOrDefault(u => u.StaffId == staffId);
+
+            if (user == null)
+                return false;
+
+            user.IsLocked = false;
+            user.FailedLoginAttempts = 0;
+
+            db.SaveChanges();
+            return true;
+        }
+    }
+
 }

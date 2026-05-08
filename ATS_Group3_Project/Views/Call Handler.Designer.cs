@@ -48,7 +48,7 @@
             // 
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,7 +79,7 @@
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
             this.pictureBox2.Location = new System.Drawing.Point(454, 171);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(248, 260);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,17 +89,18 @@
             // btnSimulationDashboard
             // 
             this.btnSimulationDashboard.Location = new System.Drawing.Point(212, 171);
-            this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimulationDashboard.Name = "btnSimulationDashboard";
             this.btnSimulationDashboard.Size = new System.Drawing.Size(206, 65);
             this.btnSimulationDashboard.TabIndex = 4;
             this.btnSimulationDashboard.Text = "Simulation Dashboard";
             this.btnSimulationDashboard.UseVisualStyleBackColor = true;
+            this.btnSimulationDashboard.Click += new System.EventHandler(this.btnSimulationDashboard_Click);
             // 
             // btnAddTurbine
             // 
             this.btnAddTurbine.Location = new System.Drawing.Point(212, 366);
-            this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTurbine.Name = "btnAddTurbine";
             this.btnAddTurbine.Size = new System.Drawing.Size(206, 65);
             this.btnAddTurbine.TabIndex = 5;
@@ -109,7 +110,7 @@
             // btnAddWindFarm
             // 
             this.btnAddWindFarm.Location = new System.Drawing.Point(212, 265);
-            this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddWindFarm.Name = "btnAddWindFarm";
             this.btnAddWindFarm.Size = new System.Drawing.Size(206, 65);
             this.btnAddWindFarm.TabIndex = 6;
@@ -119,7 +120,7 @@
             // btnLogFaultJob
             // 
             this.btnLogFaultJob.Location = new System.Drawing.Point(736, 171);
-            this.btnLogFaultJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogFaultJob.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogFaultJob.Name = "btnLogFaultJob";
             this.btnLogFaultJob.Size = new System.Drawing.Size(206, 65);
             this.btnLogFaultJob.TabIndex = 7;
@@ -129,7 +130,7 @@
             // btnAddShifts
             // 
             this.btnAddShifts.Location = new System.Drawing.Point(736, 265);
-            this.btnAddShifts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddShifts.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddShifts.Name = "btnAddShifts";
             this.btnAddShifts.Size = new System.Drawing.Size(206, 65);
             this.btnAddShifts.TabIndex = 8;
@@ -139,7 +140,7 @@
             // btnViewAllJobs
             // 
             this.btnViewAllJobs.Location = new System.Drawing.Point(736, 366);
-            this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewAllJobs.Name = "btnViewAllJobs";
             this.btnViewAllJobs.Size = new System.Drawing.Size(206, 65);
             this.btnViewAllJobs.TabIndex = 9;
@@ -149,7 +150,7 @@
             // btnManageAccount
             // 
             this.btnManageAccount.Location = new System.Drawing.Point(476, 462);
-            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageAccount.Name = "btnManageAccount";
             this.btnManageAccount.Size = new System.Drawing.Size(206, 65);
             this.btnManageAccount.TabIndex = 10;
@@ -161,7 +162,7 @@
             this.btnLogOut.BackColor = System.Drawing.Color.Red;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogOut.Location = new System.Drawing.Point(899, 562);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 41);
             this.btnLogOut.TabIndex = 11;
@@ -188,7 +189,7 @@
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCallHandler";
             this.Text = "frmCallHandler";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
