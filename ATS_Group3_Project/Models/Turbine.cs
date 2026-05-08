@@ -24,4 +24,5 @@ public class Turbine
 
     [ForeignKey("WindFarmId")]
     public virtual WindFarm WindFarm { get; set; }
+
 }

@@ -33,32 +33,63 @@ namespace ATS_Group3_Project
             //Whitelee
             //Beinn an Tuirc
             //Clyde
-            string windFarmId;
-            List<Turbine> turbines = null;
+            
+        }
+        private void LoadTurbinesList(List<Turbine> turbines)
+        {
+            dataGVTrubinStats.DataSource = null;
+            dataGVTrubinStats.DataSource = turbines;
+        }
 
-            if (cboWIndFarms.SelectedIndex == 0)
-            {
-                windFarmId = "WL-FARM";
-                turbines = new TurbineManager().GetTurbinesByFarmId(windFarmId);
-            }
-            else if (cboWIndFarms.SelectedIndex == 1)
-            {
-                windFarmId = "BT-FARM";
-                turbines = new TurbineManager().GetTurbinesByFarmId(windFarmId);
-            }
-            else if (cboWIndFarms.SelectedIndex == 2)
-            {
-                windFarmId = "CL-FARM";
-                turbines = new TurbineManager().GetTurbinesByFarmId(windFarmId);
-            }
+        private void cboWIndFarms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboTurbine.Items.Clear();
 
-            if (turbines != null)
+            string selectedFarm = cboWIndFarms.SelectedItem.ToString();
+
+            List<Turbine> turbines;
+
+            if (selectedFarm == "All")
             {
-                for (int i = 0; i < turbines.Count; i++)
+                //Get ALL turbines (no filter)
+                turbines = new TurbineManager().GetAllTurbines();
+            }
+            else
+            {
+                string windFarmId = "";
+
+                switch (selectedFarm)
                 {
-                    lstTest.Items.Add(turbines[i].TurbineId);
+                    case "Whitelee":
+                        windFarmId = "WL-FARM";
+                        break;
+
+                    case "Black Tower":
+                        windFarmId = "BT-FARM";
+                        break;
+
+                    case "Clyde":
+                        windFarmId = "CL-FARM";
+                        break;
+
+                    default:
+                        return;
                 }
+
+                turbines = new TurbineManager().GetTurbinesByFarmId(windFarmId);
             }
+
+            LoadTurbinesList(turbines);
+
+            cboTurbine.Items.AddRange(
+                turbines.Select(t => t.TurbineId).ToArray());
+        }
+
+        private void frmTurbSimData_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aTS_WindSyncDBDataSet.Turbines' table. You can move, or remove it, as needed.
+            this.turbinesTableAdapter.Fill(this.aTS_WindSyncDBDataSet.Turbines);
+
         }
     }
 }

@@ -280,7 +280,8 @@ public class ATSDbInitializer : DropCreateDatabaseIfModelChanges<ATSContext>
             CreateUser("ENG-018"),
             CreateUser("ENG-019"),
             CreateUser("ENG-020"),
-            CreateUser("CALL-001")
+            CreateUser("CALL-001"),
+            CreateUser("ADM-001")
         });
 
         context.SaveChanges();
