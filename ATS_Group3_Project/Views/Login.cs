@@ -20,8 +20,6 @@ namespace ATS_Group3_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
-        
             string staffId = txtStaffId.Text.Trim();
             string password = txtPassword.Text;
 
@@ -39,20 +37,39 @@ namespace ATS_Group3_Project
 
             MessageBox.Show("Login successful. Role: " + user.Staff.Role);
 
+            Form dashboard = null;
+
             if (user.Staff.Role == "Engineer")
             {
-                new frmEngineerDashboard(user.Staff.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                dashboard = new frmEngineerDashboard(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role);
             }
-            else if (user.Staff.Role == "CallHandler")
+            else if (user.Staff.Role == "Call Handler")
             {
-                new frmCallHandler(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                dashboard = new frmCallHandler(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role);
             }
             else if (user.Staff.Role == "Admin")
             {
-                new frmAdminDashboard(user.StaffId, user.Staff.FirstName, user.Staff.Role).Show();
+                dashboard = new frmAdminDashboard(
+                    user.Staff.StaffId,
+                    user.Staff.FirstName,
+                    user.Staff.Role);
             }
-            
+            else
+            {
+                MessageBox.Show("Unknown role.");
+                return;
+            }
+
+            dashboard.Show();
+
             this.Hide();
+
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATS_WindSyncDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\DispatchManager.cs" />
     <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
@@ -74,9 +79,23 @@
     <Compile Include="Models\Windfarm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AddFaultJob.cs" />
-    <Compile Include="Views\AddFaultJob.Designer.cs">
-      <DependentUpon>AddFaultJob.cs</DependentUpon>
+    <Compile Include="Views\Add Fault Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Add Fault Job.Designer.cs">
+      <DependentUpon>Add Fault Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin Dashboard.Designer.cs">
+      <DependentUpon>Admin Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Call Handler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Call Handler.Designer.cs">
+      <DependentUpon>Call Handler.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
@@ -84,17 +103,11 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmAdminDashboard.cs" />
-    <Compile Include="Views\frmAdminDashboard.Designer.cs">
-      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    <Compile Include="Views\Engineer Dashboard.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCallHandler.cs" />
-    <Compile Include="Views\frmCallHandler.Designer.cs">
-      <DependentUpon>frmCallHandler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\frmEngineerDashboard.cs" />
-    <Compile Include="Views\frmEngineerDashboard.Designer.cs">
-      <DependentUpon>frmEngineerDashboard.cs</DependentUpon>
+    <Compile Include="Views\Engineer Dashboard.Designer.cs">
+      <DependentUpon>Engineer Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Turbine History.cs">
       <SubType>Form</SubType>
@@ -143,20 +156,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\AddFaultJob.resx">
-      <DependentUpon>AddFaultJob.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Add Fault Job.resx">
+      <DependentUpon>Add Fault Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin Dashboard.resx">
+      <DependentUpon>Admin Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Call Handler.resx">
+      <DependentUpon>Call Handler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmAdminDashboard.resx">
-      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCallHandler.resx">
-      <DependentUpon>frmCallHandler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmEngineerDashboard.resx">
-      <DependentUpon>frmEngineerDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Engineer Dashboard.resx">
+      <DependentUpon>Engineer Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Job Details.resx">
       <DependentUpon>Job Details.cs</DependentUpon>
@@ -176,6 +189,17 @@
     <EmbeddedResource Include="Views\View Assigned Jobs.resx">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ATS_WindSyncDBDataSet.xsc">
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATS_WindSyncDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet.xss">
+      <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
