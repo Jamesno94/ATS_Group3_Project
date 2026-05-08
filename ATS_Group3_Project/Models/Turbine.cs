@@ -20,7 +20,7 @@ public class Turbine
     public string Status { get; set; }
 
     // Foreign Key
-    public int FarmId { get; set; }
+    public string WindFarmId { get; set; }
 
     [ForeignKey("FarmId")]
     public virtual WindFarm WindFarm { get; set; }

@@ -113,17 +113,15 @@
             // 
             // lnkForgotPassword
             // 
-            this.lnkForgotPassword.AutoSize = true;
-            this.lnkForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lnkForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkForgotPassword.Location = new System.Drawing.Point(696, 282);
-            this.lnkForgotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkForgotPassword.Name = "lnkForgotPassword";
-            this.lnkForgotPassword.Size = new System.Drawing.Size(121, 17);
-            this.lnkForgotPassword.TabIndex = 7;
-            this.lnkForgotPassword.TabStop = true;
-            this.lnkForgotPassword.Text = "Forgot password?";
-            this.lnkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkForgotPassword_LinkClicked);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(928, 347);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(121, 17);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot password?";
             // 
             // label4
             // 
@@ -156,7 +154,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(986, 613);
+            this.ClientSize = new System.Drawing.Size(1315, 754);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lnkForgotPassword);

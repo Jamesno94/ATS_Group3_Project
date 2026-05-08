@@ -23,7 +23,7 @@ namespace ATS_Group3_Project
             modelBuilder.Entity<Turbine>()
                 .HasRequired(t => t.WindFarm)
                 .WithMany(w => w.Turbines)
-                .HasForeignKey(t => t.FarmId)
+                .HasForeignKey(t => t.WindFarmId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<JobRecord>()

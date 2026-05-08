@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGVFaultHistory = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnExportReport = new System.Windows.Forms.Button();
-            this.dataGVServiceHistory = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGVRepairHistory = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,14 +73,32 @@
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGVFaultHistory.Location = new System.Drawing.Point(651, 83);
-            this.dataGVFaultHistory.Name = "dataGVFaultHistory";
-            this.dataGVFaultHistory.RowHeadersWidth = 62;
-            this.dataGVFaultHistory.RowTemplate.Height = 28;
-            this.dataGVFaultHistory.Size = new System.Drawing.Size(815, 240);
-            this.dataGVFaultHistory.TabIndex = 2;
+            this.dataGridView3.Location = new System.Drawing.Point(434, 54);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(543, 156);
+            this.dataGridView3.TabIndex = 2;
+            // 
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1357, 897);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 897);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 35);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Export Report";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -101,7 +121,27 @@
             this.Column3.HeaderText = "Description";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(899, 567);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 41);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(11, 567);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 41);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Export Report";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
             this.Column3.Width = 150;
             // 
             // Column4
@@ -120,7 +160,7 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 150;
             // 
-            // btnCancel
+            // dataGridView1
             // 
             this.btnCancel.Location = new System.Drawing.Point(1357, 897);
             this.btnCancel.Name = "btnCancel";
@@ -128,14 +168,14 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.dataGridView1.Location = new System.Drawing.Point(434, 233);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(543, 156);
+            this.dataGridView1.TabIndex = 5;
             // 
-            // btnExportReport
-            // 
-            this.btnExportReport.Location = new System.Drawing.Point(12, 897);
-            this.btnExportReport.Name = "btnExportReport";
-            this.btnExportReport.Size = new System.Drawing.Size(137, 35);
-            this.btnExportReport.TabIndex = 4;
-            this.btnExportReport.Text = "Export Report";
             this.btnExportReport.UseVisualStyleBackColor = true;
             // 
             // dataGVServiceHistory
@@ -147,18 +187,53 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewComboBoxColumn1});
-            this.dataGVServiceHistory.Location = new System.Drawing.Point(651, 358);
-            this.dataGVServiceHistory.Name = "dataGVServiceHistory";
-            this.dataGVServiceHistory.RowHeadersWidth = 62;
-            this.dataGVServiceHistory.RowTemplate.Height = 28;
-            this.dataGVServiceHistory.Size = new System.Drawing.Size(815, 240);
-            this.dataGVServiceHistory.TabIndex = 5;
+            this.dataGridView1.Location = new System.Drawing.Point(651, 358);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(815, 240);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.Column6,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewComboBoxColumn2});
+            this.dataGridView2.Location = new System.Drawing.Point(501, 626);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(965, 240);
+            this.dataGridView2.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Service Date";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.Column6,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewComboBoxColumn2});
+            this.dataGridView2.Location = new System.Drawing.Point(334, 407);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(643, 156);
+            this.dataGridView2.TabIndex = 6;
+            // 
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 150;
             // 
@@ -193,23 +268,6 @@
             this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
             this.dataGridViewComboBoxColumn1.ReadOnly = true;
             this.dataGridViewComboBoxColumn1.Width = 150;
-            // 
-            // dataGVRepairHistory
-            // 
-            this.dataGVRepairHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVRepairHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.Column6,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewComboBoxColumn2});
-            this.dataGVRepairHistory.Location = new System.Drawing.Point(501, 626);
-            this.dataGVRepairHistory.Name = "dataGVRepairHistory";
-            this.dataGVRepairHistory.RowHeadersWidth = 62;
-            this.dataGVRepairHistory.RowTemplate.Height = 28;
-            this.dataGVRepairHistory.Size = new System.Drawing.Size(965, 240);
-            this.dataGVRepairHistory.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -256,89 +314,97 @@
             this.dataGridViewComboBoxColumn2.HeaderText = "Status";
             this.dataGridViewComboBoxColumn2.MinimumWidth = 8;
             this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.ReadOnly = true;
-            this.dataGridViewComboBoxColumn2.Width = 150;
-            // 
-            // label1
-            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(51, 177);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(82, 21);
+            this.comboBox1.TabIndex = 10;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(647, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Fault History";
-            // 
+            this.label1.Location = new System.Drawing.Point(431, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(199, 177);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(82, 21);
+            this.comboBox2.TabIndex = 11;
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(647, 335);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Service History";
+            this.button3.Location = new System.Drawing.Point(130, 233);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 26);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(497, 603);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
-            this.label3.TabIndex = 9;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(55, 310);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(227, 82);
+            this.listBox1.TabIndex = 13;
             this.label3.Text = "Repair History";
             // 
             // comboxWindfarm
             // 
-            this.comboxWindfarm.FormattingEnabled = true;
-            this.comboxWindfarm.Location = new System.Drawing.Point(77, 273);
-            this.comboxWindfarm.Name = "comboxWindfarm";
-            this.comboxWindfarm.Size = new System.Drawing.Size(121, 28);
-            this.comboxWindfarm.TabIndex = 10;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(77, 273);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 10;
             // 
             // comboxTurbine
             // 
-            this.comboxTurbine.FormattingEnabled = true;
-            this.comboxTurbine.Location = new System.Drawing.Point(299, 273);
-            this.comboxTurbine.Name = "comboxTurbine";
-            this.comboxTurbine.Size = new System.Drawing.Size(121, 28);
-            this.comboxTurbine.TabIndex = 11;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(299, 273);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.TabIndex = 11;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(195, 358);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 40);
-            this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(195, 358);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(109, 40);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // lstboxTurbineSummary
             // 
-            this.lstboxTurbineSummary.FormattingEnabled = true;
-            this.lstboxTurbineSummary.ItemHeight = 20;
-            this.lstboxTurbineSummary.Location = new System.Drawing.Point(82, 477);
-            this.lstboxTurbineSummary.Name = "lstboxTurbineSummary";
-            this.lstboxTurbineSummary.Size = new System.Drawing.Size(338, 124);
-            this.lstboxTurbineSummary.TabIndex = 13;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(82, 477);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(338, 124);
+            this.listBox1.TabIndex = 13;
             // 
-            // label4
+            this.ClientSize = new System.Drawing.Size(985, 614);
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 250);
+            this.label4.Location = new System.Drawing.Point(52, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Windfarm";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Turbine";
-            // 
-            // label6
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView3);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(82, 451);
@@ -349,12 +415,11 @@
             // 
             // frmTurbineHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1478, 944);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstboxTurbineSummary);
@@ -364,17 +429,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGVRepairHistory);
-            this.Controls.Add(this.dataGVServiceHistory);
-            this.Controls.Add(this.btnExportReport);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.dataGVFaultHistory);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView3);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmTurbineHistory";
-            this.Text = "Turbine History";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVFaultHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVServiceHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVRepairHistory)).EndInit();
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
