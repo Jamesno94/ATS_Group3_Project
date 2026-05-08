@@ -113,15 +113,15 @@
             // 
             // lnkForgotPassword
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(928, 347);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(121, 17);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot password?";
+            this.lnkForgotPassword.AutoSize = true;
+            this.lnkForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lnkForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkForgotPassword.Location = new System.Drawing.Point(928, 347);
+            this.lnkForgotPassword.Name = "lnkForgotPassword";
+            this.lnkForgotPassword  .Size = new System.Drawing.Size(121, 17);
+            this.lnkForgotPassword.TabIndex = 7;
+            this.lnkForgotPassword.TabStop = true;
+            this.lnkForgotPassword.Text = "Forgot password?";
             // 
             // label4
             // 
