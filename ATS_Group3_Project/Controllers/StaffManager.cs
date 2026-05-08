@@ -7,6 +7,45 @@ namespace ATS_Group3_Project
 {
     public class StaffManager
     {
+        public string GenerateID(string role)
+        {
+            using (var db = new ATSContext())
+            {
+                string prefix = "";
+
+                if (role == "Engineer")
+                    prefix = "ENG";
+                else if (role == "Admin")
+                    prefix = "ADM";
+                else if (role == "Call Handler")
+                    prefix = "CALL";
+                else
+                    throw new Exception("Invalid role");
+
+                var lastStaff = db.Staff
+                    .Where(s => s.StaffId.StartsWith(prefix + "-"))
+                    .ToList()
+                    .OrderByDescending(s => int.Parse(s.StaffId.Split('-')[1]))
+                    .FirstOrDefault();
+
+                int nextNumber = 1;
+
+                if (lastStaff != null)
+                {
+                    string[] parts = lastStaff.StaffId.Split('-');
+
+                    if (parts.Length == 2 &&
+                        int.TryParse(parts[1], out int number))
+                    {
+                        nextNumber = number + 1;
+                    }
+                }
+
+                return prefix + "-" + nextNumber.ToString("D3");
+            }
+        }
+
+
         public bool RegisterStaffAccount(string staffId, string firstName, string lastName, string workMobile, string homeMobile, string email, string address1,
                                          string address2, string city, string postcode, decimal salary, string role, string password)
         {
