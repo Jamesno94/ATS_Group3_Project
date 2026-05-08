@@ -89,16 +89,16 @@
             this.lblGreetings.AutoSize = true;
             this.lblGreetings.Location = new System.Drawing.Point(137, 60);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(87, 20);
+            this.lblGreetings.Size = new System.Drawing.Size(83, 20);
             this.lblGreetings.TabIndex = 4;
-            this.lblGreetings.Text = "Greetings, ";
+            this.lblGreetings.Text = "Greetings ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(137, 96);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(42, 16);
+            this.lblRole.Size = new System.Drawing.Size(46, 20);
             this.lblRole.TabIndex = 5;
             this.lblRole.Text = "Role:";
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.btnViewAssignedJobs);
             this.Controls.Add(this.btnAddFaultJob);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Dashboard";
+            this.Name = "frmDashboard";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

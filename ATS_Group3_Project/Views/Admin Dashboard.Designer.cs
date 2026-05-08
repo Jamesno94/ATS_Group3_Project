@@ -39,9 +39,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -49,42 +50,44 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
-            this.lblGreetings.Location = new System.Drawing.Point(122, 48);
+            this.lblGreetings.Location = new System.Drawing.Point(137, 60);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
+            this.lblGreetings.Size = new System.Drawing.Size(83, 20);
             this.lblGreetings.TabIndex = 1;
-            this.lblGreetings.Text = "Greetings, ";
+            this.lblGreetings.Text = "Greetings ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(122, 77);
+            this.lblRole.Location = new System.Drawing.Point(137, 96);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(39, 16);
+            this.lblRole.Size = new System.Drawing.Size(46, 20);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(606, 211);
+            this.pictureBox2.Location = new System.Drawing.Point(682, 264);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(330, 320);
+            this.pictureBox2.Size = new System.Drawing.Size(371, 400);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
             // frmAdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1478, 944);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdminDashboard";
             this.Text = "frmAdminDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
