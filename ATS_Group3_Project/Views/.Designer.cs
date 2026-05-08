@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGVComponentChecklist = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,43 +42,79 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtJobReference = new System.Windows.Forms.TextBox();
+            this.txtJobType = new System.Windows.Forms.TextBox();
+            this.txtWindfarm = new System.Windows.Forms.TextBox();
+            this.txtTurbine = new System.Windows.Forms.TextBox();
+            this.txtAssignedEngineer = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.datetimeFault = new System.Windows.Forms.DateTimePicker();
+            this.comboxPriority = new System.Windows.Forms.ComboBox();
+            this.comboxStatus = new System.Windows.Forms.ComboBox();
+            this.rtxtFaultDescription = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtxtEngineerNotes = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVComponentChecklist)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGVComponentChecklist
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGVComponentChecklist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVComponentChecklist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(650, 465);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(816, 353);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGVComponentChecklist.Location = new System.Drawing.Point(650, 465);
+            this.dataGVComponentChecklist.Name = "dataGVComponentChecklist";
+            this.dataGVComponentChecklist.RowHeadersWidth = 62;
+            this.dataGVComponentChecklist.RowTemplate.Height = 28;
+            this.dataGVComponentChecklist.Size = new System.Drawing.Size(816, 353);
+            this.dataGVComponentChecklist.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Component";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Issue Found";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Action Required";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Status";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Notes";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
             // label1
             // 
@@ -147,129 +188,89 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Fault Date/Time:";
             // 
-            // textBox1
+            // txtJobReference
             // 
-            this.textBox1.Location = new System.Drawing.Point(273, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 9;
+            this.txtJobReference.Location = new System.Drawing.Point(273, 134);
+            this.txtJobReference.Name = "txtJobReference";
+            this.txtJobReference.Size = new System.Drawing.Size(100, 26);
+            this.txtJobReference.TabIndex = 9;
             // 
-            // textBox2
+            // txtJobType
             // 
-            this.textBox2.Location = new System.Drawing.Point(273, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 10;
+            this.txtJobType.Location = new System.Drawing.Point(273, 194);
+            this.txtJobType.Name = "txtJobType";
+            this.txtJobType.Size = new System.Drawing.Size(100, 26);
+            this.txtJobType.TabIndex = 10;
             // 
-            // textBox3
+            // txtWindfarm
             // 
-            this.textBox3.Location = new System.Drawing.Point(273, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 11;
+            this.txtWindfarm.Location = new System.Drawing.Point(273, 248);
+            this.txtWindfarm.Name = "txtWindfarm";
+            this.txtWindfarm.Size = new System.Drawing.Size(100, 26);
+            this.txtWindfarm.TabIndex = 11;
             // 
-            // textBox4
+            // txtTurbine
             // 
-            this.textBox4.Location = new System.Drawing.Point(273, 313);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 12;
+            this.txtTurbine.Location = new System.Drawing.Point(273, 313);
+            this.txtTurbine.Name = "txtTurbine";
+            this.txtTurbine.Size = new System.Drawing.Size(100, 26);
+            this.txtTurbine.TabIndex = 12;
             // 
-            // textBox5
+            // txtAssignedEngineer
             // 
-            this.textBox5.Location = new System.Drawing.Point(650, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 13;
+            this.txtAssignedEngineer.Location = new System.Drawing.Point(650, 130);
+            this.txtAssignedEngineer.Name = "txtAssignedEngineer";
+            this.txtAssignedEngineer.Size = new System.Drawing.Size(100, 26);
+            this.txtAssignedEngineer.TabIndex = 13;
             // 
-            // Column1
+            // btnCancel
             // 
-            this.Column1.HeaderText = "Component";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.btnCancel.Location = new System.Drawing.Point(1324, 886);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(142, 46);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // Column2
+            // btnSaveChanges
             // 
-            this.Column2.HeaderText = "Issue Found";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.btnSaveChanges.Location = new System.Drawing.Point(12, 885);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(149, 47);
+            this.btnSaveChanges.TabIndex = 18;
+            this.btnSaveChanges.Text = "Save Changes";
+            this.btnSaveChanges.UseVisualStyleBackColor = true;
             // 
-            // Column3
+            // datetimeFault
             // 
-            this.Column3.HeaderText = "Action Required";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
+            this.datetimeFault.Location = new System.Drawing.Point(650, 331);
+            this.datetimeFault.Name = "datetimeFault";
+            this.datetimeFault.Size = new System.Drawing.Size(200, 26);
+            this.datetimeFault.TabIndex = 19;
             // 
-            // Column4
+            // comboxPriority
             // 
-            this.Column4.HeaderText = "Status";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
+            this.comboxPriority.FormattingEnabled = true;
+            this.comboxPriority.Location = new System.Drawing.Point(650, 192);
+            this.comboxPriority.Name = "comboxPriority";
+            this.comboxPriority.Size = new System.Drawing.Size(121, 28);
+            this.comboxPriority.TabIndex = 20;
             // 
-            // Column5
+            // comboxStatus
             // 
-            this.Column5.HeaderText = "Notes";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
+            this.comboxStatus.FormattingEnabled = true;
+            this.comboxStatus.Location = new System.Drawing.Point(650, 265);
+            this.comboxStatus.Name = "comboxStatus";
+            this.comboxStatus.Size = new System.Drawing.Size(121, 28);
+            this.comboxStatus.TabIndex = 21;
             // 
-            // button1
+            // rtxtFaultDescription
             // 
-            this.button1.Location = new System.Drawing.Point(1324, 886);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 46);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 885);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 47);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Save Changes";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(650, 331);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 19;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(650, 192);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(650, 265);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 21;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(932, 123);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(517, 240);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
+            this.rtxtFaultDescription.Location = new System.Drawing.Point(932, 123);
+            this.rtxtFaultDescription.Name = "rtxtFaultDescription";
+            this.rtxtFaultDescription.Size = new System.Drawing.Size(517, 240);
+            this.rtxtFaultDescription.TabIndex = 22;
+            this.rtxtFaultDescription.Text = "";
             // 
             // label9
             // 
@@ -280,13 +281,13 @@
             this.label9.TabIndex = 23;
             this.label9.Text = "Fault Description:";
             // 
-            // richTextBox2
+            // rtxtEngineerNotes
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(72, 488);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(517, 330);
-            this.richTextBox2.TabIndex = 24;
-            this.richTextBox2.Text = "";
+            this.rtxtEngineerNotes.Location = new System.Drawing.Point(72, 488);
+            this.rtxtEngineerNotes.Name = "rtxtEngineerNotes";
+            this.rtxtEngineerNotes.Size = new System.Drawing.Size(517, 330);
+            this.rtxtEngineerNotes.TabIndex = 24;
+            this.rtxtEngineerNotes.Text = "";
             // 
             // label10
             // 
@@ -297,6 +298,15 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Engineer Notes:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(650, 439);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(160, 20);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Component Checklist";
+            // 
             // frmJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -304,20 +314,21 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1478, 944);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.rtxtEngineerNotes);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.rtxtFaultDescription);
+            this.Controls.Add(this.comboxStatus);
+            this.Controls.Add(this.comboxPriority);
+            this.Controls.Add(this.datetimeFault);
+            this.Controls.Add(this.btnSaveChanges);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtAssignedEngineer);
+            this.Controls.Add(this.txtTurbine);
+            this.Controls.Add(this.txtWindfarm);
+            this.Controls.Add(this.txtJobType);
+            this.Controls.Add(this.txtJobReference);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -326,12 +337,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGVComponentChecklist);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmJobDetails";
             this.Text = "Job Details";
             this.Load += new System.EventHandler(this.frmTest_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVComponentChecklist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +350,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGVComponentChecklist;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
@@ -351,21 +362,22 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtJobReference;
+        private System.Windows.Forms.TextBox txtJobType;
+        private System.Windows.Forms.TextBox txtWindfarm;
+        private System.Windows.Forms.TextBox txtTurbine;
+        private System.Windows.Forms.TextBox txtAssignedEngineer;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.DateTimePicker datetimeFault;
+        private System.Windows.Forms.ComboBox comboxPriority;
+        private System.Windows.Forms.ComboBox comboxStatus;
+        private System.Windows.Forms.RichTextBox rtxtFaultDescription;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtxtEngineerNotes;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
