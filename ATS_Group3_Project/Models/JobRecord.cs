@@ -17,7 +17,7 @@ namespace ATS_Group3_Project
         // Early or Late
 
         [Required]
-        public int FarmId { get; set; }
+        public string WindFarmId { get; set; }
 
         [Required]
         public string TurbineId { get; set; }
@@ -77,7 +77,7 @@ namespace ATS_Group3_Project
             JobId = jobId;
             JobDate = jobDate;
             JobTime = jobTime;
-            FarmId = farmId;
+            WindFarmId = windFarmId;
             TurbineId = turbineId;
             StaffId = staffId;
             JobType = jobType;
