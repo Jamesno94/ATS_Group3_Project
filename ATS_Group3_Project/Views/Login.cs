@@ -71,5 +71,10 @@ namespace ATS_Group3_Project
             register.Show();
             this.Close();
         }
+
+        private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
