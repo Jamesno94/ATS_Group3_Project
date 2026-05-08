@@ -69,6 +69,30 @@ namespace ATS_Group3_Project
         [ForeignKey("StaffId")]
         public virtual Staff Staff { get; set; }
 
+        public JobRecord(int jobId, DateTime jobDate, string jobTime, int farmId, string turbineId, string staffId, string jobType,
+                         string faultDescription, bool mainGeneratorServiced, bool gearboxServiced, bool yawMotorServiced,
+                         bool internalPassengerLiftServiced, bool mainGeneratorReplaced, bool gearboxReplaced,
+                         bool yawMotorReplaced, bool internalPassengerLiftReplaced, string jobComplete)
+        {
+            JobId = jobId;
+            JobDate = jobDate;
+            JobTime = jobTime;
+            FarmId = farmId;
+            TurbineId = turbineId;
+            StaffId = staffId;
+            JobType = jobType;
+            FaultDescription = faultDescription;
+            MainGeneratorServiced = mainGeneratorServiced;
+            GearboxServiced = gearboxServiced;
+            YawMotorServiced = yawMotorServiced;
+            InternalPassengerLiftServiced = internalPassengerLiftServiced;
+            MainGeneratorReplaced = mainGeneratorReplaced;
+            GearboxReplaced = gearboxReplaced;
+            YawMotorReplaced = yawMotorReplaced;
+            InternalPassengerLiftReplaced = internalPassengerLiftReplaced;
+            JobComplete = jobComplete;
+        }
+
         public JobRecord()
         {
             JobDate = DateTime.Today;
