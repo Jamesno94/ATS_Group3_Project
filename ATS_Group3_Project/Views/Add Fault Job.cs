@@ -24,7 +24,7 @@ namespace ATS_Group3_Project
 
             if (result == DialogResult.Yes)
             {
-                Form1 secondForm = new Form1();
+                frmTurbineHistory secondForm = new frmTurbineHistory();
                 secondForm.Show();
                 this.Hide();
             }
