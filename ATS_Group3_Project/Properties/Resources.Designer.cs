@@ -73,6 +73,16 @@ namespace ATS_Group3_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ATS_Background1_jpg {
+            get {
+                object obj = ResourceManager.GetObject("ATS_Background1.jpg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ATS_Logo_NoText {
             get {
                 object obj = ResourceManager.GetObject("ATS_Logo_NoText", resourceCulture);
