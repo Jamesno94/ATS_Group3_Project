@@ -54,7 +54,7 @@ namespace ATS_Group3_Project
                 {
                     JobDate = targetDate,
                     JobTime = jobTime,
-                    FarmId = turbine.FarmId,
+                    WindFarmId = turbine.WindFarmId,
                     TurbineId = turbine.TurbineId,
                     StaffId = engineer.StaffId,
                     JobType = "Scheduled Service",
@@ -128,7 +128,7 @@ namespace ATS_Group3_Project
                 {
                     JobDate = targetDate,
                     JobTime = jobTime,
-                    FarmId = turbine.FarmId,
+                    WindFarmId = turbine.WindFarmId,
                     TurbineId = turbine.TurbineId,
                     StaffId = engineer.StaffId,
                     JobType = "Fault",

@@ -13,13 +13,15 @@ namespace ATS_Group3_Project.Views
     public partial class frmCallHandler : Form
     {
         private string StaffId;
+
         public frmCallHandler(string StaffId, string firstName, string role)
         {
+            InitializeComponent();
+
+            this.StaffId = StaffId;
+
             lblGreetings.Text = $"Greetings, {firstName}";
             lblRole.Text = $"Role: {role}";
-
-            InitializeComponent();
-            this.StaffId = StaffId;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -38,6 +40,13 @@ namespace ATS_Group3_Project.Views
 
                 this.Hide();
             }
+        }
+
+        private void btnSimulationDashboard_Click(object sender, EventArgs e)
+        {
+            frmTurbSimData simDataForm = new frmTurbSimData();
+            simDataForm.Show();
+            this.Hide();
         }
 
         private void btnSimulationDashboard_Click(object sender, EventArgs e)

@@ -16,13 +16,13 @@ namespace ATS_Group3_Project
             }
         }
 
-        public WindFarm GetWindFarmById(int farmId)
+        public WindFarm GetWindFarmById(string farmId)
         {
             using (var db = new ATSContext())
             {
                 return db.WindFarms
                     .Include(w => w.Turbines)
-                    .FirstOrDefault(w => w.FarmId == farmId);
+                    .FirstOrDefault(w => w.WindFarmId == farmId);
             }
         }
 
@@ -40,7 +40,7 @@ namespace ATS_Group3_Project
         {
             using (var db = new ATSContext())
             {
-                var farm = db.WindFarms.Find(updatedFarm.FarmId);
+                var farm = db.WindFarms.Find(updatedFarm.WindFarmId);
 
                 if (farm == null)
                 {

@@ -13,12 +13,12 @@ namespace ATS_Group3_Project
 
             using (var db = new ATSContext())
             {
-                db.Database.Initialize(false);
+                db.Database.Initialize(force: true);
             }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin()); // James - need to connect this to login form and then set to main via project properties 
+            Application.Run(new frmLogin());
         }
     }
 }

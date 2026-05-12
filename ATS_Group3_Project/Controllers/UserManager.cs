@@ -1,14 +1,18 @@
-﻿using System;
+﻿using ATS_Group3_Project;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ATS_Group3_Project;
+using System.Windows.Forms;
 
 public class UserManager
 {
     public User Login(string staffId, string password)
     {
+        staffId = staffId.Trim().ToUpper();
+        password = password.Trim();
+
         using (var db = new ATSContext())
         {
             var user = db.Users
@@ -16,6 +20,11 @@ public class UserManager
                 .FirstOrDefault(u => u.StaffId == staffId);
 
             if (user == null)
+            {
+                return null;
+            }
+
+            if (user.IsLocked)
             {
                 return null;
             }
@@ -28,8 +37,19 @@ public class UserManager
 
             if (!passwordCorrect)
             {
+                user.FailedLoginAttempts++;
+
+                if (user.FailedLoginAttempts >= 3)
+                {
+                    user.IsLocked = true;
+                }
+
+                db.SaveChanges();
                 return null;
             }
+
+            user.FailedLoginAttempts = 0;
+            db.SaveChanges();
 
             return user;
         }
@@ -52,6 +72,8 @@ public class UserManager
 
     public bool CreateUser(string staffId, string password)
     {
+        staffId = staffId.Trim();
+
         if (!IsPasswordComplex(password))
         {
             return false;
@@ -73,7 +95,9 @@ public class UserManager
             {
                 StaffId = staffId,
                 PasswordHash = passwordResult.hash,
-                PasswordSalt = passwordResult.salt
+                PasswordSalt = passwordResult.salt,
+                FailedLoginAttempts = 0,
+                IsLocked = false
             };
 
             db.Users.Add(newUser);
@@ -132,4 +156,22 @@ public class UserManager
 
         return hasMinimumLength && hasUppercase && hasNumber;
     }
+
+    public bool UnlockUser(string staffId)
+    {
+        using (var db = new ATSContext())
+        {
+            var user = db.Users.FirstOrDefault(u => u.StaffId == staffId);
+
+            if (user == null)
+                return false;
+
+            user.IsLocked = false;
+            user.FailedLoginAttempts = 0;
+
+            db.SaveChanges();
+            return true;
+        }
+    }
+
 }

@@ -26,12 +26,12 @@ namespace ATS_Group3_Project
             }
         }
 
-        public List<Turbine> GetTurbinesByFarmId(int farmId)
+        public List<Turbine> GetTurbinesByFarmId(string windFarmId)
         {
             using (var db = new ATSContext())
             {
                 return db.Turbines
-                    .Where(t => t.FarmId == farmId)
+                    .Where(t => t.WindFarmId == windFarmId)
                     .ToList();
             }
         }
@@ -59,7 +59,7 @@ namespace ATS_Group3_Project
 
                 turbine.Make = updatedTurbine.Make;
                 turbine.Model = updatedTurbine.Model;
-                turbine.FarmId = updatedTurbine.FarmId;
+                turbine.WindFarmId = updatedTurbine.WindFarmId;
                 turbine.RuntimeHours = updatedTurbine.RuntimeHours;
                 turbine.Status = updatedTurbine.Status;
 

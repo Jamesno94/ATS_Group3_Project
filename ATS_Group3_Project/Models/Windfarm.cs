@@ -8,7 +8,7 @@ using System.Data.Entity;
 public class WindFarm
 {
     [Key]
-    public int FarmId { get; set; }
+    public string WindFarmId { get; set; }
 
     [Required]
     [StringLength(100)]
