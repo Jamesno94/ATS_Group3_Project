@@ -8,8 +8,6 @@ namespace ATS_Group3_Project
 {
     public partial class frmTurbSimData : Form
     {
-        private User _user;
-
         // Stores turbines currently shown in grid
         private List<Turbine> currentTurbines = new List<Turbine>();
 
@@ -23,6 +21,8 @@ namespace ATS_Group3_Project
 
         private void frmTurbSimData_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aTS_WindSyncDBDataSet1.Turbines' table. You can move, or remove it, as needed.
+            this.turbinesTableAdapter1.Fill(this.aTS_WindSyncDBDataSet1.Turbines);
             // Optional initial load
             this.turbinesTableAdapter.Fill(this.aTS_WindSyncDBDataSet.Turbines);
         }
@@ -127,6 +127,7 @@ namespace ATS_Group3_Project
 
             int currentRunTime;
             int newRunTime;
+            DateTime dateTimeUpdated;
 
             // Validate numbers
             bool currentValid =
@@ -153,9 +154,6 @@ namespace ATS_Group3_Project
             // Update turbine runtime
             selectedTurbine.RuntimeHours = newRunTime;
 
-            // Update turbine runtime
-            selectedTurbine.RuntimeHours = newRunTime;
-
             // Service trigger
             if (newRunTime >= 2000)
             {
@@ -163,18 +161,23 @@ namespace ATS_Group3_Project
                     "Requires Service";
 
                 txtAutoJobService.Text =
-                    "This turbine requires a service.";
+                    "Is Service Job Required: This turbine requires a service.";
+                
+                dateTimeUpdated = DateTime.Now;
+                selectedTurbine.LastRecorded = dateTimeUpdated;
 
-                DispatchManager dispatchManager = new DispatchManager();
-                bool jobCreated =
-                    dispatchManager.CreateScheduledServiceJob(selectedTurbine.TurbineId);
+                //DispatchManager dispatchManager = new DispatchManager();
+                //bool jobCreated =
+                //    dispatchManager.CreateScheduledServiceJob(selectedTurbine.TurbineId);
             }
             else
             {
                 selectedTurbine.Status = "Active";
-
                 txtAutoJobService.Text = "";
             }
+
+            txtCurrentHr.Clear();
+            txtNewHr.Clear();
 
             // Save to database
             bool updated =

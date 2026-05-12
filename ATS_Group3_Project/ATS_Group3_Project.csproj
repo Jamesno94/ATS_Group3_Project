@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ATS_WindSyncDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\DispatchManager.cs" />
     <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
@@ -199,6 +204,17 @@
     </None>
     <None Include="ATS_WindSyncDBDataSet.xss">
       <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet1.xsc">
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATS_WindSyncDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet1.xss">
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
