@@ -15,6 +15,10 @@ public class User
     [Required]
     public string PasswordSalt { get; set; }
 
+    public int FailedLoginAttempts { get; set; }
+
+    public bool IsLocked { get; set; }
+
     [ForeignKey("StaffId")]
     public virtual Staff Staff { get; set; }
 }

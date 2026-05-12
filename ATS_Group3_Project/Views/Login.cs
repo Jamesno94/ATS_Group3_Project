@@ -27,49 +27,54 @@ namespace ATS_Group3_Project
 
             User user = manager.Login(staffId, password);
 
-            MessageBox.Show("Users in DB: " + manager.CountUsers());
-
             if (user == null)
             {
-                MessageBox.Show("Invalid login.");
+                using (var db = new ATSContext())
+                {
+                    var existingUser = db.Users
+                        .FirstOrDefault(u => u.StaffId == staffId);
+
+                    if (existingUser != null && existingUser.IsLocked)
+                    {
+                        MessageBox.Show("Your account is locked. Contact administrator.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid login details.");
+                    }
+                }
+
                 return;
             }
 
             MessageBox.Show("Login successful. Role: " + user.Staff.Role);
 
-            Form dashboard = null;
-
             if (user.Staff.Role == "Engineer")
             {
-                dashboard = new frmEngineerDashboard(
+                new frmEngineerDashboard(
                     user.Staff.StaffId,
                     user.Staff.FirstName,
-                    user.Staff.Role);
+                    user.Staff.Role
+                ).Show();
             }
             else if (user.Staff.Role == "Call Handler")
             {
-                dashboard = new frmCallHandler(
+                new frmCallHandler(
                     user.Staff.StaffId,
                     user.Staff.FirstName,
-                    user.Staff.Role);
+                    user.Staff.Role
+                ).Show();
             }
             else if (user.Staff.Role == "Admin")
             {
-                dashboard = new frmAdminDashboard(
+                new frmAdminDashboard(
                     user.Staff.StaffId,
                     user.Staff.FirstName,
-                    user.Staff.Role);
+                    user.Staff.Role
+                ).Show();
             }
-            else
-            {
-                MessageBox.Show("Unknown role.");
-                return;
-            }
-
-            dashboard.Show();
 
             this.Hide();
-
         }
 
         private void label1_Click(object sender, EventArgs e)
