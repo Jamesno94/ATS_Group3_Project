@@ -51,20 +51,20 @@
             this.cboWIndFarms = new System.Windows.Forms.ComboBox();
             this.cboTurbine = new System.Windows.Forms.ComboBox();
             this.dataGVTrubinStats = new System.Windows.Forms.DataGridView();
-            this.aTS_WindSyncDBDataSet = new ATS_Group3_Project.ATS_WindSyncDBDataSet();
-            this.turbinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
-            this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turbineIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.runtimeHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.windFarmIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turbinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aTS_WindSyncDBDataSet = new ATS_Group3_Project.ATS_WindSyncDBDataSet();
+            this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
+            this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +109,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 10;
             this.label1.Text = "Windfarm";
             // 
@@ -317,25 +317,6 @@
             this.dataGVTrubinStats.Size = new System.Drawing.Size(541, 200);
             this.dataGVTrubinStats.TabIndex = 33;
             // 
-            // aTS_WindSyncDBDataSet
-            // 
-            this.aTS_WindSyncDBDataSet.DataSetName = "ATS_WindSyncDBDataSet";
-            this.aTS_WindSyncDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // turbinesBindingSource
-            // 
-            this.turbinesBindingSource.DataMember = "Turbines";
-            this.turbinesBindingSource.DataSource = this.aTS_WindSyncDBDataSet;
-            // 
-            // turbinesTableAdapter
-            // 
-            this.turbinesTableAdapter.ClearBeforeFill = true;
-            // 
-            // aTSWindSyncDBDataSetBindingSource
-            // 
-            this.aTSWindSyncDBDataSetBindingSource.DataSource = this.aTS_WindSyncDBDataSet;
-            this.aTSWindSyncDBDataSetBindingSource.Position = 0;
-            // 
             // turbineIdDataGridViewTextBoxColumn
             // 
             this.turbineIdDataGridViewTextBoxColumn.DataPropertyName = "TurbineId";
@@ -372,6 +353,25 @@
             this.windFarmIdDataGridViewTextBoxColumn.HeaderText = "WindFarmId";
             this.windFarmIdDataGridViewTextBoxColumn.Name = "windFarmIdDataGridViewTextBoxColumn";
             // 
+            // turbinesBindingSource
+            // 
+            this.turbinesBindingSource.DataMember = "Turbines";
+            this.turbinesBindingSource.DataSource = this.aTS_WindSyncDBDataSet;
+            // 
+            // aTS_WindSyncDBDataSet
+            // 
+            this.aTS_WindSyncDBDataSet.DataSetName = "ATS_WindSyncDBDataSet";
+            this.aTS_WindSyncDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // turbinesTableAdapter
+            // 
+            this.turbinesTableAdapter.ClearBeforeFill = true;
+            // 
+            // aTSWindSyncDBDataSetBindingSource
+            // 
+            this.aTSWindSyncDBDataSetBindingSource.DataSource = this.aTS_WindSyncDBDataSet;
+            this.aTSWindSyncDBDataSetBindingSource.Position = 0;
+            // 
             // frmTurbSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,8 +406,8 @@
             this.Load += new System.EventHandler(this.frmTurbSimData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

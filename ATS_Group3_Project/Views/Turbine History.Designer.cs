@@ -73,11 +73,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGVFaultHistory.Location = new System.Drawing.Point(651, 83);
+            this.dataGVFaultHistory.Location = new System.Drawing.Point(434, 54);
+            this.dataGVFaultHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGVFaultHistory.Name = "dataGVFaultHistory";
             this.dataGVFaultHistory.RowHeadersWidth = 62;
             this.dataGVFaultHistory.RowTemplate.Height = 28;
-            this.dataGVFaultHistory.Size = new System.Drawing.Size(815, 240);
+            this.dataGVFaultHistory.Size = new System.Drawing.Size(543, 156);
             this.dataGVFaultHistory.TabIndex = 2;
             // 
             // Column1
@@ -122,18 +123,20 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1357, 897);
+            this.btnCancel.Location = new System.Drawing.Point(905, 583);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(109, 35);
+            this.btnCancel.Size = new System.Drawing.Size(73, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnExportReport
             // 
-            this.btnExportReport.Location = new System.Drawing.Point(12, 897);
+            this.btnExportReport.Location = new System.Drawing.Point(8, 583);
+            this.btnExportReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExportReport.Name = "btnExportReport";
-            this.btnExportReport.Size = new System.Drawing.Size(137, 35);
+            this.btnExportReport.Size = new System.Drawing.Size(91, 23);
             this.btnExportReport.TabIndex = 4;
             this.btnExportReport.Text = "Export Report";
             this.btnExportReport.UseVisualStyleBackColor = true;
@@ -147,11 +150,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewComboBoxColumn1});
-            this.dataGVServiceHistory.Location = new System.Drawing.Point(651, 358);
+            this.dataGVServiceHistory.Location = new System.Drawing.Point(434, 233);
+            this.dataGVServiceHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGVServiceHistory.Name = "dataGVServiceHistory";
             this.dataGVServiceHistory.RowHeadersWidth = 62;
             this.dataGVServiceHistory.RowTemplate.Height = 28;
-            this.dataGVServiceHistory.Size = new System.Drawing.Size(815, 240);
+            this.dataGVServiceHistory.Size = new System.Drawing.Size(543, 156);
             this.dataGVServiceHistory.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -204,11 +208,12 @@
             this.Column6,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewComboBoxColumn2});
-            this.dataGVRepairHistory.Location = new System.Drawing.Point(501, 626);
+            this.dataGVRepairHistory.Location = new System.Drawing.Point(334, 407);
+            this.dataGVRepairHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGVRepairHistory.Name = "dataGVRepairHistory";
             this.dataGVRepairHistory.RowHeadersWidth = 62;
             this.dataGVRepairHistory.RowTemplate.Height = 28;
-            this.dataGVRepairHistory.Size = new System.Drawing.Size(965, 240);
+            this.dataGVRepairHistory.Size = new System.Drawing.Size(643, 156);
             this.dataGVRepairHistory.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn5
@@ -262,51 +267,57 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(647, 60);
+            this.label1.Location = new System.Drawing.Point(431, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Fault History";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(647, 335);
+            this.label2.Location = new System.Drawing.Point(431, 218);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Service History";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(497, 603);
+            this.label3.Location = new System.Drawing.Point(331, 392);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Repair History";
             // 
             // comboxWindfarm
             // 
             this.comboxWindfarm.FormattingEnabled = true;
-            this.comboxWindfarm.Location = new System.Drawing.Point(77, 273);
+            this.comboxWindfarm.Location = new System.Drawing.Point(51, 177);
+            this.comboxWindfarm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboxWindfarm.Name = "comboxWindfarm";
-            this.comboxWindfarm.Size = new System.Drawing.Size(121, 28);
+            this.comboxWindfarm.Size = new System.Drawing.Size(82, 21);
             this.comboxWindfarm.TabIndex = 10;
             // 
             // comboxTurbine
             // 
             this.comboxTurbine.FormattingEnabled = true;
-            this.comboxTurbine.Location = new System.Drawing.Point(299, 273);
+            this.comboxTurbine.Location = new System.Drawing.Point(199, 177);
+            this.comboxTurbine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboxTurbine.Name = "comboxTurbine";
-            this.comboxTurbine.Size = new System.Drawing.Size(121, 28);
+            this.comboxTurbine.Size = new System.Drawing.Size(82, 21);
             this.comboxTurbine.TabIndex = 11;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(195, 358);
+            this.btnRefresh.Location = new System.Drawing.Point(130, 233);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(73, 26);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -314,46 +325,51 @@
             // lstboxTurbineSummary
             // 
             this.lstboxTurbineSummary.FormattingEnabled = true;
-            this.lstboxTurbineSummary.ItemHeight = 20;
-            this.lstboxTurbineSummary.Location = new System.Drawing.Point(82, 477);
+            this.lstboxTurbineSummary.Location = new System.Drawing.Point(55, 310);
+            this.lstboxTurbineSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstboxTurbineSummary.Name = "lstboxTurbineSummary";
-            this.lstboxTurbineSummary.Size = new System.Drawing.Size(338, 124);
+            this.lstboxTurbineSummary.Size = new System.Drawing.Size(227, 82);
             this.lstboxTurbineSummary.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 250);
+            this.label4.Location = new System.Drawing.Point(52, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Windfarm";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 248);
+            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(196, 145);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Turbine";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(82, 451);
+            this.label6.Location = new System.Drawing.Point(55, 293);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 20);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Turbine Summary";
             // 
             // frmTurbineHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1478, 944);
+            this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -369,7 +385,7 @@
             this.Controls.Add(this.btnExportReport);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dataGVFaultHistory);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmTurbineHistory";
             this.Text = "Turbine History";
             ((System.ComponentModel.ISupportInitialize)(this.dataGVFaultHistory)).EndInit();
