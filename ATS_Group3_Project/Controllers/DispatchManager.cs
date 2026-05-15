@@ -6,7 +6,7 @@ namespace ATS_Group3_Project
 {
     public class DispatchManager
     {
-        public bool CreateScheduledServiceJob(string turbineId)
+        public JobRecord CreateScheduledServiceJob(string turbineId)
         {
             using (var db = new ATSContext())
             {
@@ -15,7 +15,10 @@ namespace ATS_Group3_Project
                     .FirstOrDefault(t => t.TurbineId == turbineId);
 
                 if (turbine == null)
-                    return false;
+                    return null;
+
+                if (turbine.RuntimeHours < 2000)
+                    return null;
 
                 bool existingOpenService = db.JobRecords.Any(j =>
                     j.TurbineId == turbineId &&
@@ -23,7 +26,7 @@ namespace ATS_Group3_Project
                     j.JobComplete == "Awaiting Engineer");
 
                 if (existingOpenService)
-                    return false;
+                    return null;
 
                 DateTime targetDate = DateTime.Today.AddDays(1);
 
@@ -78,19 +81,20 @@ namespace ATS_Group3_Project
                 db.JobRecords.Add(job);
                 db.SaveChanges();
 
-                return true;
+                return job;
             }
         }
 
-        public bool CreateFaultJob(string turbineId, string faultDescription, DateTime reportedDateTime)
+        public JobRecord CreateFaultJob(string turbineId, string faultDescription, DateTime reportedDateTime)
         {
             using (var db = new ATSContext())
             {
                 var turbine = db.Turbines
+                    .Include(t => t.WindFarm)
                     .FirstOrDefault(t => t.TurbineId == turbineId);
 
                 if (turbine == null)
-                    return false;
+                    return null;
 
                 DateTime targetDate;
                 string preferredShift;
@@ -152,7 +156,7 @@ namespace ATS_Group3_Project
                 db.JobRecords.Add(job);
                 db.SaveChanges();
 
-                return true;
+                return job;
             }
         }
 
