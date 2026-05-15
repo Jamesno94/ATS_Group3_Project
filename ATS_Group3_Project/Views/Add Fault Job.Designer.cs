@@ -49,20 +49,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.DashboardLogoClick = new System.Windows.Forms.PictureBox();
             this.lblCompanyName = new System.Windows.Forms.Label();
+            this.btnViewAssignedJobs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
             this.SuspendLayout();
             // 
             // lblJobType
             // 
             this.lblJobType.AutoSize = true;
             this.lblJobType.BackColor = System.Drawing.Color.Transparent;
+            this.lblJobType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblJobType.Location = new System.Drawing.Point(346, 236);
+            this.lblJobType.Location = new System.Drawing.Point(308, 189);
             this.lblJobType.Name = "lblJobType";
-            this.lblJobType.Size = new System.Drawing.Size(73, 20);
+            this.lblJobType.Size = new System.Drawing.Size(77, 20);
             this.lblJobType.TabIndex = 0;
             this.lblJobType.Text = "Job Type";
             // 
@@ -70,10 +70,11 @@
             // 
             this.lblWindfarm.AutoSize = true;
             this.lblWindfarm.BackColor = System.Drawing.Color.Transparent;
+            this.lblWindfarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWindfarm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblWindfarm.Location = new System.Drawing.Point(348, 316);
+            this.lblWindfarm.Location = new System.Drawing.Point(309, 253);
             this.lblWindfarm.Name = "lblWindfarm";
-            this.lblWindfarm.Size = new System.Drawing.Size(77, 20);
+            this.lblWindfarm.Size = new System.Drawing.Size(81, 20);
             this.lblWindfarm.TabIndex = 1;
             this.lblWindfarm.Text = "Windfarm";
             // 
@@ -81,10 +82,11 @@
             // 
             this.lblTurbine.AutoSize = true;
             this.lblTurbine.BackColor = System.Drawing.Color.Transparent;
+            this.lblTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurbine.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTurbine.Location = new System.Drawing.Point(349, 398);
+            this.lblTurbine.Location = new System.Drawing.Point(310, 318);
             this.lblTurbine.Name = "lblTurbine";
-            this.lblTurbine.Size = new System.Drawing.Size(62, 20);
+            this.lblTurbine.Size = new System.Drawing.Size(65, 20);
             this.lblTurbine.TabIndex = 2;
             this.lblTurbine.Text = "Turbine";
             // 
@@ -92,10 +94,11 @@
             // 
             this.lblFaultDate.AutoSize = true;
             this.lblFaultDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblFaultDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaultDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultDate.Location = new System.Drawing.Point(346, 479);
+            this.lblFaultDate.Location = new System.Drawing.Point(308, 383);
             this.lblFaultDate.Name = "lblFaultDate";
-            this.lblFaultDate.Size = new System.Drawing.Size(84, 20);
+            this.lblFaultDate.Size = new System.Drawing.Size(87, 20);
             this.lblFaultDate.TabIndex = 3;
             this.lblFaultDate.Text = "Fault Date";
             // 
@@ -103,10 +106,11 @@
             // 
             this.lblFaultTime.AutoSize = true;
             this.lblFaultTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblFaultTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaultTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultTime.Location = new System.Drawing.Point(348, 562);
+            this.lblFaultTime.Location = new System.Drawing.Point(309, 450);
             this.lblFaultTime.Name = "lblFaultTime";
-            this.lblFaultTime.Size = new System.Drawing.Size(83, 20);
+            this.lblFaultTime.Size = new System.Drawing.Size(88, 20);
             this.lblFaultTime.TabIndex = 4;
             this.lblFaultTime.Text = "Fault Time";
             // 
@@ -114,10 +118,11 @@
             // 
             this.lblFaultDescription.AutoSize = true;
             this.lblFaultDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblFaultDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaultDescription.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFaultDescription.Location = new System.Drawing.Point(1047, 236);
+            this.lblFaultDescription.Location = new System.Drawing.Point(646, 200);
             this.lblFaultDescription.Name = "lblFaultDescription";
-            this.lblFaultDescription.Size = new System.Drawing.Size(129, 20);
+            this.lblFaultDescription.Size = new System.Drawing.Size(137, 20);
             this.lblFaultDescription.TabIndex = 5;
             this.lblFaultDescription.Text = "Fault Description";
             // 
@@ -125,10 +130,11 @@
             // 
             this.lblAssignedEngineer.AutoSize = true;
             this.lblAssignedEngineer.BackColor = System.Drawing.Color.Transparent;
+            this.lblAssignedEngineer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssignedEngineer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAssignedEngineer.Location = new System.Drawing.Point(1047, 316);
+            this.lblAssignedEngineer.Location = new System.Drawing.Point(646, 264);
             this.lblAssignedEngineer.Name = "lblAssignedEngineer";
-            this.lblAssignedEngineer.Size = new System.Drawing.Size(143, 20);
+            this.lblAssignedEngineer.Size = new System.Drawing.Size(149, 20);
             this.lblAssignedEngineer.TabIndex = 6;
             this.lblAssignedEngineer.Text = "Assigned Engineer";
             // 
@@ -136,10 +142,11 @@
             // 
             this.lblPriority.AutoSize = true;
             this.lblPriority.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriority.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPriority.Location = new System.Drawing.Point(1047, 398);
+            this.lblPriority.Location = new System.Drawing.Point(646, 329);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(56, 20);
+            this.lblPriority.Size = new System.Drawing.Size(62, 20);
             this.lblPriority.TabIndex = 7;
             this.lblPriority.Text = "Priority";
             // 
@@ -147,93 +154,93 @@
             // 
             this.lblNotes.AutoSize = true;
             this.lblNotes.BackColor = System.Drawing.Color.Transparent;
+            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNotes.Location = new System.Drawing.Point(1047, 479);
+            this.lblNotes.Location = new System.Drawing.Point(646, 394);
             this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(51, 20);
+            this.lblNotes.Size = new System.Drawing.Size(53, 20);
             this.lblNotes.TabIndex = 8;
             this.lblNotes.Text = "Notes";
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(350, 259);
-            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtJobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJobTitle.Location = new System.Drawing.Point(311, 207);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(187, 26);
+            this.txtJobTitle.Size = new System.Drawing.Size(209, 27);
             this.txtJobTitle.TabIndex = 9;
             // 
             // txtWindfarm
             // 
-            this.txtWindfarm.Location = new System.Drawing.Point(352, 340);
-            this.txtWindfarm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWindfarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWindfarm.Location = new System.Drawing.Point(313, 272);
             this.txtWindfarm.Name = "txtWindfarm";
-            this.txtWindfarm.Size = new System.Drawing.Size(187, 26);
+            this.txtWindfarm.Size = new System.Drawing.Size(209, 27);
             this.txtWindfarm.TabIndex = 10;
             // 
             // txtTurbine
             // 
-            this.txtTurbine.Location = new System.Drawing.Point(351, 421);
-            this.txtTurbine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTurbine.Location = new System.Drawing.Point(312, 337);
             this.txtTurbine.Name = "txtTurbine";
-            this.txtTurbine.Size = new System.Drawing.Size(187, 26);
+            this.txtTurbine.Size = new System.Drawing.Size(209, 27);
             this.txtTurbine.TabIndex = 11;
             // 
             // txtFaultDate
             // 
-            this.txtFaultDate.Location = new System.Drawing.Point(350, 502);
-            this.txtFaultDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFaultDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFaultDate.Location = new System.Drawing.Point(311, 402);
             this.txtFaultDate.Name = "txtFaultDate";
-            this.txtFaultDate.Size = new System.Drawing.Size(187, 26);
+            this.txtFaultDate.Size = new System.Drawing.Size(209, 27);
             this.txtFaultDate.TabIndex = 12;
             // 
             // txtFaultTime
             // 
-            this.txtFaultTime.Location = new System.Drawing.Point(350, 586);
-            this.txtFaultTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFaultTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFaultTime.Location = new System.Drawing.Point(311, 469);
             this.txtFaultTime.Name = "txtFaultTime";
-            this.txtFaultTime.Size = new System.Drawing.Size(187, 26);
+            this.txtFaultTime.Size = new System.Drawing.Size(209, 27);
             this.txtFaultTime.TabIndex = 13;
             // 
             // txtFaultDescription
             // 
-            this.txtFaultDescription.Location = new System.Drawing.Point(1051, 260);
-            this.txtFaultDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFaultDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFaultDescription.Location = new System.Drawing.Point(649, 219);
             this.txtFaultDescription.Name = "txtFaultDescription";
-            this.txtFaultDescription.Size = new System.Drawing.Size(187, 26);
+            this.txtFaultDescription.Size = new System.Drawing.Size(209, 27);
             this.txtFaultDescription.TabIndex = 14;
             // 
             // txtAssignedEngineer
             // 
-            this.txtAssignedEngineer.Location = new System.Drawing.Point(1051, 340);
-            this.txtAssignedEngineer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAssignedEngineer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAssignedEngineer.Location = new System.Drawing.Point(649, 283);
             this.txtAssignedEngineer.Name = "txtAssignedEngineer";
-            this.txtAssignedEngineer.Size = new System.Drawing.Size(187, 26);
+            this.txtAssignedEngineer.Size = new System.Drawing.Size(209, 27);
             this.txtAssignedEngineer.TabIndex = 15;
             // 
             // txtPriority
             // 
-            this.txtPriority.Location = new System.Drawing.Point(1051, 421);
-            this.txtPriority.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriority.Location = new System.Drawing.Point(649, 348);
             this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(187, 26);
+            this.txtPriority.Size = new System.Drawing.Size(209, 27);
             this.txtPriority.TabIndex = 16;
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(1051, 502);
-            this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotes.Location = new System.Drawing.Point(649, 413);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(187, 26);
+            this.txtNotes.Size = new System.Drawing.Size(209, 27);
             this.txtNotes.TabIndex = 17;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(609, 236);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1081, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(371, 400);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -242,10 +249,9 @@
             // 
             this.btnSaveChanges.BackColor = System.Drawing.Color.Lime;
             this.btnSaveChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveChanges.Location = new System.Drawing.Point(1519, 1241);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSaveChanges.Location = new System.Drawing.Point(579, 535);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(135, 62);
+            this.btnSaveChanges.Size = new System.Drawing.Size(120, 50);
             this.btnSaveChanges.TabIndex = 19;
             this.btnSaveChanges.Text = "SAVE CHANGES";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
@@ -254,8 +260,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancel.Location = new System.Drawing.Point(14, 614);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Location = new System.Drawing.Point(12, 491);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(0, 0);
             this.btnCancel.TabIndex = 20;
@@ -263,39 +268,36 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // DashboardLogoClick
-            // 
-            this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
-            this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.DashboardLogoClick.Location = new System.Drawing.Point(1485, 15);
-            this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DashboardLogoClick.Name = "DashboardLogoClick";
-            this.DashboardLogoClick.Size = new System.Drawing.Size(169, 188);
-            this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DashboardLogoClick.TabIndex = 21;
-            this.DashboardLogoClick.TabStop = false;
-            this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
-            // 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.BackColor = System.Drawing.Color.Transparent;
             this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(14, 15);
+            this.lblCompanyName.Location = new System.Drawing.Point(12, 12);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(250, 38);
+            this.lblCompanyName.Size = new System.Drawing.Size(216, 32);
             this.lblCompanyName.TabIndex = 22;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
+            // btnViewAssignedJobs
+            // 
+            this.btnViewAssignedJobs.Location = new System.Drawing.Point(1009, 583);
+            this.btnViewAssignedJobs.Name = "btnViewAssignedJobs";
+            this.btnViewAssignedJobs.Size = new System.Drawing.Size(149, 35);
+            this.btnViewAssignedJobs.TabIndex = 23;
+            this.btnViewAssignedJobs.Text = "View Assigned Jobs";
+            this.btnViewAssignedJobs.UseVisualStyleBackColor = true;
+            this.btnViewAssignedJobs.Click += new System.EventHandler(this.ViewAssignedJobs_Click);
+            // 
             // frmAddFaultJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1478, 944);
+            this.ClientSize = new System.Drawing.Size(1232, 679);
+            this.Controls.Add(this.btnViewAssignedJobs);
             this.Controls.Add(this.lblCompanyName);
-            this.Controls.Add(this.DashboardLogoClick);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.pictureBox1);
@@ -317,10 +319,10 @@
             this.Controls.Add(this.lblTurbine);
             this.Controls.Add(this.lblWindfarm);
             this.Controls.Add(this.lblJobType);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAddFaultJob";
             this.Text = "Add Fault Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +351,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSaveChanges;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.PictureBox DashboardLogoClick;
         private System.Windows.Forms.Label lblCompanyName;
+        private System.Windows.Forms.Button btnViewAssignedJobs;
     }
 }

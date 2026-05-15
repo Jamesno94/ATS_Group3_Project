@@ -44,10 +44,10 @@
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(694, 310);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(925, 382);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 25);
+            this.btnLogin.Size = new System.Drawing.Size(172, 31);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -57,19 +57,20 @@
             // 
             this.txtStaffId.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffId.Location = new System.Drawing.Point(694, 148);
-            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStaffId.Location = new System.Drawing.Point(925, 182);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaffId.Name = "txtStaffId";
-            this.txtStaffId.Size = new System.Drawing.Size(204, 38);
+            this.txtStaffId.Size = new System.Drawing.Size(271, 45);
             this.txtStaffId.TabIndex = 2;
+            this.txtStaffId.TextChanged += new System.EventHandler(this.txtStaffId_TextChanged);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(694, 232);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(925, 286);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(204, 38);
+            this.txtPassword.Size = new System.Drawing.Size(271, 45);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -78,10 +79,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(690, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(920, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 24);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Staff Id:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -91,10 +91,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(690, 201);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(920, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(126, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password:";
             // 
@@ -103,10 +102,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 6);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(11, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 31);
+            this.label3.Size = new System.Drawing.Size(259, 39);
             this.label3.TabIndex = 6;
             this.label3.Text = "WindSync ATS";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -116,9 +114,10 @@
             this.lnkForgotPassword.AutoSize = true;
             this.lnkForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.lnkForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkForgotPassword.Location = new System.Drawing.Point(928, 347);
+            this.lnkForgotPassword.Location = new System.Drawing.Point(1237, 427);
+            this.lnkForgotPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkForgotPassword.Name = "lnkForgotPassword";
-            this.lnkForgotPassword  .Size = new System.Drawing.Size(121, 17);
+            this.lnkForgotPassword.Size = new System.Drawing.Size(143, 20);
             this.lnkForgotPassword.TabIndex = 7;
             this.lnkForgotPassword.TabStop = true;
             this.lnkForgotPassword.Text = "Forgot password?";
@@ -127,10 +126,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 184);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(468, 168);
+            this.label4.Size = new System.Drawing.Size(602, 203);
             this.label4.TabIndex = 8;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -138,10 +136,10 @@
             // 
             this.btnRegister.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(839, 310);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Location = new System.Drawing.Point(1119, 382);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(129, 25);
+            this.btnRegister.Size = new System.Drawing.Size(172, 31);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -149,12 +147,12 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1315, 754);
+            this.ClientSize = new System.Drawing.Size(1753, 928);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lnkForgotPassword);
@@ -164,9 +162,9 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtStaffId);
             this.Controls.Add(this.btnLogin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
-            this.Text = "Login Form";
+            this.Text = "WindSync ATS";
             this.ResumeLayout(false);
             this.PerformLayout();
 

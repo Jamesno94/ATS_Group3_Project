@@ -50,5 +50,10 @@ namespace ATS_Group3_Project
 
             }
         }
+
+        private void ViewAssignedJobs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

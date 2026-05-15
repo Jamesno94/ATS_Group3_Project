@@ -48,6 +48,13 @@ namespace ATS_Group3_Project.Views
             simDataForm.Show();
             this.Hide();
         }
+
+        private void btnLogFaultJob_Click(object sender, EventArgs e)
+        {
+            ATS_Group3_Project.frmAddFaultJob addFaultJobForm = new ATS_Group3_Project.frmAddFaultJob();
+            addFaultJobForm.Show();
+            this.Hide();
+        }
     }
 }
 

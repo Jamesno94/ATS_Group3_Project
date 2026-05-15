@@ -45,10 +45,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -56,80 +56,78 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
-            this.lblGreetings.Location = new System.Drawing.Point(92, 39);
-            this.lblGreetings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGreetings.Location = new System.Drawing.Point(123, 48);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(58, 13);
+            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
             this.lblGreetings.TabIndex = 1;
             this.lblGreetings.Text = "Greetings, ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(92, 63);
-            this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRole.Location = new System.Drawing.Point(123, 78);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(32, 13);
+            this.lblRole.Size = new System.Drawing.Size(39, 16);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(454, 171);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(605, 210);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 260);
+            this.pictureBox2.Size = new System.Drawing.Size(331, 320);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
             // btnViewAllStaff
             // 
-            this.btnViewAllStaff.Location = new System.Drawing.Point(208, 171);
-            this.btnViewAllStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewAllStaff.Location = new System.Drawing.Point(277, 210);
+            this.btnViewAllStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewAllStaff.Name = "btnViewAllStaff";
-            this.btnViewAllStaff.Size = new System.Drawing.Size(206, 65);
+            this.btnViewAllStaff.Size = new System.Drawing.Size(275, 80);
             this.btnViewAllStaff.TabIndex = 4;
             this.btnViewAllStaff.Text = "View All Staff";
             this.btnViewAllStaff.UseVisualStyleBackColor = true;
             // 
             // btnCreateNewStaff
             // 
-            this.btnCreateNewStaff.Location = new System.Drawing.Point(208, 366);
-            this.btnCreateNewStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateNewStaff.Location = new System.Drawing.Point(277, 450);
+            this.btnCreateNewStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateNewStaff.Name = "btnCreateNewStaff";
-            this.btnCreateNewStaff.Size = new System.Drawing.Size(206, 65);
+            this.btnCreateNewStaff.Size = new System.Drawing.Size(275, 80);
             this.btnCreateNewStaff.TabIndex = 5;
             this.btnCreateNewStaff.Text = "Create Staff";
             this.btnCreateNewStaff.UseVisualStyleBackColor = true;
             // 
             // btnEditAllStaff
             // 
-            this.btnEditAllStaff.Location = new System.Drawing.Point(208, 271);
-            this.btnEditAllStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAllStaff.Location = new System.Drawing.Point(277, 334);
+            this.btnEditAllStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditAllStaff.Name = "btnEditAllStaff";
-            this.btnEditAllStaff.Size = new System.Drawing.Size(206, 65);
+            this.btnEditAllStaff.Size = new System.Drawing.Size(275, 80);
             this.btnEditAllStaff.TabIndex = 6;
             this.btnEditAllStaff.Text = "Edit All Staff";
             this.btnEditAllStaff.UseVisualStyleBackColor = true;
             // 
             // btnDeleteStaff
             // 
-            this.btnDeleteStaff.Location = new System.Drawing.Point(736, 171);
-            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(981, 210);
+            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
-            this.btnDeleteStaff.Size = new System.Drawing.Size(206, 65);
+            this.btnDeleteStaff.Size = new System.Drawing.Size(275, 80);
             this.btnDeleteStaff.TabIndex = 7;
             this.btnDeleteStaff.Text = "Delete Staff";
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
             // 
             // btnUnlockAccount
             // 
-            this.btnUnlockAccount.Location = new System.Drawing.Point(736, 271);
-            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUnlockAccount.Location = new System.Drawing.Point(981, 334);
+            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUnlockAccount.Name = "btnUnlockAccount";
-            this.btnUnlockAccount.Size = new System.Drawing.Size(206, 65);
+            this.btnUnlockAccount.Size = new System.Drawing.Size(275, 80);
             this.btnUnlockAccount.TabIndex = 8;
             this.btnUnlockAccount.Text = "Unlock Account";
             this.btnUnlockAccount.UseVisualStyleBackColor = true;
@@ -138,10 +136,10 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Red;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogOut.Location = new System.Drawing.Point(899, 562);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(1199, 692);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 41);
+            this.btnLogOut.Size = new System.Drawing.Size(100, 50);
             this.btnLogOut.TabIndex = 12;
             this.btnLogOut.Text = "LOG OUT";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -149,11 +147,11 @@
             // 
             // frmAdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(985, 614);
+            this.ClientSize = new System.Drawing.Size(1313, 756);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnUnlockAccount);
             this.Controls.Add(this.btnDeleteStaff);
@@ -164,9 +162,9 @@
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAdminDashboard";
-            this.Text = "frmAdminDashboard";
+            this.Text = "Admin Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

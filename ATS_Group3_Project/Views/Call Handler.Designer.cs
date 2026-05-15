@@ -47,10 +47,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -58,40 +58,38 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
-            this.lblGreetings.Location = new System.Drawing.Point(92, 39);
-            this.lblGreetings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGreetings.Location = new System.Drawing.Point(123, 48);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(58, 13);
+            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
             this.lblGreetings.TabIndex = 1;
             this.lblGreetings.Text = "Greetings, ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(92, 63);
-            this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRole.Location = new System.Drawing.Point(123, 78);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(32, 13);
+            this.lblRole.Size = new System.Drawing.Size(39, 16);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(454, 171);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(605, 210);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 260);
+            this.pictureBox2.Size = new System.Drawing.Size(331, 320);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
             // btnSimulationDashboard
             // 
-            this.btnSimulationDashboard.Location = new System.Drawing.Point(212, 171);
-            this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSimulationDashboard.Location = new System.Drawing.Point(283, 210);
+            this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSimulationDashboard.Name = "btnSimulationDashboard";
-            this.btnSimulationDashboard.Size = new System.Drawing.Size(206, 65);
+            this.btnSimulationDashboard.Size = new System.Drawing.Size(275, 80);
             this.btnSimulationDashboard.TabIndex = 4;
             this.btnSimulationDashboard.Text = "Simulation Dashboard";
             this.btnSimulationDashboard.UseVisualStyleBackColor = true;
@@ -99,60 +97,61 @@
             // 
             // btnAddTurbine
             // 
-            this.btnAddTurbine.Location = new System.Drawing.Point(212, 366);
-            this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddTurbine.Location = new System.Drawing.Point(283, 450);
+            this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTurbine.Name = "btnAddTurbine";
-            this.btnAddTurbine.Size = new System.Drawing.Size(206, 65);
+            this.btnAddTurbine.Size = new System.Drawing.Size(275, 80);
             this.btnAddTurbine.TabIndex = 5;
             this.btnAddTurbine.Text = "Add Turbine";
             this.btnAddTurbine.UseVisualStyleBackColor = true;
             // 
             // btnAddWindFarm
             // 
-            this.btnAddWindFarm.Location = new System.Drawing.Point(212, 265);
-            this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddWindFarm.Location = new System.Drawing.Point(283, 326);
+            this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddWindFarm.Name = "btnAddWindFarm";
-            this.btnAddWindFarm.Size = new System.Drawing.Size(206, 65);
+            this.btnAddWindFarm.Size = new System.Drawing.Size(275, 80);
             this.btnAddWindFarm.TabIndex = 6;
             this.btnAddWindFarm.Text = "Add Windfarm";
             this.btnAddWindFarm.UseVisualStyleBackColor = true;
             // 
             // btnLogFaultJob
             // 
-            this.btnLogFaultJob.Location = new System.Drawing.Point(736, 171);
-            this.btnLogFaultJob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogFaultJob.Location = new System.Drawing.Point(981, 210);
+            this.btnLogFaultJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogFaultJob.Name = "btnLogFaultJob";
-            this.btnLogFaultJob.Size = new System.Drawing.Size(206, 65);
+            this.btnLogFaultJob.Size = new System.Drawing.Size(275, 80);
             this.btnLogFaultJob.TabIndex = 7;
-            this.btnLogFaultJob.Text = "Log Fault Job";
+            this.btnLogFaultJob.Text = "Add Fault Job";
             this.btnLogFaultJob.UseVisualStyleBackColor = true;
+            this.btnLogFaultJob.Click += new System.EventHandler(this.btnLogFaultJob_Click);
             // 
             // btnAddShifts
             // 
-            this.btnAddShifts.Location = new System.Drawing.Point(736, 265);
-            this.btnAddShifts.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddShifts.Location = new System.Drawing.Point(981, 326);
+            this.btnAddShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddShifts.Name = "btnAddShifts";
-            this.btnAddShifts.Size = new System.Drawing.Size(206, 65);
+            this.btnAddShifts.Size = new System.Drawing.Size(275, 80);
             this.btnAddShifts.TabIndex = 8;
             this.btnAddShifts.Text = "Add Shifts";
             this.btnAddShifts.UseVisualStyleBackColor = true;
             // 
             // btnViewAllJobs
             // 
-            this.btnViewAllJobs.Location = new System.Drawing.Point(736, 366);
-            this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewAllJobs.Location = new System.Drawing.Point(981, 450);
+            this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewAllJobs.Name = "btnViewAllJobs";
-            this.btnViewAllJobs.Size = new System.Drawing.Size(206, 65);
+            this.btnViewAllJobs.Size = new System.Drawing.Size(275, 80);
             this.btnViewAllJobs.TabIndex = 9;
             this.btnViewAllJobs.Text = "View All Jobs";
             this.btnViewAllJobs.UseVisualStyleBackColor = true;
             // 
             // btnManageAccount
             // 
-            this.btnManageAccount.Location = new System.Drawing.Point(476, 462);
-            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManageAccount.Location = new System.Drawing.Point(635, 569);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(206, 65);
+            this.btnManageAccount.Size = new System.Drawing.Size(275, 80);
             this.btnManageAccount.TabIndex = 10;
             this.btnManageAccount.Text = "Manage Account ";
             this.btnManageAccount.UseVisualStyleBackColor = true;
@@ -161,10 +160,10 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Red;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogOut.Location = new System.Drawing.Point(899, 562);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Location = new System.Drawing.Point(1199, 692);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 41);
+            this.btnLogOut.Size = new System.Drawing.Size(100, 50);
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "LOG OUT";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -172,11 +171,11 @@
             // 
             // frmCallHandler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(985, 614);
+            this.ClientSize = new System.Drawing.Size(1313, 756);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnManageAccount);
             this.Controls.Add(this.btnViewAllJobs);
@@ -189,9 +188,9 @@
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCallHandler";
-            this.Text = "frmCallHandler";
+            this.Text = "Call Handler";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

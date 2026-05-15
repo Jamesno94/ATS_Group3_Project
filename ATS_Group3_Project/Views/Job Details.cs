@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace ATS_Group3_Project.Views
@@ -63,6 +64,7 @@ namespace ATS_Group3_Project.Views
 
         private void SetupReadOnlyFields()
         {
+            // Job information should be viewed, not edited, on this screen.
             txtJobReference.ReadOnly = true;
             txtJobType.ReadOnly = true;
             txtWindfarm.ReadOnly = true;
@@ -71,6 +73,12 @@ namespace ATS_Group3_Project.Views
             rtxtFaultDescription.ReadOnly = true;
             datetimeFault.Enabled = false;
 
+            // Engineer can update these.
+            comboxStatus.Enabled = true;
+            rtxtEngineerNotes.ReadOnly = false;
+            dataGVComponentChecklist.ReadOnly = false;
+
+            // Makes labels visible on dark/background image.
             label1.ForeColor = Color.White;
             label2.ForeColor = Color.White;
             label3.ForeColor = Color.White;
@@ -91,7 +99,10 @@ namespace ATS_Group3_Project.Views
             dataGVComponentChecklist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGVComponentChecklist.EditMode = DataGridViewEditMode.EditOnEnter;
 
+            // Component name stays locked.
             Column1.ReadOnly = true;
+
+            // Engineer can edit these columns.
             Column2.ReadOnly = false;
             Column3.ReadOnly = false;
             Column4.ReadOnly = false;
@@ -126,7 +137,7 @@ namespace ATS_Group3_Project.Views
 
             if (string.IsNullOrWhiteSpace(_staffId))
             {
-                txtAssignedEngineer.Text = "Engineer";
+                txtAssignedEngineer.Text = "Engineer A";
             }
             else
             {
@@ -156,20 +167,117 @@ namespace ATS_Group3_Project.Views
         {
             dataGVComponentChecklist.EndEdit();
 
+            if (comboxStatus.SelectedIndex == -1)
+            {
+                MessageBox.Show(
+                    "Please select a job status before saving.",
+                    "Missing Status",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return;
+            }
+
+            if (comboxStatus.Text == "Completed" && string.IsNullOrWhiteSpace(rtxtEngineerNotes.Text))
+            {
+                MessageBox.Show(
+                    "Please enter engineer notes before marking this job as completed.",
+                    "Engineer Notes Required",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return;
+            }
+
+            if (comboxStatus.Text == "Completed" && ChecklistStillHasPendingItems())
+            {
+                DialogResult result = MessageBox.Show(
+                    "Some checklist items are still pending. Do you still want to save this job as completed?",
+                    "Pending Checklist Items",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            string saveSummary = BuildSaveSummary();
+
             MessageBox.Show(
-                "Job details have been saved successfully.",
-                "Saved",
+                saveSummary,
+                "Job Saved",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private bool ChecklistStillHasPendingItems()
         {
-            Close();
+            foreach (DataGridViewRow row in dataGVComponentChecklist.Rows)
+            {
+                if (row.IsNewRow)
+                {
+                    continue;
+                }
+
+                object statusValue = row.Cells[3].Value;
+
+                if (statusValue == null)
+                {
+                    return true;
+                }
+
+                string status = statusValue.ToString();
+
+                if (status == "Pending" || status == "In Progress")
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        // Keep this here in case your old Designer file is still calling frmTest_Load.
+        private string BuildSaveSummary()
+        {
+            StringBuilder summary = new StringBuilder();
+
+            summary.AppendLine("Job details have been saved successfully.");
+            summary.AppendLine();
+            summary.AppendLine("Job Reference: " + txtJobReference.Text);
+            summary.AppendLine("Turbine: " + txtTurbine.Text);
+            summary.AppendLine("Priority: " + comboxPriority.Text);
+            summary.AppendLine("Status: " + comboxStatus.Text);
+            summary.AppendLine();
+            summary.AppendLine("Engineer Notes:");
+            summary.AppendLine(string.IsNullOrWhiteSpace(rtxtEngineerNotes.Text)
+                ? "No notes entered."
+                : rtxtEngineerNotes.Text);
+
+            return summary.ToString();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to close this job details screen?",
+                "Close Job Details",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        // Keep this in case the old Designer file still calls frmTest_Load.
         private void frmTest_Load(object sender, EventArgs e)
         {
             frmJobDetails_Load(sender, e);

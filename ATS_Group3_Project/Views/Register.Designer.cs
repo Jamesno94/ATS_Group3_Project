@@ -66,10 +66,9 @@
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFirstName.Location = new System.Drawing.Point(74, 87);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstName.Location = new System.Drawing.Point(99, 107);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(106, 24);
+            this.lblFirstName.Size = new System.Drawing.Size(137, 29);
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -79,10 +78,9 @@
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLastName.Location = new System.Drawing.Point(74, 127);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastName.Location = new System.Drawing.Point(99, 156);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(109, 24);
+            this.lblLastName.Size = new System.Drawing.Size(140, 29);
             this.lblLastName.TabIndex = 1;
             this.lblLastName.Text = "Last Name: ";
             // 
@@ -92,10 +90,9 @@
             this.lblWorkMobileNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblWorkMobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorkMobileNumber.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblWorkMobileNumber.Location = new System.Drawing.Point(74, 173);
-            this.lblWorkMobileNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWorkMobileNumber.Location = new System.Drawing.Point(99, 213);
             this.lblWorkMobileNumber.Name = "lblWorkMobileNumber";
-            this.lblWorkMobileNumber.Size = new System.Drawing.Size(138, 24);
+            this.lblWorkMobileNumber.Size = new System.Drawing.Size(174, 29);
             this.lblWorkMobileNumber.TabIndex = 2;
             this.lblWorkMobileNumber.Text = "Work  Number:";
             // 
@@ -105,10 +102,9 @@
             this.lblHomeNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblHomeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeNumber.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHomeNumber.Location = new System.Drawing.Point(74, 222);
-            this.lblHomeNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHomeNumber.Location = new System.Drawing.Point(99, 273);
             this.lblHomeNumber.Name = "lblHomeNumber";
-            this.lblHomeNumber.Size = new System.Drawing.Size(141, 24);
+            this.lblHomeNumber.Size = new System.Drawing.Size(177, 29);
             this.lblHomeNumber.TabIndex = 3;
             this.lblHomeNumber.Text = "Home Number:";
             // 
@@ -118,10 +114,9 @@
             this.lblWorkEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblWorkEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorkEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblWorkEmail.Location = new System.Drawing.Point(74, 271);
-            this.lblWorkEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWorkEmail.Location = new System.Drawing.Point(99, 334);
             this.lblWorkEmail.Name = "lblWorkEmail";
-            this.lblWorkEmail.Size = new System.Drawing.Size(111, 24);
+            this.lblWorkEmail.Size = new System.Drawing.Size(142, 29);
             this.lblWorkEmail.TabIndex = 4;
             this.lblWorkEmail.Text = "Work Email:";
             // 
@@ -131,10 +126,9 @@
             this.lblAddressLine1.BackColor = System.Drawing.Color.Transparent;
             this.lblAddressLine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressLine1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAddressLine1.Location = new System.Drawing.Point(74, 320);
-            this.lblAddressLine1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddressLine1.Location = new System.Drawing.Point(99, 394);
             this.lblAddressLine1.Name = "lblAddressLine1";
-            this.lblAddressLine1.Size = new System.Drawing.Size(141, 24);
+            this.lblAddressLine1.Size = new System.Drawing.Size(179, 29);
             this.lblAddressLine1.TabIndex = 5;
             this.lblAddressLine1.Text = "Address Line 1:";
             // 
@@ -144,10 +138,9 @@
             this.lblAddressLine2.BackColor = System.Drawing.Color.Transparent;
             this.lblAddressLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressLine2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAddressLine2.Location = new System.Drawing.Point(74, 372);
-            this.lblAddressLine2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddressLine2.Location = new System.Drawing.Point(99, 458);
             this.lblAddressLine2.Name = "lblAddressLine2";
-            this.lblAddressLine2.Size = new System.Drawing.Size(141, 24);
+            this.lblAddressLine2.Size = new System.Drawing.Size(179, 29);
             this.lblAddressLine2.TabIndex = 6;
             this.lblAddressLine2.Text = "Address Line 2:";
             // 
@@ -157,10 +150,9 @@
             this.lblCity.BackColor = System.Drawing.Color.Transparent;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCity.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCity.Location = new System.Drawing.Point(74, 422);
-            this.lblCity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCity.Location = new System.Drawing.Point(99, 519);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(45, 24);
+            this.lblCity.Size = new System.Drawing.Size(59, 29);
             this.lblCity.TabIndex = 7;
             this.lblCity.Text = "City:";
             // 
@@ -170,10 +162,9 @@
             this.lblPostcode.BackColor = System.Drawing.Color.Transparent;
             this.lblPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPostcode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPostcode.Location = new System.Drawing.Point(74, 476);
-            this.lblPostcode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPostcode.Location = new System.Drawing.Point(99, 586);
             this.lblPostcode.Name = "lblPostcode";
-            this.lblPostcode.Size = new System.Drawing.Size(94, 24);
+            this.lblPostcode.Size = new System.Drawing.Size(121, 29);
             this.lblPostcode.TabIndex = 8;
             this.lblPostcode.Text = "Postcode:";
             // 
@@ -181,10 +172,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.pictureBox1.Location = new System.Drawing.Point(862, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(1149, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(149, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -195,100 +186,99 @@
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.BackColor = System.Drawing.Color.Transparent;
             this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(9, 10);
-            this.lblCompanyName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCompanyName.Location = new System.Drawing.Point(12, 12);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(171, 26);
+            this.lblCompanyName.Size = new System.Drawing.Size(216, 32);
             this.lblCompanyName.TabIndex = 10;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(221, 83);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirstName.Location = new System.Drawing.Point(295, 102);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(193, 28);
+            this.txtFirstName.Size = new System.Drawing.Size(256, 34);
             this.txtFirstName.TabIndex = 11;
             // 
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(221, 123);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastName.Location = new System.Drawing.Point(295, 151);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(193, 28);
+            this.txtLastName.Size = new System.Drawing.Size(256, 34);
             this.txtLastName.TabIndex = 12;
             // 
             // txtWorkNumber
             // 
             this.txtWorkNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWorkNumber.Location = new System.Drawing.Point(221, 169);
-            this.txtWorkNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtWorkNumber.Location = new System.Drawing.Point(295, 208);
+            this.txtWorkNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWorkNumber.Name = "txtWorkNumber";
-            this.txtWorkNumber.Size = new System.Drawing.Size(193, 28);
+            this.txtWorkNumber.Size = new System.Drawing.Size(256, 34);
             this.txtWorkNumber.TabIndex = 13;
             // 
             // txtHomeNumber
             // 
             this.txtHomeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHomeNumber.Location = new System.Drawing.Point(221, 218);
-            this.txtHomeNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHomeNumber.Location = new System.Drawing.Point(295, 268);
+            this.txtHomeNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHomeNumber.Name = "txtHomeNumber";
-            this.txtHomeNumber.Size = new System.Drawing.Size(193, 28);
+            this.txtHomeNumber.Size = new System.Drawing.Size(256, 34);
             this.txtHomeNumber.TabIndex = 14;
             // 
             // txtWorkEmail
             // 
             this.txtWorkEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWorkEmail.Location = new System.Drawing.Point(221, 267);
-            this.txtWorkEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtWorkEmail.Location = new System.Drawing.Point(295, 329);
+            this.txtWorkEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWorkEmail.Name = "txtWorkEmail";
-            this.txtWorkEmail.Size = new System.Drawing.Size(193, 28);
+            this.txtWorkEmail.Size = new System.Drawing.Size(256, 34);
             this.txtWorkEmail.TabIndex = 15;
             // 
             // txtAddressLine1
             // 
             this.txtAddressLine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine1.Location = new System.Drawing.Point(221, 318);
-            this.txtAddressLine1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddressLine1.Location = new System.Drawing.Point(295, 391);
+            this.txtAddressLine1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressLine1.Name = "txtAddressLine1";
-            this.txtAddressLine1.Size = new System.Drawing.Size(193, 28);
+            this.txtAddressLine1.Size = new System.Drawing.Size(256, 34);
             this.txtAddressLine1.TabIndex = 16;
             // 
             // txtAddressLine2
             // 
             this.txtAddressLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine2.Location = new System.Drawing.Point(221, 368);
-            this.txtAddressLine2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddressLine2.Location = new System.Drawing.Point(295, 453);
+            this.txtAddressLine2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressLine2.Name = "txtAddressLine2";
-            this.txtAddressLine2.Size = new System.Drawing.Size(193, 28);
+            this.txtAddressLine2.Size = new System.Drawing.Size(256, 34);
             this.txtAddressLine2.TabIndex = 17;
             // 
             // txtCity
             // 
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(221, 422);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCity.Location = new System.Drawing.Point(295, 519);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(193, 28);
+            this.txtCity.Size = new System.Drawing.Size(256, 34);
             this.txtCity.TabIndex = 18;
             // 
             // txtPostcode
             // 
             this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostcode.Location = new System.Drawing.Point(221, 476);
-            this.txtPostcode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPostcode.Location = new System.Drawing.Point(295, 586);
+            this.txtPostcode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(193, 28);
+            this.txtPostcode.Size = new System.Drawing.Size(256, 34);
             this.txtPostcode.TabIndex = 19;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(796, 552);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(1061, 679);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(178, 51);
+            this.btnRegister.Size = new System.Drawing.Size(237, 63);
             this.btnRegister.TabIndex = 20;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -300,10 +290,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(505, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(673, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 24);
+            this.label1.Size = new System.Drawing.Size(70, 29);
             this.label1.TabIndex = 21;
             this.label1.Text = "Role:";
             // 
@@ -315,20 +304,20 @@
             "Engineer",
             "Call Handler",
             "Admin"});
-            this.cboRole.Location = new System.Drawing.Point(635, 84);
-            this.cboRole.Margin = new System.Windows.Forms.Padding(2);
+            this.cboRole.Location = new System.Drawing.Point(847, 103);
+            this.cboRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(193, 30);
+            this.cboRole.Size = new System.Drawing.Size(256, 37);
             this.cboRole.TabIndex = 22;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(635, 223);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(847, 274);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(193, 28);
+            this.txtPassword.Size = new System.Drawing.Size(256, 34);
             this.txtPassword.TabIndex = 24;
             // 
             // label2
@@ -337,20 +326,19 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(505, 223);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(673, 274);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(126, 29);
             this.label2.TabIndex = 23;
             this.label2.Text = "Password:";
             // 
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(635, 128);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSalary.Location = new System.Drawing.Point(847, 158);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(193, 28);
+            this.txtSalary.Size = new System.Drawing.Size(256, 34);
             this.txtSalary.TabIndex = 26;
             // 
             // label3
@@ -359,21 +347,20 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(505, 127);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(673, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 25;
             this.label3.Text = "Salary:";
             // 
             // txtStaffId
             // 
             this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffId.Location = new System.Drawing.Point(635, 172);
-            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStaffId.Location = new System.Drawing.Point(847, 212);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaffId.Name = "txtStaffId";
             this.txtStaffId.ReadOnly = true;
-            this.txtStaffId.Size = new System.Drawing.Size(193, 28);
+            this.txtStaffId.Size = new System.Drawing.Size(256, 34);
             this.txtStaffId.TabIndex = 28;
             // 
             // label4
@@ -382,20 +369,19 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(505, 176);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(673, 217);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.Size = new System.Drawing.Size(92, 29);
             this.label4.TabIndex = 27;
             this.label4.Text = "Staff Id:";
             // 
             // frmRegisterNewAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(985, 614);
+            this.ClientSize = new System.Drawing.Size(1313, 756);
             this.Controls.Add(this.txtStaffId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSalary);
@@ -425,9 +411,9 @@
             this.Controls.Add(this.lblWorkMobileNumber);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRegisterNewAccount";
-            this.Text = "Register New Account";
+            this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
