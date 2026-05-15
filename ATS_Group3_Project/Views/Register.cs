@@ -158,7 +158,7 @@ namespace ATS_Group3_Project
                 cboRole.SelectedIndex = -1;
                 txtPassword.Clear();
 
-                frmLogin login = new frmLogin(StaffId, firstName, role);
+                frmLogin login = new frmLogin();
                 login.Show();
                 this.Close();
             }

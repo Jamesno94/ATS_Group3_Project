@@ -54,12 +54,12 @@
             this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
             this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCreateSJob = new System.Windows.Forms.Button();
             this.btnCreateJob = new System.Windows.Forms.Button();
             this.btnLogAFault = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtAutoJobService = new System.Windows.Forms.Label();
             this.turbinesTableAdapter1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter();
-            this.btnCreateSJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).BeginInit();
@@ -313,17 +313,24 @@
             this.panel1.Size = new System.Drawing.Size(272, 431);
             this.panel1.TabIndex = 34;
             // 
+            // btnCreateSJob
+            // 
+            this.btnCreateSJob.BackColor = System.Drawing.Color.Azure;
+            this.btnCreateSJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateSJob.Location = new System.Drawing.Point(129, 378);
+            this.btnCreateSJob.Name = "btnCreateSJob";
+            this.btnCreateSJob.Size = new System.Drawing.Size(116, 41);
+            this.btnCreateSJob.TabIndex = 36;
+            this.btnCreateSJob.Text = "Create Service";
+            this.btnCreateSJob.UseVisualStyleBackColor = false;
+            this.btnCreateSJob.Click += new System.EventHandler(this.btnCreateSJob_Click_1);
+            // 
             // btnCreateJob
             // 
-            //this.btnCreateJob.BackColor = System.Drawing.Color.Azure;
-            //this.btnCreateJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.btnCreateJob.Location = new System.Drawing.Point(469, 562);
-            //this.btnCreateJob.Name = "btnCreateJob";
-            //this.btnCreateJob.Size = new System.Drawing.Size(122, 39);
-            //this.btnCreateJob.TabIndex = 35;
-            //this.btnCreateJob.Text = "Create Job";
-            //this.btnCreateJob.UseVisualStyleBackColor = true;
-            //this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
+            this.btnCreateJob.Location = new System.Drawing.Point(0, 0);
+            this.btnCreateJob.Name = "btnCreateJob";
+            this.btnCreateJob.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateJob.TabIndex = 37;
             // 
             // btnLogAFault
             // 
@@ -363,17 +370,6 @@
             // turbinesTableAdapter1
             // 
             this.turbinesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // btnCreateSJob
-            // 
-            this.btnCreateSJob.BackColor = System.Drawing.Color.Azure;
-            this.btnCreateSJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateSJob.Location = new System.Drawing.Point(129, 378);
-            this.btnCreateSJob.Name = "btnCreateSJob";
-            this.btnCreateSJob.Size = new System.Drawing.Size(116, 41);
-            this.btnCreateSJob.TabIndex = 36;
-            this.btnCreateSJob.Text = "Create Service";
-            this.btnCreateSJob.UseVisualStyleBackColor = false;
             // 
             // frmTurbSimData
             // 

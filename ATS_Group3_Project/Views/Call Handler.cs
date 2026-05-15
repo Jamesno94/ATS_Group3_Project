@@ -41,7 +41,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin(StaffId, firstName, role);
+                frmLogin loginForm = new frmLogin();
                 loginForm.Show();
 
                 this.Hide();
@@ -55,12 +55,7 @@ namespace ATS_Group3_Project.Views
             this.Hide();
         }
 
-        private void btnLogFaultJob_Click(object sender, EventArgs e)
-        {
-            ATS_Group3_Project.frmAddFaultJob addFaultJobForm = new ATS_Group3_Project.frmAddFaultJob();
-            addFaultJobForm.Show();
-            this.Hide();
-        }
+      
     }
 }
 

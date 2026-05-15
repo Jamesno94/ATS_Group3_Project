@@ -38,7 +38,7 @@ namespace ATS_Group3_Project
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin(StaffId, firstName, role);
+            frmLogin login = new frmLogin();
             login.ShowDialog();
 
             this.Close();
@@ -224,6 +224,10 @@ namespace ATS_Group3_Project
         }
 
         private void btnCreateSJob_Click(object sender, EventArgs e)
+        { }
+            
+
+        private void btnCreateSJob_Click_1(object sender, EventArgs e)
         {
             if (selectedTurbine == null)
             {
@@ -271,5 +275,6 @@ namespace ATS_Group3_Project
             jobDetails.Show();
             this.Hide();
         }
+    
     }// End class
 }// End namespace

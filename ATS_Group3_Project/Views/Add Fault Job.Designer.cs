@@ -49,7 +49,7 @@
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.txtTurbineId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,17 +236,17 @@
             // 
             // DashboardLogoClick
             // 
-            this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
-            this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.DashboardLogoClick.Location = new System.Drawing.Point(990, 10);
-            this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.DashboardLogoClick.Name = "DashboardLogoClick";
-            this.DashboardLogoClick.Size = new System.Drawing.Size(113, 122);
-            this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DashboardLogoClick.TabIndex = 21;
-            this.DashboardLogoClick.TabStop = false;
-            this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
-            // 
+            //this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
+            //this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
+            //this.DashboardLogoClick.Location = new System.Drawing.Point(990, 10);
+            //this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            //this.DashboardLogoClick.Name = "DashboardLogoClick";
+            //this.DashboardLogoClick.Size = new System.Drawing.Size(113, 122);
+            //this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.DashboardLogoClick.TabIndex = 21;
+            //this.DashboardLogoClick.TabStop = false;
+            //this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
+            //// 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
@@ -332,7 +332,7 @@
             this.Name = "frmAddFaultJob";
             this.Text = "Add Fault Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -427,6 +427,31 @@
             this.chkMainGeneratorServiced.Size = new System.Drawing.Size(15, 14);
             this.chkMainGeneratorServiced.TabIndex = 15;
             this.chkMainGeneratorServiced.UseVisualStyleBackColor = true;
+
+            //checkbox load events
+            this.chkMainGeneratorServiced.CheckedChanged +=
+    new System.EventHandler(this.chkMainGeneratorServiced_CheckedChanged);
+
+            this.chkMainGeneratorReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkMainGeneratorReplaced_CheckedChanged);
+
+            this.chkGearboxServiced.CheckedChanged +=
+                new System.EventHandler(this.chkGearboxServiced_CheckedChanged);
+
+            this.chkGearboxReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkGearboxReplaced_CheckedChanged);
+
+            this.chkYawMotorServiced.CheckedChanged +=
+                new System.EventHandler(this.chkYawMotorServiced_CheckedChanged);
+
+            this.chkYawMotorReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkYawMotorReplaced_CheckedChanged);
+
+            this.chkLiftServiced.CheckedChanged +=
+                new System.EventHandler(this.chkLiftServiced_CheckedChanged);
+
+            this.chkLiftReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkLiftReplaced_CheckedChanged);
             // 
             // lblReplaced
             // 
@@ -509,6 +534,7 @@
             this.btnUpdateJob.TabIndex = 21;
             this.btnUpdateJob.Text = "Update Job";
             this.btnUpdateJob.UseVisualStyleBackColor = true;
+            this.btnUpdateJob.Click += new System.EventHandler(this.btnUpdateJob_Click);
             // 
             // frmJobDetails
             // 
@@ -537,6 +563,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
+
+            this.Load += new System.EventHandler(this.frmJobDetails_Load);
 
         }
 
