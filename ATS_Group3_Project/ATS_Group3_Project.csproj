@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ATS_WindSyncDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\DispatchManager.cs" />
     <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
@@ -97,30 +102,35 @@
     <Compile Include="Views\Call Handler.Designer.cs">
       <DependentUpon>Call Handler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Engineer Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Engineer Dashboard.Designer.cs">
       <DependentUpon>Engineer Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manage.Turbines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage.Turbines.Designer.cs">
+      <DependentUpon>Manage.Turbines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageWindFarms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageWindFarms.Designer.cs">
+      <DependentUpon>ManageWindFarms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JobDetailsCallHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\JobDetailsCallHandler.Designer.cs">
+      <DependentUpon>JobDetailsCallHandler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Turbine History.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Turbine History.Designer.cs">
       <DependentUpon>Turbine History.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Job Details.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\.Designer.cs">
-      <DependentUpon>Job Details.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -140,11 +150,23 @@
     <Compile Include="Views\Turbine Simulation Data.Designer.cs">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Turbines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turbines.Designer.cs">
+      <DependentUpon>Turbines.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\View Assigned Jobs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\View Assigned Jobs.Designer.cs">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WindFarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\WindFarm.Designer.cs">
+      <DependentUpon>WindFarm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,17 +187,20 @@
     <EmbeddedResource Include="Views\Call Handler.resx">
       <DependentUpon>Call Handler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Engineer Dashboard.resx">
       <DependentUpon>Engineer Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Job Details.resx">
-      <DependentUpon>Job Details.cs</DependentUpon>
+    <EmbeddedResource Include="Views\JobDetailsCallHandler.resx">
+      <DependentUpon>JobDetailsCallHandler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage.Turbines.resx">
+      <DependentUpon>Manage.Turbines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageWindFarms.resx">
+      <DependentUpon>ManageWindFarms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -185,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turbines.resx">
+      <DependentUpon>Turbines.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\View Assigned Jobs.resx">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
@@ -200,6 +228,20 @@
     <None Include="ATS_WindSyncDBDataSet.xss">
       <DependentUpon>ATS_WindSyncDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ATS_WindSyncDBDataSet1.xsc">
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ATS_WindSyncDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATS_WindSyncDBDataSet1.xss">
+      <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Views\WindFarm.resx">
+      <DependentUpon>WindFarm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

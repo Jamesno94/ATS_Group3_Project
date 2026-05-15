@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Windows.Forms;
 using ATS_Group3_Project.Views;
 
@@ -7,8 +8,10 @@ namespace ATS_Group3_Project
     public partial class frmViewAssignedJobs : Form
     {
         private string StaffId;
+        private string firstName;
+        private string role;
 
-        public frmViewAssignedJobs()
+        public frmViewAssignedJobs(string StaffId, string firstName, string role)
         {
             InitializeComponent();
         }
@@ -27,6 +30,10 @@ namespace ATS_Group3_Project
                 MessageBox.Show("Please select a job first.");
                 return;
             }
+            this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
+        }
 
             frmJobDetails jobDetailsForm = new frmJobDetails(StaffId);
             jobDetailsForm.Show();
@@ -45,7 +52,10 @@ namespace ATS_Group3_Project
 
             if (result == DialogResult.Yes)
             {
-                frmDashboard dash = new frmDashboard();
+                // 2. Create the Dashboard form instance
+                frmEngineerDashboard dash = new frmEngineerDashboard(StaffId, firstName, role);
+
+                // 3. Show the dashboard
                 dash.Show();
                 this.Hide();
             }

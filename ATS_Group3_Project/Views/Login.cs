@@ -13,15 +13,22 @@ namespace ATS_Group3_Project
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        private string StaffId;
+        private string firstName;
+        private string role;
+
+        public frmLogin(string StaffId, string firstName, string role)
         {
             InitializeComponent();
+            this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string staffId = txtStaffId.Text.Trim();
-            string password = txtPassword.Text;
+            string staffId = txtStaffId.Text.Trim().ToUpper();
+            string password = txtPassword.Text.Trim();
 
             UserManager manager = new UserManager();
 
@@ -89,7 +96,7 @@ namespace ATS_Group3_Project
 
         private void btnRegister_Click_1(object sender, EventArgs e)
         {
-            frmRegisterNewAccount register = new frmRegisterNewAccount();
+            frmRegisterNewAccount register = new frmRegisterNewAccount(StaffId, firstName, role);
             register.Show();
             this.Close();
         }

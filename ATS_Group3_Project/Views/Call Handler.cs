@@ -13,12 +13,18 @@ namespace ATS_Group3_Project.Views
     public partial class frmCallHandler : Form
     {
         private string StaffId;
+        private string firstName;
+        private string role;
+        private string turbineId;
+        private string windFarmId;
 
         public frmCallHandler(string StaffId, string firstName, string role)
         {
             InitializeComponent();
 
             this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
 
             lblGreetings.Text = $"Greetings, {firstName}";
             lblRole.Text = $"Role: {role}";
@@ -35,7 +41,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin();
+                frmLogin loginForm = new frmLogin(StaffId, firstName, role);
                 loginForm.Show();
 
                 this.Hide();
@@ -44,7 +50,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnSimulationDashboard_Click(object sender, EventArgs e)
         {
-            frmTurbSimData simDataForm = new frmTurbSimData();
+            frmTurbSimData simDataForm = new frmTurbSimData(StaffId, firstName, role);
             simDataForm.Show();
             this.Hide();
         }

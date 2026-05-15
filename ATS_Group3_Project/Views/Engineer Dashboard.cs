@@ -39,7 +39,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin();
+                frmLogin loginForm = new frmLogin(StaffId, FirstName, Role);
                 loginForm.Show();
 
                 this.Hide();

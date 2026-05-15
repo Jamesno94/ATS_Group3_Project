@@ -1,14 +1,18 @@
-﻿using System;
+﻿using ATS_Group3_Project;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ATS_Group3_Project;
+using System.Windows.Forms;
 
 public class UserManager
 {
     public User Login(string staffId, string password)
     {
+        staffId = staffId.Trim().ToUpper();
+        password = password.Trim();
+
         using (var db = new ATSContext())
         {
             var user = db.Users
@@ -22,7 +26,6 @@ public class UserManager
 
             if (user.IsLocked)
             {
-                
                 return null;
             }
 
@@ -39,9 +42,6 @@ public class UserManager
                 if (user.FailedLoginAttempts >= 3)
                 {
                     user.IsLocked = true;
-                    
-                    db.SaveChanges();
-                    return null;
                 }
 
                 db.SaveChanges();
@@ -72,6 +72,8 @@ public class UserManager
 
     public bool CreateUser(string staffId, string password)
     {
+        staffId = staffId.Trim();
+
         if (!IsPasswordComplex(password))
         {
             return false;
@@ -93,7 +95,9 @@ public class UserManager
             {
                 StaffId = staffId,
                 PasswordHash = passwordResult.hash,
-                PasswordSalt = passwordResult.salt
+                PasswordSalt = passwordResult.salt,
+                FailedLoginAttempts = 0,
+                IsLocked = false
             };
 
             db.Users.Add(newUser);
