@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
@@ -193,5 +194,51 @@ namespace ATS_Group3_Project
 
 
         }// End btnSave_Click
+
+        private void btnCreateJob_Click(object sender, EventArgs e)
+        {
+            if (selectedTurbine == null)
+            {
+                MessageBox.Show("Please select a turbine first.");
+                return;
+            }
+
+            using (var db = new ATSContext())
+            {
+                var turbine = db.Turbines
+                    .FirstOrDefault(t => t.TurbineId == selectedTurbine.TurbineId);
+
+                if (turbine == null)
+                {
+                    MessageBox.Show("Turbine could not be found in the database.");
+                    return;
+                }
+
+                if (turbine.RuntimeHours < 2000)
+                {
+                    MessageBox.Show("This turbine has not reached 2000 runtime hours yet.");
+                    return;
+                }
+            }
+
+            DispatchManager dispatchManager = new DispatchManager();
+
+            JobRecord createdJob = dispatchManager.CreateScheduledServiceJob(
+                selectedTurbine.TurbineId
+            );
+
+            if (createdJob == null)
+            {
+                MessageBox.Show("A service job already exists for this turbine, or no engineer could be assigned.");
+                return;
+            }
+
+            MessageBox.Show("Service job created and engineer assigned.");
+
+            frmJobDetails jobDetails = new frmJobDetails(createdJob.JobId);
+            jobDetails.Show();
+
+            this.Hide();
+        } 
     }// End class
 }// End namespace

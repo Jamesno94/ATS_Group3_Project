@@ -56,6 +56,7 @@
             this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
             this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCreateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource)).BeginInit();
@@ -325,14 +326,25 @@
             this.panel1.Size = new System.Drawing.Size(228, 413);
             this.panel1.TabIndex = 34;
             // 
+            // btnCreateJob
+            // 
+            this.btnCreateJob.Location = new System.Drawing.Point(469, 562);
+            this.btnCreateJob.Name = "btnCreateJob";
+            this.btnCreateJob.Size = new System.Drawing.Size(122, 39);
+            this.btnCreateJob.TabIndex = 35;
+            this.btnCreateJob.Text = "Create Job";
+            this.btnCreateJob.UseVisualStyleBackColor = true;
+            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
+            // 
             // frmTurbSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(986, 613);
+            this.Controls.Add(this.btnCreateJob);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
             this.Controls.Add(this.btnSave);
@@ -386,5 +398,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn windFarmIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCreateJob;
     }
 }
