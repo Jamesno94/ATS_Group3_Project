@@ -118,22 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="call handler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\call handler;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="engineer icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engineer icon1;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ATS_Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ATS Background1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ATS_Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ATS_Background5.jpg.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ATS_Logo_NoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ATS_Logo_NoText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Company_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Company Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="admin icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin icon;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Home_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home Logo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ATS_Logo_NoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ATS_Logo_NoText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profile_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Company_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Company Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin icon1;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

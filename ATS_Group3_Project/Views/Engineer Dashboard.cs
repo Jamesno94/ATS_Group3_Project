@@ -57,5 +57,13 @@ namespace ATS_Group3_Project.Views
             viewAssignedJobsForm.Show(this);
             this.Hide();
         }
+
+        private void btnManageAccount_Click(object sender, EventArgs e)
+        {
+            Manage_Account frm = new Manage_Account(StaffId);
+            frm.Show();
+            this.Hide();
+
+        }
     }
 }
