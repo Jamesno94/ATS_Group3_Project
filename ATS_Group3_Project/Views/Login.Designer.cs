@@ -46,7 +46,7 @@
             this.btnLogin.Location = new System.Drawing.Point(59, 180);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 25);
+            this.btnLogin.Size = new System.Drawing.Size(172, 31);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -59,8 +59,9 @@
             this.txtStaffId.Location = new System.Drawing.Point(18, 37);
             this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffId.Name = "txtStaffId";
-            this.txtStaffId.Size = new System.Drawing.Size(204, 38);
+            this.txtStaffId.Size = new System.Drawing.Size(271, 45);
             this.txtStaffId.TabIndex = 2;
+            this.txtStaffId.TextChanged += new System.EventHandler(this.txtStaffId_TextChanged);
             // 
             // txtPassword
             // 
@@ -69,7 +70,7 @@
             this.txtPassword.Location = new System.Drawing.Point(18, 128);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(204, 38);
+            this.txtPassword.Size = new System.Drawing.Size(271, 45);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -103,10 +104,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 6);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(11, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 31);
+            this.label3.Size = new System.Drawing.Size(259, 39);
             this.label3.TabIndex = 6;
             this.label3.Text = "WindSync ATS";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -140,7 +140,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;

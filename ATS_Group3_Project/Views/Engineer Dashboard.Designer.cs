@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -79,7 +78,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(454, 171);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 260);
+            this.pictureBox2.Size = new System.Drawing.Size(79, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -120,7 +119,7 @@
             this.btnManageAccount.Text = "Manage Account ";
             this.btnManageAccount.UseVisualStyleBackColor = false;
             // 
-            // btnLogOut
+            // lnklblLogout
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Azure;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,8 +160,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEngineerDashboard";
-            this.Text = "EngineerDashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Engineer Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -171,8 +169,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.PictureBox pictureBox2;

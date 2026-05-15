@@ -43,7 +43,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.DashboardLogoClick = new System.Windows.Forms.PictureBox();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCreateJob = new System.Windows.Forms.Button();
@@ -326,7 +325,6 @@
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCompanyName);
-            this.Controls.Add(this.DashboardLogoClick);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.pictureBox1);
@@ -359,7 +357,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSaveChanges;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.PictureBox DashboardLogoClick;
         private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCreateJob;
