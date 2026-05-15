@@ -44,7 +44,11 @@ namespace ATS_Group3_Project
             }
         }
 
-        
+        private void btnRegisterNewAccount_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             //Cheaking For Blank Fields

@@ -12,9 +12,9 @@ namespace ATS_Group3_Project.Views
 {
     public partial class frmAdminDashboard : Form
     {
-        private string FirstName;
+        private string firstName;
 
-        private string Role;
+        private string role;
 
         private string StaffId;
         public frmAdminDashboard(string StaffId, string firstName, string role)
@@ -22,8 +22,8 @@ namespace ATS_Group3_Project.Views
             InitializeComponent();
 
             this.StaffId = StaffId;
-            this.FirstName = firstName;
-            this.Role = role;
+            this.firstName = firstName;
+            this.role = role;
 
             lblGreetings.Text = $"Greetings, {firstName}";
             lblRole.Text = $"Role: {role}";
@@ -40,7 +40,33 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin();
+                frmLogin loginForm = new frmLogin(StaffId, firstName, role);
+                loginForm.Show();
+
+                this.Hide();
+            }
+        }
+
+        private void btnCreateNewStaff_Click(object sender, EventArgs e)
+        {
+            frmRegisterNewAccount Registerfrm = new frmRegisterNewAccount(StaffId, firstName, role);
+            Registerfrm.Show();
+
+            this.Hide();
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Do you wish to log out?",
+            "Logout Confirmation",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+    );
+
+            if (result == DialogResult.Yes)
+            {
+                frmLogin loginForm = new frmLogin(StaffId, firstName, role);
                 loginForm.Show();
 
                 this.Hide();

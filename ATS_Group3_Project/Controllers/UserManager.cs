@@ -107,7 +107,7 @@ public class UserManager
         }
     }
 
-    public bool ChangePassword(int userId, string newPassword)
+    public bool ChangePassword(string staffId, string newPassword)
     {
         if (!IsPasswordComplex(newPassword))
         {
@@ -116,7 +116,7 @@ public class UserManager
 
         using (var db = new ATSContext())
         {
-            var user = db.Users.Find(userId);
+            var user = db.Users.Find(staffId);
 
             if (user == null)
             {

@@ -39,14 +39,12 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnViewAllJobs = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTurbineId = new System.Windows.Forms.TextBox();
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.btnCreateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,19 +161,6 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // DashboardLogoClick
-            // 
-            //this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
-            //this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            //this.DashboardLogoClick.Location = new System.Drawing.Point(990, 10);
-            //this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            //this.DashboardLogoClick.Name = "DashboardLogoClick";
-            //this.DashboardLogoClick.Size = new System.Drawing.Size(113, 122);
-            //this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            //this.DashboardLogoClick.TabIndex = 21;
-            //this.DashboardLogoClick.TabStop = false;
-            //this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
-            //// 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
@@ -192,7 +177,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnViewAllJobs);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtTurbineId);
@@ -208,18 +192,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 457);
             this.panel1.TabIndex = 23;
-            // 
-            // btnViewAllJobs
-            // 
-            this.btnViewAllJobs.BackColor = System.Drawing.Color.Azure;
-            this.btnViewAllJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllJobs.Location = new System.Drawing.Point(171, 393);
-            this.btnViewAllJobs.Name = "btnViewAllJobs";
-            this.btnViewAllJobs.Size = new System.Drawing.Size(99, 43);
-            this.btnViewAllJobs.TabIndex = 26;
-            this.btnViewAllJobs.Text = "View All Jobs";
-            this.btnViewAllJobs.UseVisualStyleBackColor = false;
-            this.btnViewAllJobs.Click += new System.EventHandler(this.btnViewAllJobs_Click);
             // 
             // btnBack
             // 
@@ -296,7 +268,6 @@
             this.Name = "frmAddFaultJob";
             this.Text = "Add Fault Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-          //  ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -321,7 +292,6 @@
         private System.Windows.Forms.TextBox txtTurbineId;
         private System.Windows.Forms.TextBox txtWindFarmId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnViewAllJobs;
         private System.Windows.Forms.Button btnBack;
     }
 }

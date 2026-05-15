@@ -133,11 +133,6 @@ namespace ATS_Group3_Project
             this.Close();
         }
 
-        private void btnViewAllJobs_Click(object sender, EventArgs e)
-        {
-            frmViewAssignedJobs viewAllJobsForm = new frmViewAssignedJobs(StaffId, firstName, role);
-            viewAllJobsForm.Show();
-            this.Close();
-        }
+        
     }
 }
