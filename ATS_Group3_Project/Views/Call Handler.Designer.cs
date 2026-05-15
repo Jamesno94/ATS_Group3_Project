@@ -33,8 +33,6 @@
             this.lblRole = new System.Windows.Forms.Label();
             this.btnSimulationDashboard = new System.Windows.Forms.Button();
             this.btnAddTurbine = new System.Windows.Forms.Button();
-            this.btnAddWindFarm = new System.Windows.Forms.Button();
-            this.btnAddShifts = new System.Windows.Forms.Button();
             this.btnViewAllJobs = new System.Windows.Forms.Button();
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -77,7 +75,7 @@
             // btnSimulationDashboard
             // 
             this.btnSimulationDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimulationDashboard.Location = new System.Drawing.Point(25, 28);
+            this.btnSimulationDashboard.Location = new System.Drawing.Point(130, 54);
             this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimulationDashboard.Name = "btnSimulationDashboard";
             this.btnSimulationDashboard.Size = new System.Drawing.Size(275, 80);
@@ -89,40 +87,18 @@
             // btnAddTurbine
             // 
             this.btnAddTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTurbine.Location = new System.Drawing.Point(25, 230);
+            this.btnAddTurbine.Location = new System.Drawing.Point(130, 172);
             this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTurbine.Name = "btnAddTurbine";
             this.btnAddTurbine.Size = new System.Drawing.Size(275, 80);
             this.btnAddTurbine.TabIndex = 5;
-            this.btnAddTurbine.Text = "Add Turbine";
+            this.btnAddTurbine.Text = "Manage Windfarms";
             this.btnAddTurbine.UseVisualStyleBackColor = true;
-            // 
-            // btnAddWindFarm
-            // 
-            this.btnAddWindFarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddWindFarm.Location = new System.Drawing.Point(25, 130);
-            this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddWindFarm.Name = "btnAddWindFarm";
-            this.btnAddWindFarm.Size = new System.Drawing.Size(275, 80);
-            this.btnAddWindFarm.TabIndex = 6;
-            this.btnAddWindFarm.Text = "Add Windfarm";
-            this.btnAddWindFarm.UseVisualStyleBackColor = true;
-            // 
-            // btnAddShifts
-            // 
-            this.btnAddShifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddShifts.Location = new System.Drawing.Point(467, 130);
-            this.btnAddShifts.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddShifts.Name = "btnAddShifts";
-            this.btnAddShifts.Size = new System.Drawing.Size(275, 80);
-            this.btnAddShifts.TabIndex = 8;
-            this.btnAddShifts.Text = "Add Shifts";
-            this.btnAddShifts.UseVisualStyleBackColor = true;
             // 
             // btnViewAllJobs
             // 
             this.btnViewAllJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllJobs.Location = new System.Drawing.Point(467, 28);
+            this.btnViewAllJobs.Location = new System.Drawing.Point(422, 54);
             this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewAllJobs.Name = "btnViewAllJobs";
             this.btnViewAllJobs.Size = new System.Drawing.Size(275, 80);
@@ -133,7 +109,7 @@
             // btnManageAccount
             // 
             this.btnManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(467, 230);
+            this.btnManageAccount.Location = new System.Drawing.Point(422, 172);
             this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageAccount.Name = "btnManageAccount";
             this.btnManageAccount.Size = new System.Drawing.Size(275, 80);
@@ -159,16 +135,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnManageAccount);
-            this.panel1.Controls.Add(this.btnAddShifts);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSimulationDashboard);
             this.panel1.Controls.Add(this.btnViewAllJobs);
-            this.panel1.Controls.Add(this.btnAddWindFarm);
             this.panel1.Controls.Add(this.btnAddTurbine);
-            this.panel1.Location = new System.Drawing.Point(252, 116);
+            this.panel1.Location = new System.Drawing.Point(228, 171);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 416);
+            this.panel1.Size = new System.Drawing.Size(842, 377);
             this.panel1.TabIndex = 12;
             // 
             // button1
@@ -176,7 +150,7 @@
             this.button1.BackColor = System.Drawing.Color.Azure;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(334, 346);
+            this.button1.Location = new System.Drawing.Point(352, 288);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 50);
@@ -213,8 +187,6 @@
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Button btnSimulationDashboard;
         private System.Windows.Forms.Button btnAddTurbine;
-        private System.Windows.Forms.Button btnAddWindFarm;
-        private System.Windows.Forms.Button btnAddShifts;
         private System.Windows.Forms.Button btnViewAllJobs;
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Button btnLogOut;
