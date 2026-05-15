@@ -205,7 +205,7 @@ namespace ATS_Group3_Project
                         "Service job created and engineer assigned.");
 
                     frmJobDetails jobDetails =
-                        new frmJobDetails(createdJob.JobId);
+                        new frmJobDetails(createdJob.JobId, StaffId);
 
                     jobDetails.Show();
 

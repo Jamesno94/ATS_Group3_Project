@@ -8,7 +8,7 @@ namespace ATS_Group3_Project
 {
     public partial class frmJobDetails : Form
     {
-        private int _jobId;
+        private string _jobId;
         private string _loggedInStaffId;
         private string _staffRole;
 
@@ -18,7 +18,7 @@ namespace ATS_Group3_Project
             InitializeComponent();
         }
 
-        public frmJobDetails(int jobId, string loggedInStaffId)
+        public frmJobDetails(string jobId, string loggedInStaffId)
         {
             InitializeComponent();
 

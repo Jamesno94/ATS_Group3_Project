@@ -158,7 +158,7 @@ namespace ATS_Group3_Project
         }
 
         public bool MarkJobComplete(
-          int jobId,
+          string jobId,
           bool mainGeneratorServiced,
           bool gearboxServiced,
           bool yawMotorServiced,
