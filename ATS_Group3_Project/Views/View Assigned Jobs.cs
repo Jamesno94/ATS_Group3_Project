@@ -64,9 +64,7 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            int jobId = Convert.ToInt32(
-                DataGVJobs.CurrentRow.Cells["JobId"].Value
-            );
+            string jobId = DataGVJobs.CurrentRow.Cells["JobId"].Value.ToString();
 
             frmJobDetails jobDetailsForm =
                 new frmJobDetails(jobId, StaffId);
