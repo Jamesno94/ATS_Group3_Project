@@ -110,5 +110,21 @@ namespace ATS_Group3_Project
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // 1. Ask for confirmation
+            DialogResult result = MessageBox.Show("Are you sure you wish to exit the application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // 2. Check if the user clicked 'Yes'
+            if (result == DialogResult.Yes)
+            {
+                // 3. Display the thank you message
+                MessageBox.Show("Thank you for using the application!", "Goodbye");
+
+                // 4. Close the application
+                Application.Exit();
+            }
+        }
     }
 }

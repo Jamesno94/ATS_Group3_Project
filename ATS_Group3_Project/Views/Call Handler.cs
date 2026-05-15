@@ -15,8 +15,6 @@ namespace ATS_Group3_Project.Views
         private string StaffId;
         private string firstName;
         private string role;
-        private string turbineId;
-        private string windFarmId;
 
         public frmCallHandler(string StaffId, string firstName, string role)
         {
@@ -55,12 +53,7 @@ namespace ATS_Group3_Project.Views
             this.Hide();
         }
 
-        private void btnLogFaultJob_Click(object sender, EventArgs e)
-        {
-            ATS_Group3_Project.frmAddFaultJob addFaultJobForm = new ATS_Group3_Project.frmAddFaultJob();
-            addFaultJobForm.Show();
-            this.Hide();
-        }
+        
     }
 }
 

@@ -31,7 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSimulationDashboard = new System.Windows.Forms.Button();
             this.btnAddTurbine = new System.Windows.Forms.Button();
             this.btnAddWindFarm = new System.Windows.Forms.Button();
@@ -39,8 +38,10 @@
             this.btnViewAllJobs = new System.Windows.Forms.Button();
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -73,21 +74,10 @@
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(368, 164);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(331, 320);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnSimulationDashboard
             // 
-            this.btnSimulationDashboard.Location = new System.Drawing.Point(126, 164);
+            this.btnSimulationDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimulationDashboard.Location = new System.Drawing.Point(25, 28);
             this.btnSimulationDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimulationDashboard.Name = "btnSimulationDashboard";
             this.btnSimulationDashboard.Size = new System.Drawing.Size(275, 80);
@@ -98,7 +88,8 @@
             // 
             // btnAddTurbine
             // 
-            this.btnAddTurbine.Location = new System.Drawing.Point(126, 359);
+            this.btnAddTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTurbine.Location = new System.Drawing.Point(25, 230);
             this.btnAddTurbine.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTurbine.Name = "btnAddTurbine";
             this.btnAddTurbine.Size = new System.Drawing.Size(275, 80);
@@ -108,7 +99,8 @@
             // 
             // btnAddWindFarm
             // 
-            this.btnAddWindFarm.Location = new System.Drawing.Point(126, 258);
+            this.btnAddWindFarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddWindFarm.Location = new System.Drawing.Point(25, 130);
             this.btnAddWindFarm.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddWindFarm.Name = "btnAddWindFarm";
             this.btnAddWindFarm.Size = new System.Drawing.Size(275, 80);
@@ -118,7 +110,8 @@
             // 
             // btnAddShifts
             // 
-            this.btnAddShifts.Location = new System.Drawing.Point(650, 258);
+            this.btnAddShifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddShifts.Location = new System.Drawing.Point(467, 130);
             this.btnAddShifts.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddShifts.Name = "btnAddShifts";
             this.btnAddShifts.Size = new System.Drawing.Size(275, 80);
@@ -128,7 +121,8 @@
             // 
             // btnViewAllJobs
             // 
-            this.btnViewAllJobs.Location = new System.Drawing.Point(650, 359);
+            this.btnViewAllJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllJobs.Location = new System.Drawing.Point(467, 28);
             this.btnViewAllJobs.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewAllJobs.Name = "btnViewAllJobs";
             this.btnViewAllJobs.Size = new System.Drawing.Size(275, 80);
@@ -138,7 +132,8 @@
             // 
             // btnManageAccount
             // 
-            this.btnManageAccount.Location = new System.Drawing.Point(390, 455);
+            this.btnManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAccount.Location = new System.Drawing.Point(467, 230);
             this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageAccount.Name = "btnManageAccount";
             this.btnManageAccount.Size = new System.Drawing.Size(275, 80);
@@ -159,21 +154,45 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnManageAccount);
+            this.panel1.Controls.Add(this.btnAddShifts);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSimulationDashboard);
+            this.panel1.Controls.Add(this.btnViewAllJobs);
+            this.panel1.Controls.Add(this.btnAddWindFarm);
+            this.panel1.Controls.Add(this.btnAddTurbine);
+            this.panel1.Location = new System.Drawing.Point(252, 116);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(765, 416);
+            this.panel1.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Azure;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(334, 346);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 50);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "LOG OUT";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmCallHandler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1313, 756);
+            this.ClientSize = new System.Drawing.Size(1252, 668);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnManageAccount);
-            this.Controls.Add(this.btnViewAllJobs);
-            this.Controls.Add(this.btnAddShifts);
-            this.Controls.Add(this.btnAddWindFarm);
-            this.Controls.Add(this.btnAddTurbine);
-            this.Controls.Add(this.btnSimulationDashboard);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
@@ -181,7 +200,7 @@
             this.Name = "frmCallHandler";
             this.Text = "Call Handler";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +211,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSimulationDashboard;
         private System.Windows.Forms.Button btnAddTurbine;
         private System.Windows.Forms.Button btnAddWindFarm;
@@ -200,5 +218,7 @@
         private System.Windows.Forms.Button btnViewAllJobs;
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

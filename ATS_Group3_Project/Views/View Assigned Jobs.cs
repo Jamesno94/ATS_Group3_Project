@@ -1,7 +1,6 @@
 ﻿using ATS_Group3_Project.Views;
 using System;
 using System.Windows.Forms;
-using ATS_Group3_Project.Views;
 
 namespace ATS_Group3_Project
 {
@@ -14,6 +13,9 @@ namespace ATS_Group3_Project
         public frmViewAssignedJobs(string StaffId, string firstName, string role)
         {
             InitializeComponent();
+            this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
         }
 
         public frmViewAssignedJobs(string staffId)
@@ -30,14 +32,9 @@ namespace ATS_Group3_Project
                 MessageBox.Show("Please select a job first.");
                 return;
             }
-            this.StaffId = StaffId;
-            this.firstName = firstName;
-            this.role = role;
-        }
-
-            frmJobDetails jobDetailsForm = new frmJobDetails(StaffId);
+            
+            frmJobDetails jobDetailsForm = new frmJobDetails();
             jobDetailsForm.Show();
-
             this.Hide();
         }
 

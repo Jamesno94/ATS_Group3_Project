@@ -30,10 +30,7 @@ namespace ATS_Group3_Project
             this.windFarmId = windFarmId;
         }
 
-        // Stores turbines currently shown in grid
-        private List<Turbine> currentTurbines = new List<Turbine>();
-
-        private Turbine selectedTurbine;
+        
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

@@ -48,7 +48,6 @@
             this.txtAddressLine2 = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtPostcode = new System.Windows.Forms.TextBox();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cboRole = new System.Windows.Forms.ComboBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRegisterNewAccount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,7 +70,7 @@
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.Black;
-            this.lblFirstName.Location = new System.Drawing.Point(8, 10);
+            this.lblFirstName.Location = new System.Drawing.Point(13, 7);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(137, 29);
@@ -83,7 +83,7 @@
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.Black;
-            this.lblLastName.Location = new System.Drawing.Point(8, 50);
+            this.lblLastName.Location = new System.Drawing.Point(10, 51);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(140, 29);
@@ -208,7 +208,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(155, 6);
+            this.txtFirstName.Location = new System.Drawing.Point(186, 4);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(256, 34);
@@ -217,7 +217,7 @@
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(155, 46);
+            this.txtLastName.Location = new System.Drawing.Point(186, 45);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(256, 34);
@@ -226,7 +226,7 @@
             // txtWorkNumber
             // 
             this.txtWorkNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWorkNumber.Location = new System.Drawing.Point(155, 92);
+            this.txtWorkNumber.Location = new System.Drawing.Point(186, 93);
             this.txtWorkNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtWorkNumber.Name = "txtWorkNumber";
             this.txtWorkNumber.Size = new System.Drawing.Size(256, 34);
@@ -235,7 +235,7 @@
             // txtHomeNumber
             // 
             this.txtHomeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHomeNumber.Location = new System.Drawing.Point(155, 141);
+            this.txtHomeNumber.Location = new System.Drawing.Point(186, 142);
             this.txtHomeNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtHomeNumber.Name = "txtHomeNumber";
             this.txtHomeNumber.Size = new System.Drawing.Size(256, 34);
@@ -244,7 +244,7 @@
             // txtWorkEmail
             // 
             this.txtWorkEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWorkEmail.Location = new System.Drawing.Point(155, 190);
+            this.txtWorkEmail.Location = new System.Drawing.Point(186, 191);
             this.txtWorkEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtWorkEmail.Name = "txtWorkEmail";
             this.txtWorkEmail.Size = new System.Drawing.Size(256, 34);
@@ -253,7 +253,7 @@
             // txtAddressLine1
             // 
             this.txtAddressLine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine1.Location = new System.Drawing.Point(155, 241);
+            this.txtAddressLine1.Location = new System.Drawing.Point(186, 243);
             this.txtAddressLine1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(256, 34);
@@ -262,7 +262,7 @@
             // txtAddressLine2
             // 
             this.txtAddressLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressLine2.Location = new System.Drawing.Point(155, 291);
+            this.txtAddressLine2.Location = new System.Drawing.Point(186, 292);
             this.txtAddressLine2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(256, 34);
@@ -271,7 +271,7 @@
             // txtCity
             // 
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(155, 345);
+            this.txtCity.Location = new System.Drawing.Point(186, 345);
             this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(256, 34);
@@ -280,22 +280,11 @@
             // txtPostcode
             // 
             this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostcode.Location = new System.Drawing.Point(155, 399);
+            this.txtPostcode.Location = new System.Drawing.Point(186, 399);
             this.txtPostcode.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostcode.Name = "txtPostcode";
             this.txtPostcode.Size = new System.Drawing.Size(256, 34);
             this.txtPostcode.TabIndex = 19;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(1061, 679);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(237, 63);
-            this.btnRegister.TabIndex = 20;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label1
             // 
@@ -414,15 +403,16 @@
             this.panel1.Controls.Add(this.lblWorkMobileNumber);
             this.panel1.Controls.Add(this.lblLastName);
             this.panel1.Controls.Add(this.lblFirstName);
-            this.panel1.Location = new System.Drawing.Point(66, 77);
+            this.panel1.Location = new System.Drawing.Point(12, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 475);
+            this.panel1.Size = new System.Drawing.Size(480, 475);
             this.panel1.TabIndex = 29;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnRegisterNewAccount);
             this.panel2.Controls.Add(this.txtStaffId);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtSalary);
@@ -431,10 +421,20 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cboRole);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(504, 77);
+            this.panel2.Location = new System.Drawing.Point(528, 77);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(353, 238);
+            this.panel2.Size = new System.Drawing.Size(445, 238);
             this.panel2.TabIndex = 30;
+            // 
+            // btnRegisterNewAccount
+            // 
+            this.btnRegisterNewAccount.Location = new System.Drawing.Point(137, 194);
+            this.btnRegisterNewAccount.Name = "btnRegisterNewAccount";
+            this.btnRegisterNewAccount.Size = new System.Drawing.Size(256, 30);
+            this.btnRegisterNewAccount.TabIndex = 29;
+            this.btnRegisterNewAccount.Text = "Register";
+            this.btnRegisterNewAccount.UseVisualStyleBackColor = true;
+            this.btnRegisterNewAccount.Click += new System.EventHandler(this.btnRegisterNewAccount_Click);
             // 
             // frmRegisterNewAccount
             // 
@@ -445,7 +445,6 @@
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -483,7 +482,6 @@
         private System.Windows.Forms.TextBox txtAddressLine2;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtPostcode;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboRole;
         private System.Windows.Forms.TextBox txtPassword;
@@ -494,5 +492,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRegisterNewAccount;
     }
 }

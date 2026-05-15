@@ -38,10 +38,21 @@ namespace ATS_Group3_Project
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin(StaffId, firstName, role);
-            login.ShowDialog();
+            // 1. Ask for confirmation
+            DialogResult result = MessageBox.Show("Are you sure you want to return to the Call Handler Dashboard?",
+                "Confirm Navigation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            this.Close();
+            if (result == DialogResult.Yes)
+            {
+                // 2. Create the Dashboard form instance
+                frmCallHandler frmCallHandler = new frmCallHandler(StaffId, firstName, role);
+
+                // 3. Show the dashboard
+                frmCallHandler.Show();
+
+                // 4. Hide This
+                this.Hide();
+            }
         }
 
         // Load turbines into DataGridView
