@@ -55,8 +55,6 @@
             this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogAFault = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtAutoJobService = new System.Windows.Forms.Label();
             this.turbinesTableAdapter1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
@@ -65,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -214,7 +211,7 @@
             this.dataGVTrubinStats.Location = new System.Drawing.Point(272, 56);
             this.dataGVTrubinStats.Name = "dataGVTrubinStats";
             this.dataGVTrubinStats.ReadOnly = true;
-            this.dataGVTrubinStats.Size = new System.Drawing.Size(734, 316);
+            this.dataGVTrubinStats.Size = new System.Drawing.Size(734, 359);
             this.dataGVTrubinStats.TabIndex = 33;
             this.dataGVTrubinStats.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVTrubinStats_CellClick);
             // 
@@ -322,29 +319,6 @@
             this.btnLogAFault.UseVisualStyleBackColor = false;
             this.btnLogAFault.Click += new System.EventHandler(this.btnLogAFault_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtAutoJobService);
-            this.panel2.Location = new System.Drawing.Point(272, 378);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 62);
-            this.panel2.TabIndex = 35;
-            // 
-            // txtAutoJobService
-            // 
-            this.txtAutoJobService.AutoSize = true;
-            this.txtAutoJobService.BackColor = System.Drawing.Color.Transparent;
-            this.txtAutoJobService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutoJobService.ForeColor = System.Drawing.Color.Black;
-            this.txtAutoJobService.Location = new System.Drawing.Point(2, 16);
-            this.txtAutoJobService.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtAutoJobService.Name = "txtAutoJobService";
-            this.txtAutoJobService.Size = new System.Drawing.Size(181, 20);
-            this.txtAutoJobService.TabIndex = 18;
-            this.txtAutoJobService.Text = "Is Service Job Required:";
-            // 
             // turbinesTableAdapter1
             // 
             this.turbinesTableAdapter1.ClearBeforeFill = true;
@@ -357,7 +331,6 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1026, 501);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
             this.Controls.Add(this.pictureBox1);
@@ -375,8 +348,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,8 +370,6 @@
         private ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter turbinesTableAdapter;
         private System.Windows.Forms.BindingSource aTSWindSyncDBDataSetBindingSource;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label txtAutoJobService;
         private ATS_WindSyncDBDataSet1 aTS_WindSyncDBDataSet1;
         private System.Windows.Forms.BindingSource turbinesBindingSource1;
         private ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter turbinesTableAdapter1;

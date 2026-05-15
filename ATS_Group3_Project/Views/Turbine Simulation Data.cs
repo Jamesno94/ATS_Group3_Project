@@ -164,16 +164,10 @@ namespace ATS_Group3_Project
             if (requiresService)
             {
                 selectedTurbine.Status = "Requires Service";
-
-                txtAutoJobService.Text =
-                    "Is Service Job Required: Service Required, Job Created";
             }
             else
             {
                 selectedTurbine.Status = "Active";
-
-                txtAutoJobService.Text =
-                    "Is Service Job Required: This turbine does not require a service.";
             }
 
             // Save turbine update first
