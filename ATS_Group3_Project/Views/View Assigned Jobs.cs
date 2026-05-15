@@ -1,5 +1,6 @@
 ﻿using ATS_Group3_Project.Views;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ATS_Group3_Project
@@ -10,19 +11,49 @@ namespace ATS_Group3_Project
         private string firstName;
         private string role;
 
-        public frmViewAssignedJobs(string StaffId, string firstName, string role)
+        public frmViewAssignedJobs(string staffId, string firstName, string role)
         {
             InitializeComponent();
-            this.StaffId = StaffId;
+
+            this.StaffId = staffId;
             this.firstName = firstName;
             this.role = role;
         }
-
-        public frmViewAssignedJobs(string staffId)
+        private void frmViewAssignedJobs_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            LoadJobs();
+        }
+        private void LoadJobs()
+        {
+            using (var db = new ATSContext())
+            {
+                var jobs = db.JobRecords
+                    .Where(j => j.StaffId == StaffId)
+                    .Select(j => new
+                    {
+                        StaffId = j.StaffId,
+                        j.JobId,
+                        j.WindFarmId,
+                        j.TurbineId,
+                        j.JobType,
+                        j.JobDate,
+                        j.JobTime,
+                        Status = j.JobComplete
+                    })
+                    .ToList();
 
-            StaffId = staffId;
+                DataGVJobs.DataSource = jobs;
+            }
+
+            DataGVJobs.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            DataGVJobs.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            DataGVJobs.ReadOnly = true;
+
+            DataGVJobs.MultiSelect = false;
         }
 
         private void btnOpenJobDetails_Click(object sender, EventArgs e)
@@ -32,9 +63,14 @@ namespace ATS_Group3_Project
                 MessageBox.Show("Please select a job first.");
                 return;
             }
-            
-            frmJobDetails jobDetailsForm = new frmJobDetails();
+
+            string jobId = DataGVJobs.CurrentRow.Cells["JobId"].Value.ToString();
+
+            frmJobDetails jobDetailsForm =
+                new frmJobDetails(jobId, StaffId);
+
             jobDetailsForm.Show();
+
             this.Hide();
         }
 
@@ -49,10 +85,9 @@ namespace ATS_Group3_Project
 
             if (result == DialogResult.Yes)
             {
-                // 2. Create the Dashboard form instance
-                frmEngineerDashboard dash = new frmEngineerDashboard(StaffId, firstName, role);
+                frmEngineerDashboard dash =
+                    new frmEngineerDashboard(StaffId, firstName, role);
 
-                // 3. Show the dashboard
                 dash.Show();
                 this.Hide();
             }
@@ -60,12 +95,16 @@ namespace ATS_Group3_Project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (this.Owner != null)
-            {
-                this.Owner.Show();
-            }
+            frmEngineerDashboard dash =
+                new frmEngineerDashboard(StaffId, firstName, role);
 
+            dash.Show();
             this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

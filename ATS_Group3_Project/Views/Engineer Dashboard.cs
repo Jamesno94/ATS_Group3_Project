@@ -39,7 +39,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin(StaffId, FirstName, Role);
+                frmLogin loginForm = new frmLogin();
                 loginForm.Show();
 
                 this.Hide();
@@ -48,7 +48,12 @@ namespace ATS_Group3_Project.Views
 
         private void btnViewAssignedJobs_Click(object sender, EventArgs e)
         {
-            frmViewAssignedJobs viewAssignedJobsForm = new frmViewAssignedJobs(StaffId);
+          
+        }
+
+        private void btnViewJobs_Click(object sender, EventArgs e)
+        {
+            frmViewAssignedJobs viewAssignedJobsForm = new frmViewAssignedJobs(StaffId, FirstName, Role);
             viewAssignedJobsForm.Show(this);
             this.Hide();
         }

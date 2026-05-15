@@ -28,9 +28,10 @@ namespace ATS_Group3_Project
             this.role = role;
             this.turbineId = turbineId;
             this.windFarmId = windFarmId;
-        }
 
-        
+            txtTurbineId.Text = turbineId;
+            txtWindFarmId.Text = windFarmId;
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -68,58 +69,6 @@ namespace ATS_Group3_Project
 
         private void btnCreateJob_Click(object sender, EventArgs e)
         {
-            //var jobType = "Fault";
-            //var faultDescription = txtFaultDescription.Text?.Trim();
-
-            //if (string.IsNullOrEmpty(faultDescription))
-            //{
-            //    MessageBox.Show("Please enter a fault description.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //if (cboWindFarmId.SelectedItem == null || cboTurbineId.SelectedItem == null)
-            //{
-            //    MessageBox.Show("Please select a wind farm and a turbine.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //var turbineId = cboTurbineId.SelectedItem.ToString();
-            //var windFarmId = cboWindFarmId.SelectedItem.ToString();
-            //var faultDateTime = DateTime.Now;
-            //var jobTime = faultDateTime.Hour < 12 ? "Early" : "Late";
-
-            //try
-            //{
-            //    var createJob = new DispatchManager();
-            //    createJob.CreateFaultJob(new JobRecord
-            //    {
-            //        JobType = jobType,
-            //        FaultDescription = faultDescription,
-            //        TurbineId = turbineId,
-            //        WindFarmId = windFarmId,
-            //        JobDate = faultDateTime,
-            //        JobTime = jobTime,
-            //        StaffId = StaffId,
-
-            //        MainGeneratorServiced = false,
-            //        GearboxServiced = false,
-            //        YawMotorServiced = false,
-            //        InternalPassengerLiftServiced = false,
-            //        MainGeneratorReplaced = false,
-            //        GearboxReplaced = false,
-            //        YawMotorReplaced = false,
-            //        InternalPassengerLiftReplaced = false,
-            //        JobComplete = "Awaiting Engineer"
-            //    });
-
-            //    MessageBox.Show("Fault job created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    // Optionally clear/reset form or navigate away
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error creating job: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
             string faultDescription = txtFaultDescription.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(faultDescription))
@@ -140,36 +89,24 @@ namespace ATS_Group3_Project
             {
                 DateTime faultDateTime = DateTime.Now;
 
-                JobRecord job = new JobRecord
+                DispatchManager manager = new DispatchManager();
+
+                JobRecord createdJob = manager.CreateFaultJob(
+                    turbineId,
+                    faultDescription,
+                    faultDateTime
+                );
+
+                if (createdJob == null)
                 {
-                    JobType = "Fault",
-                    FaultDescription = faultDescription,
-                    TurbineId = turbineId,
-                    WindFarmId = windFarmId,
-                    JobDate = faultDateTime,
-                    JobTime = faultDateTime.Hour < 12 ? "Early" : "Late",
-                    StaffId = StaffId,
+                    MessageBox.Show(
+                        "Unable to assign engineer.",
+                        "Dispatch Failed",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
 
-                    MainGeneratorServiced = false,
-                    GearboxServiced = false,
-                    YawMotorServiced = false,
-                    InternalPassengerLiftServiced = false,
-
-                    MainGeneratorReplaced = false,
-                    GearboxReplaced = false,
-                    YawMotorReplaced = false,
-                    InternalPassengerLiftReplaced = false,
-
-                    JobComplete = "Awaiting Engineer"
-                };
-
-                //DispatchManager manager = new DispatchManager();
-
-                //bool success = manager.CreateFaultJob(
-                //    turbineId,
-                //    faultDescription,
-                //    faultDateTime
-                //);
+                    return;
+                }
 
                 MessageBox.Show(
                     "Fault job created successfully.",
@@ -186,9 +123,16 @@ namespace ATS_Group3_Project
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmTurbSimData frmTurbSimData = new frmTurbSimData(StaffId, firstName, role);
+            frmTurbSimData.Show();
+            this.Close();
+        }
+
+        
     }
 }

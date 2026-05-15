@@ -24,8 +24,8 @@ namespace ATS_Group3_Project.Views
 
         private void btnViewWindFarms_Click(object sender, EventArgs e)
         {
-            
-            WindFarm viewPage = new WindFarm();
+            //Add Wind farm button
+            frmAddWindFarm viewPage = new frmAddWindFarm();
             viewPage.Show();
 
         }
@@ -47,7 +47,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            
+                                                            //Needs Fixed
             frmCallHandler dashboard = new frmCallHandler("ID001", "User", "Admin");
 
             dashboard.Show();

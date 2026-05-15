@@ -34,25 +34,17 @@ namespace ATS_Group3_Project
             this.turbinesTableAdapter1.Fill(this.aTS_WindSyncDBDataSet1.Turbines);
             // Optional initial load
             this.turbinesTableAdapter.Fill(this.aTS_WindSyncDBDataSet.Turbines);
+
+            // Automatically select "All"
+            cboWIndFarms.SelectedItem = "All";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // 1. Ask for confirmation
-            DialogResult result = MessageBox.Show("Are you sure you want to return to the Call Handler Dashboard?",
-                "Confirm Navigation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            frmLogin login = new frmLogin();
+            login.Show();
 
-            if (result == DialogResult.Yes)
-            {
-                // 2. Create the Dashboard form instance
-                frmCallHandler frmCallHandler = new frmCallHandler(StaffId, firstName, role);
-
-                // 3. Show the dashboard
-                frmCallHandler.Show();
-
-                // 4. Hide This
-                this.Hide();
-            }
+            this.Hide();
         }
 
         // Load turbines into DataGridView
@@ -145,16 +137,9 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            int currentRunTime;
-            int newRunTime;
-            DateTime dateTimeUpdated;
-
-            // Validate numbers
-            bool currentValid =
-                int.TryParse(txtCurrentHr.Text, out currentRunTime);
-
-            bool newValid =
-                int.TryParse(txtNewHr.Text, out newRunTime);
+            // Validate runtime values
+            bool currentValid = int.TryParse(txtCurrentHr.Text, out int currentRunTime);
+            bool newValid = int.TryParse(txtNewHr.Text, out int newRunTime);
 
             if (!currentValid || !newValid)
             {
@@ -162,49 +147,37 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            // Prevent lower values
+            // Prevent lower runtime values
             if (newRunTime < currentRunTime)
             {
                 MessageBox.Show(
                     "New runtime must be greater than or equal to current runtime.");
-
                 return;
             }
 
-            // Update turbine runtime
+            // Update turbine values
             selectedTurbine.RuntimeHours = newRunTime;
+            selectedTurbine.LastRecorded = DateTime.Now;
 
-            // Service trigger
-            if (newRunTime >= 2000)
+            bool requiresService = newRunTime >= 2000;
+
+            if (requiresService)
             {
-                selectedTurbine.Status =
-                    "Requires Service";
+                selectedTurbine.Status = "Requires Service";
 
                 txtAutoJobService.Text =
-                    "Is Service Job Required: This turbine requires a service.";
-                
-                dateTimeUpdated = DateTime.Now;
-                selectedTurbine.LastRecorded = dateTimeUpdated;
-
-                //DispatchManager dispatchManager = new DispatchManager();
-                //bool jobCreated =
-                //    dispatchManager.CreateScheduledServiceJob(selectedTurbine.TurbineId);
+                    "Is Service Job Required: Service Required, Job Created";
             }
             else
             {
                 selectedTurbine.Status = "Active";
-                txtAutoJobService.Text = "Is Service Job Required: This turbine does not require a service.";
 
-                dateTimeUpdated = DateTime.Now;
-                selectedTurbine.LastRecorded = dateTimeUpdated;
+                txtAutoJobService.Text =
+                    "Is Service Job Required: This turbine does not require a service.";
             }
 
-            txtCurrentHr.Clear();
-            txtNewHr.Clear();
-
-            // Save to database
-            bool updated =
-                new TurbineManager().UpdateTurbine(selectedTurbine);
+            // Save turbine update first
+            bool updated = new TurbineManager().UpdateTurbine(selectedTurbine);
 
             if (!updated)
             {
@@ -212,13 +185,41 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            // Refresh grid
+            // Create service job if needed
+            if (requiresService)
+            {
+                DispatchManager dispatchManager = new DispatchManager();
+
+                JobRecord createdJob =
+                    dispatchManager.CreateScheduledServiceJob(
+                        selectedTurbine.TurbineId);
+
+                if (createdJob == null)
+                {
+                    MessageBox.Show(
+                        "A service job already exists for this turbine, or no engineer could be assigned.");
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Service job created and engineer assigned.");
+
+                    frmJobDetails jobDetails =
+                        new frmJobDetails(createdJob.JobId, StaffId);
+
+                    jobDetails.Show();
+
+                    this.Hide();
+                }
+            }
+
+            // Update UI
+            txtCurrentHr.Text = newRunTime.ToString();
+            txtNewHr.Clear();
+
+            // Refresh grid display
             dataGVTrubinStats.Refresh();
-
-            MessageBox.Show("Runtime updated successfully.");
-
-
-        }// End btnSave_Click
+        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -227,15 +228,9 @@ namespace ATS_Group3_Project
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogAFault_Click(object sender, EventArgs e)
         {
-            frmAddFaultJob addFaultJobForm = new frmAddFaultJob(StaffId, firstName, role, selectedTurbine.TurbineId, selectedTurbine.WindFarmId);
-            addFaultJobForm.Show();
-            this.Hide();
-        }
-
-        private void btnCreateJob_Click(object sender, EventArgs e)
-        {
+            // Ensure turbine selected
             if (selectedTurbine == null)
             {
                 MessageBox.Show("Please select a turbine first.");
@@ -247,37 +242,59 @@ namespace ATS_Group3_Project
                 var turbine = db.Turbines
                     .FirstOrDefault(t => t.TurbineId == selectedTurbine.TurbineId);
 
+                // Ensure turbine exists
                 if (turbine == null)
                 {
-                    MessageBox.Show("Turbine could not be found in the database.");
+                    MessageBox.Show(
+                        "Turbine could not be found in the database.");
+
                     return;
                 }
 
-                if (turbine.RuntimeHours < 2000)
+                // Prevent duplicate open fault jobs
+                bool existingFaultJob = db.JobRecords.Any(j =>
+                    j.TurbineId == turbine.TurbineId &&
+                    j.JobType == "Fault" &&
+                    j.JobComplete == "Awaiting Engineer");
+
+                if (existingFaultJob)
                 {
-                    MessageBox.Show("This turbine has not reached 2000 runtime hours yet.");
+                    MessageBox.Show(
+                        "An active fault job already exists for this turbine.");
+
+                    return;
+                }
+
+                // Optional:
+                // Prevent fault logging if turbine already faulted
+                if (turbine.Status == "Fault")
+                {
+                    MessageBox.Show(
+                        "This turbine is already marked as Fault.");
+
                     return;
                 }
             }
 
-            DispatchManager dispatchManager = new DispatchManager();
+            // Open Add Fault Job form
+            frmAddFaultJob addFaultJobForm =
+                new frmAddFaultJob(
+                    StaffId,
+                    firstName,
+                    role,
+                    selectedTurbine.TurbineId,
+                    selectedTurbine.WindFarmId
+                );
 
-            JobRecord createdJob = dispatchManager.CreateScheduledServiceJob(
-                selectedTurbine.TurbineId
-            );
-
-            if (createdJob == null)
-            {
-                MessageBox.Show("A service job already exists for this turbine, or no engineer could be assigned.");
-                return;
-            }
-
-            MessageBox.Show("Service job created and engineer assigned.");
-
-            frmJobDetails jobDetails = new frmJobDetails(createdJob.JobId);
-            jobDetails.Show();
+            addFaultJobForm.Show();
 
             this.Hide();
         }
+
+        private void btnCreateSJob_Click(object sender, EventArgs e)
+        {
+         
+        }
+
     }// End class
 }// End namespace

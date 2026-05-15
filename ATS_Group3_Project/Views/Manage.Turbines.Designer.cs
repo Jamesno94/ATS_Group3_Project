@@ -47,7 +47,7 @@
             this.label1.Location = new System.Drawing.Point(19, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 29);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Turbine Manager";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -126,11 +126,11 @@
             // 
             // Manage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1684, 1019);
+            this.ClientSize = new System.Drawing.Size(1319, 625);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);

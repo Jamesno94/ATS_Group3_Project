@@ -61,9 +61,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.engineer_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(454, 171);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,6 +81,7 @@
             this.btnViewJobs.TabIndex = 4;
             this.btnViewJobs.Text = "View Assigned Jobs";
             this.btnViewJobs.UseVisualStyleBackColor = false;
+            this.btnViewJobs.Click += new System.EventHandler(this.btnViewJobs_Click);
             // 
             // btnJobDiary
             // 
@@ -129,8 +130,7 @@
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnJobDiary);
             this.panel1.Controls.Add(this.btnViewJobs);
-            this.panel1.Location = new System.Drawing.Point(485, 125);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(189, 106);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 416);
             this.panel1.TabIndex = 9;
@@ -146,7 +146,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEngineerDashboard";
             this.Text = "Engineer Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
