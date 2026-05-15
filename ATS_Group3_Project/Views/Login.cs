@@ -102,5 +102,10 @@ namespace ATS_Group3_Project
         {
 
         }
+
+        private void txtStaffId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
