@@ -35,7 +35,6 @@
             this.btnSimulationDashboard = new System.Windows.Forms.Button();
             this.btnAddTurbine = new System.Windows.Forms.Button();
             this.btnAddWindFarm = new System.Windows.Forms.Button();
-            this.btnLogFaultJob = new System.Windows.Forms.Button();
             this.btnAddShifts = new System.Windows.Forms.Button();
             this.btnViewAllJobs = new System.Windows.Forms.Button();
             this.btnManageAccount = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -77,6 +77,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
             this.pictureBox2.Location = new System.Drawing.Point(368, 164);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -117,16 +118,6 @@
             this.btnAddWindFarm.Text = "Add Windfarm";
             this.btnAddWindFarm.UseVisualStyleBackColor = true;
             // 
-            // btnLogFaultJob
-            // 
-            this.btnLogFaultJob.Location = new System.Drawing.Point(650, 164);
-            this.btnLogFaultJob.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogFaultJob.Name = "btnLogFaultJob";
-            this.btnLogFaultJob.Size = new System.Drawing.Size(206, 65);
-            this.btnLogFaultJob.TabIndex = 7;
-            this.btnLogFaultJob.Text = "Log Fault Job";
-            this.btnLogFaultJob.UseVisualStyleBackColor = true;
-            // 
             // btnAddShifts
             // 
             this.btnAddShifts.Location = new System.Drawing.Point(650, 258);
@@ -166,7 +157,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 41);
             this.btnLogOut.TabIndex = 11;
-            this.btnLogOut.Text = "LOG OUT";
+            this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -174,14 +165,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnManageAccount);
             this.Controls.Add(this.btnViewAllJobs);
             this.Controls.Add(this.btnAddShifts);
-            this.Controls.Add(this.btnLogFaultJob);
             this.Controls.Add(this.btnAddWindFarm);
             this.Controls.Add(this.btnAddTurbine);
             this.Controls.Add(this.btnSimulationDashboard);
@@ -208,7 +198,6 @@
         private System.Windows.Forms.Button btnSimulationDashboard;
         private System.Windows.Forms.Button btnAddTurbine;
         private System.Windows.Forms.Button btnAddWindFarm;
-        private System.Windows.Forms.Button btnLogFaultJob;
         private System.Windows.Forms.Button btnAddShifts;
         private System.Windows.Forms.Button btnViewAllJobs;
         private System.Windows.Forms.Button btnManageAccount;

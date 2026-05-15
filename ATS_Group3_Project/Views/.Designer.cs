@@ -57,7 +57,9 @@
             this.rtxtEngineerNotes = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVComponentChecklist)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGVComponentChecklist
@@ -69,12 +71,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGVComponentChecklist.Location = new System.Drawing.Point(578, 372);
-            this.dataGVComponentChecklist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGVComponentChecklist.Location = new System.Drawing.Point(434, 302);
+            this.dataGVComponentChecklist.Margin = new System.Windows.Forms.Padding(2);
             this.dataGVComponentChecklist.Name = "dataGVComponentChecklist";
             this.dataGVComponentChecklist.RowHeadersWidth = 62;
             this.dataGVComponentChecklist.RowTemplate.Height = 28;
-            this.dataGVComponentChecklist.Size = new System.Drawing.Size(725, 282);
+            this.dataGVComponentChecklist.Size = new System.Drawing.Size(544, 229);
             this.dataGVComponentChecklist.TabIndex = 0;
             // 
             // Column1
@@ -120,242 +122,279 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 112);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(18, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Job Reference:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 158);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(18, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Job Type:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 203);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(18, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Windfarm:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 255);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(18, 138);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Turbine:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(431, 109);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(296, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 16);
+            this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Assigned Engineer:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(431, 161);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(296, 62);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Priority:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(431, 218);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(296, 108);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 16);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "Status:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(431, 270);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(296, 150);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 16);
+            this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Fault Date/Time:";
             // 
             // txtJobReference
             // 
-            this.txtJobReference.Location = new System.Drawing.Point(243, 107);
-            this.txtJobReference.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtJobReference.BackColor = System.Drawing.Color.Azure;
+            this.txtJobReference.Location = new System.Drawing.Point(102, 19);
+            this.txtJobReference.Margin = new System.Windows.Forms.Padding(2);
             this.txtJobReference.Name = "txtJobReference";
-            this.txtJobReference.Size = new System.Drawing.Size(89, 22);
+            this.txtJobReference.Size = new System.Drawing.Size(134, 20);
             this.txtJobReference.TabIndex = 9;
             // 
             // txtJobType
             // 
-            this.txtJobType.Location = new System.Drawing.Point(243, 155);
-            this.txtJobType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtJobType.BackColor = System.Drawing.Color.Azure;
+            this.txtJobType.Location = new System.Drawing.Point(102, 57);
+            this.txtJobType.Margin = new System.Windows.Forms.Padding(2);
             this.txtJobType.Name = "txtJobType";
-            this.txtJobType.Size = new System.Drawing.Size(89, 22);
+            this.txtJobType.Size = new System.Drawing.Size(134, 20);
             this.txtJobType.TabIndex = 10;
             // 
             // txtWindfarm
             // 
-            this.txtWindfarm.Location = new System.Drawing.Point(243, 198);
-            this.txtWindfarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtWindfarm.BackColor = System.Drawing.Color.Azure;
+            this.txtWindfarm.Location = new System.Drawing.Point(102, 92);
+            this.txtWindfarm.Margin = new System.Windows.Forms.Padding(2);
             this.txtWindfarm.Name = "txtWindfarm";
-            this.txtWindfarm.Size = new System.Drawing.Size(89, 22);
+            this.txtWindfarm.Size = new System.Drawing.Size(134, 20);
             this.txtWindfarm.TabIndex = 11;
             // 
             // txtTurbine
             // 
-            this.txtTurbine.Location = new System.Drawing.Point(243, 250);
-            this.txtTurbine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTurbine.BackColor = System.Drawing.Color.Azure;
+            this.txtTurbine.Location = new System.Drawing.Point(102, 134);
+            this.txtTurbine.Margin = new System.Windows.Forms.Padding(2);
             this.txtTurbine.Name = "txtTurbine";
-            this.txtTurbine.Size = new System.Drawing.Size(89, 22);
+            this.txtTurbine.Size = new System.Drawing.Size(134, 20);
             this.txtTurbine.TabIndex = 12;
             // 
             // txtAssignedEngineer
             // 
-            this.txtAssignedEngineer.Location = new System.Drawing.Point(578, 104);
-            this.txtAssignedEngineer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAssignedEngineer.BackColor = System.Drawing.Color.Azure;
+            this.txtAssignedEngineer.Location = new System.Drawing.Point(407, 15);
+            this.txtAssignedEngineer.Margin = new System.Windows.Forms.Padding(2);
             this.txtAssignedEngineer.Name = "txtAssignedEngineer";
-            this.txtAssignedEngineer.Size = new System.Drawing.Size(89, 22);
+            this.txtAssignedEngineer.Size = new System.Drawing.Size(134, 20);
             this.txtAssignedEngineer.TabIndex = 13;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1177, 709);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(883, 576);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(126, 37);
+            this.btnCancel.Size = new System.Drawing.Size(94, 30);
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSaveChanges
             // 
-            this.btnSaveChanges.Location = new System.Drawing.Point(11, 708);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSaveChanges.Location = new System.Drawing.Point(8, 575);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(132, 38);
+            this.btnSaveChanges.Size = new System.Drawing.Size(99, 31);
             this.btnSaveChanges.TabIndex = 18;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = true;
             // 
             // datetimeFault
             // 
-            this.datetimeFault.Location = new System.Drawing.Point(578, 265);
-            this.datetimeFault.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datetimeFault.Location = new System.Drawing.Point(407, 146);
+            this.datetimeFault.Margin = new System.Windows.Forms.Padding(2);
             this.datetimeFault.Name = "datetimeFault";
-            this.datetimeFault.Size = new System.Drawing.Size(178, 22);
+            this.datetimeFault.Size = new System.Drawing.Size(134, 20);
             this.datetimeFault.TabIndex = 19;
             // 
             // comboxPriority
             // 
+            this.comboxPriority.BackColor = System.Drawing.Color.Azure;
             this.comboxPriority.FormattingEnabled = true;
-            this.comboxPriority.Location = new System.Drawing.Point(578, 154);
-            this.comboxPriority.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboxPriority.Location = new System.Drawing.Point(407, 56);
+            this.comboxPriority.Margin = new System.Windows.Forms.Padding(2);
             this.comboxPriority.Name = "comboxPriority";
-            this.comboxPriority.Size = new System.Drawing.Size(108, 24);
+            this.comboxPriority.Size = new System.Drawing.Size(134, 21);
             this.comboxPriority.TabIndex = 20;
             // 
             // comboxStatus
             // 
+            this.comboxStatus.BackColor = System.Drawing.Color.Azure;
             this.comboxStatus.FormattingEnabled = true;
-            this.comboxStatus.Location = new System.Drawing.Point(578, 212);
-            this.comboxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboxStatus.Location = new System.Drawing.Point(407, 103);
+            this.comboxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboxStatus.Name = "comboxStatus";
-            this.comboxStatus.Size = new System.Drawing.Size(108, 24);
+            this.comboxStatus.Size = new System.Drawing.Size(134, 21);
             this.comboxStatus.TabIndex = 21;
             // 
             // rtxtFaultDescription
             // 
-            this.rtxtFaultDescription.Location = new System.Drawing.Point(828, 98);
-            this.rtxtFaultDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtxtFaultDescription.Location = new System.Drawing.Point(621, 80);
+            this.rtxtFaultDescription.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtFaultDescription.Name = "rtxtFaultDescription";
-            this.rtxtFaultDescription.Size = new System.Drawing.Size(460, 193);
+            this.rtxtFaultDescription.Size = new System.Drawing.Size(346, 158);
             this.rtxtFaultDescription.TabIndex = 22;
             this.rtxtFaultDescription.Text = "";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(828, 78);
+            this.label9.Location = new System.Drawing.Point(621, 63);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 16);
+            this.label9.Size = new System.Drawing.Size(89, 13);
             this.label9.TabIndex = 23;
             this.label9.Text = "Fault Description:";
             // 
             // rtxtEngineerNotes
             // 
-            this.rtxtEngineerNotes.Location = new System.Drawing.Point(64, 390);
-            this.rtxtEngineerNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtxtEngineerNotes.Location = new System.Drawing.Point(48, 317);
+            this.rtxtEngineerNotes.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtEngineerNotes.Name = "rtxtEngineerNotes";
-            this.rtxtEngineerNotes.Size = new System.Drawing.Size(460, 265);
+            this.rtxtEngineerNotes.Size = new System.Drawing.Size(346, 216);
             this.rtxtEngineerNotes.TabIndex = 24;
             this.rtxtEngineerNotes.Text = "";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(68, 372);
+            this.label10.Location = new System.Drawing.Point(51, 302);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 16);
+            this.label10.Size = new System.Drawing.Size(83, 13);
             this.label10.TabIndex = 25;
             this.label10.Text = "Engineer Notes:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(578, 351);
+            this.label11.Location = new System.Drawing.Point(434, 285);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 16);
+            this.label11.Size = new System.Drawing.Size(107, 13);
             this.label11.TabIndex = 26;
             this.label11.Text = "Component Checklist";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboxStatus);
+            this.panel1.Controls.Add(this.comboxPriority);
+            this.panel1.Controls.Add(this.datetimeFault);
+            this.panel1.Controls.Add(this.txtAssignedEngineer);
+            this.panel1.Controls.Add(this.txtTurbine);
+            this.panel1.Controls.Add(this.txtWindfarm);
+            this.panel1.Controls.Add(this.txtJobType);
+            this.panel1.Controls.Add(this.txtJobReference);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(27, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(560, 194);
+            this.panel1.TabIndex = 27;
+            // 
             // frmJobDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1314, 755);
+            this.ClientSize = new System.Drawing.Size(986, 613);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.rtxtEngineerNotes);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.rtxtFaultDescription);
-            this.Controls.Add(this.comboxStatus);
-            this.Controls.Add(this.comboxPriority);
-            this.Controls.Add(this.datetimeFault);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtAssignedEngineer);
-            this.Controls.Add(this.txtTurbine);
-            this.Controls.Add(this.txtWindfarm);
-            this.Controls.Add(this.txtJobType);
-            this.Controls.Add(this.txtJobReference);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGVComponentChecklist);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmJobDetails";
             this.Text = "Job Details";
             this.Load += new System.EventHandler(this.frmJobDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVComponentChecklist)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +431,6 @@
         private System.Windows.Forms.RichTextBox rtxtEngineerNotes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel1;
     }
 }

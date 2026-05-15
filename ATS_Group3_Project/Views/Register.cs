@@ -12,9 +12,16 @@ namespace ATS_Group3_Project
 {
     public partial class frmRegisterNewAccount : Form
     {
-        public frmRegisterNewAccount()
+        private string StaffId;
+        private string firstName;
+        private string role;
+
+        public frmRegisterNewAccount(string StaffId, string firstName, string role)
         {
             InitializeComponent();
+            this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -26,7 +33,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Dashboard form instance
-                frmDashboard dash = new frmDashboard();
+                frmDashboard dash = new frmDashboard(StaffId, firstName, role);
 
                 // 3. Show the dashboard
                 dash.Show();
@@ -150,7 +157,7 @@ namespace ATS_Group3_Project
                 cboRole.SelectedIndex = -1;
                 txtPassword.Clear();
 
-                frmLogin login = new frmLogin();
+                frmLogin login = new frmLogin(StaffId, firstName, role);
                 login.Show();
                 this.Close();
             }

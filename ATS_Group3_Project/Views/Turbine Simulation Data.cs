@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net.Mime;
 using System.Windows.Forms;
@@ -8,15 +10,22 @@ namespace ATS_Group3_Project
 {
     public partial class frmTurbSimData : Form
     {
+        private string StaffId;
+        private string firstName;
+        private string role;
+
         // Stores turbines currently shown in grid
         private List<Turbine> currentTurbines = new List<Turbine>();
 
         // Stores currently selected turbine
         private Turbine selectedTurbine;
 
-        public frmTurbSimData()
+        public frmTurbSimData(string staffId, string firstName, string role)
         {
             InitializeComponent();
+            this.StaffId = staffId;
+            this.firstName = firstName;
+            this.role = role;
         }
 
         private void frmTurbSimData_Load(object sender, EventArgs e)
@@ -29,10 +38,10 @@ namespace ATS_Group3_Project
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin(StaffId, firstName, role);
             login.ShowDialog();
 
-            this.Hide();
+            this.Close();
         }
 
         // Load turbines into DataGridView
@@ -173,7 +182,10 @@ namespace ATS_Group3_Project
             else
             {
                 selectedTurbine.Status = "Active";
-                txtAutoJobService.Text = "";
+                txtAutoJobService.Text = "Is Service Job Required: This turbine does not require a service.";
+
+                dateTimeUpdated = DateTime.Now;
+                selectedTurbine.LastRecorded = dateTimeUpdated;
             }
 
             txtCurrentHr.Clear();
@@ -196,5 +208,65 @@ namespace ATS_Group3_Project
 
 
         }// End btnSave_Click
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmCallHandler callHandler = new frmCallHandler(StaffId, firstName, role);
+            callHandler.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAddFaultJob addFaultJobForm = new frmAddFaultJob(StaffId, firstName, role, selectedTurbine.TurbineId, selectedTurbine.WindFarmId);
+            addFaultJobForm.Show();
+            this.Hide();
+        }
+
+        private void btnCreateJob_Click(object sender, EventArgs e)
+        {
+            if (selectedTurbine == null)
+            {
+                MessageBox.Show("Please select a turbine first.");
+                return;
+            }
+
+            using (var db = new ATSContext())
+            {
+                var turbine = db.Turbines
+                    .FirstOrDefault(t => t.TurbineId == selectedTurbine.TurbineId);
+
+                if (turbine == null)
+                {
+                    MessageBox.Show("Turbine could not be found in the database.");
+                    return;
+                }
+
+                if (turbine.RuntimeHours < 2000)
+                {
+                    MessageBox.Show("This turbine has not reached 2000 runtime hours yet.");
+                    return;
+                }
+            }
+
+            DispatchManager dispatchManager = new DispatchManager();
+
+            JobRecord createdJob = dispatchManager.CreateScheduledServiceJob(
+                selectedTurbine.TurbineId
+            );
+
+            if (createdJob == null)
+            {
+                MessageBox.Show("A service job already exists for this turbine, or no engineer could be assigned.");
+                return;
+            }
+
+            MessageBox.Show("Service job created and engineer assigned.");
+
+            frmJobDetails jobDetails = new frmJobDetails(createdJob.JobId);
+            jobDetails.Show();
+
+            this.Hide();
+        }
     }// End class
 }// End namespace

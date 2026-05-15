@@ -74,7 +74,7 @@
             this.Column4,
             this.Column5});
             this.dataGVFaultHistory.Location = new System.Drawing.Point(434, 54);
-            this.dataGVFaultHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGVFaultHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGVFaultHistory.Name = "dataGVFaultHistory";
             this.dataGVFaultHistory.RowHeadersWidth = 62;
             this.dataGVFaultHistory.RowTemplate.Height = 28;
@@ -124,7 +124,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(905, 583);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(73, 23);
             this.btnCancel.TabIndex = 3;
@@ -134,7 +134,7 @@
             // btnExportReport
             // 
             this.btnExportReport.Location = new System.Drawing.Point(8, 583);
-            this.btnExportReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExportReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportReport.Name = "btnExportReport";
             this.btnExportReport.Size = new System.Drawing.Size(91, 23);
             this.btnExportReport.TabIndex = 4;
@@ -151,7 +151,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewComboBoxColumn1});
             this.dataGVServiceHistory.Location = new System.Drawing.Point(434, 233);
-            this.dataGVServiceHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGVServiceHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGVServiceHistory.Name = "dataGVServiceHistory";
             this.dataGVServiceHistory.RowHeadersWidth = 62;
             this.dataGVServiceHistory.RowTemplate.Height = 28;
@@ -209,7 +209,7 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewComboBoxColumn2});
             this.dataGVRepairHistory.Location = new System.Drawing.Point(334, 407);
-            this.dataGVRepairHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGVRepairHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGVRepairHistory.Name = "dataGVRepairHistory";
             this.dataGVRepairHistory.RowHeadersWidth = 62;
             this.dataGVRepairHistory.RowTemplate.Height = 28;
@@ -298,7 +298,7 @@
             // 
             this.comboxWindfarm.FormattingEnabled = true;
             this.comboxWindfarm.Location = new System.Drawing.Point(51, 177);
-            this.comboxWindfarm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboxWindfarm.Margin = new System.Windows.Forms.Padding(2);
             this.comboxWindfarm.Name = "comboxWindfarm";
             this.comboxWindfarm.Size = new System.Drawing.Size(82, 21);
             this.comboxWindfarm.TabIndex = 10;
@@ -307,7 +307,7 @@
             // 
             this.comboxTurbine.FormattingEnabled = true;
             this.comboxTurbine.Location = new System.Drawing.Point(199, 177);
-            this.comboxTurbine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboxTurbine.Margin = new System.Windows.Forms.Padding(2);
             this.comboxTurbine.Name = "comboxTurbine";
             this.comboxTurbine.Size = new System.Drawing.Size(82, 21);
             this.comboxTurbine.TabIndex = 11;
@@ -315,7 +315,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(130, 233);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(73, 26);
             this.btnRefresh.TabIndex = 12;
@@ -326,7 +326,7 @@
             // 
             this.lstboxTurbineSummary.FormattingEnabled = true;
             this.lstboxTurbineSummary.Location = new System.Drawing.Point(55, 310);
-            this.lstboxTurbineSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstboxTurbineSummary.Margin = new System.Windows.Forms.Padding(2);
             this.lstboxTurbineSummary.Name = "lstboxTurbineSummary";
             this.lstboxTurbineSummary.Size = new System.Drawing.Size(227, 82);
             this.lstboxTurbineSummary.TabIndex = 13;
@@ -367,7 +367,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.label6);

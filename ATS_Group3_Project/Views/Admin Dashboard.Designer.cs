@@ -44,9 +44,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.profile_icon;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,6 +58,7 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
+            this.lblGreetings.BackColor = System.Drawing.Color.Azure;
             this.lblGreetings.Location = new System.Drawing.Point(92, 39);
             this.lblGreetings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGreetings.Name = "lblGreetings";
@@ -66,6 +69,7 @@
             // lblRole
             // 
             this.lblRole.AutoSize = true;
+            this.lblRole.BackColor = System.Drawing.Color.Azure;
             this.lblRole.Location = new System.Drawing.Point(92, 63);
             this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRole.Name = "lblRole";
@@ -77,7 +81,7 @@
             // 
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
             this.pictureBox2.Location = new System.Drawing.Point(454, 171);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(248, 260);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,7 +91,7 @@
             // btnViewAllStaff
             // 
             this.btnViewAllStaff.Location = new System.Drawing.Point(208, 171);
-            this.btnViewAllStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewAllStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewAllStaff.Name = "btnViewAllStaff";
             this.btnViewAllStaff.Size = new System.Drawing.Size(206, 65);
             this.btnViewAllStaff.TabIndex = 4;
@@ -97,7 +101,7 @@
             // btnCreateNewStaff
             // 
             this.btnCreateNewStaff.Location = new System.Drawing.Point(208, 366);
-            this.btnCreateNewStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateNewStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateNewStaff.Name = "btnCreateNewStaff";
             this.btnCreateNewStaff.Size = new System.Drawing.Size(206, 65);
             this.btnCreateNewStaff.TabIndex = 5;
@@ -107,7 +111,7 @@
             // btnEditAllStaff
             // 
             this.btnEditAllStaff.Location = new System.Drawing.Point(208, 271);
-            this.btnEditAllStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAllStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAllStaff.Name = "btnEditAllStaff";
             this.btnEditAllStaff.Size = new System.Drawing.Size(206, 65);
             this.btnEditAllStaff.TabIndex = 6;
@@ -117,7 +121,7 @@
             // btnDeleteStaff
             // 
             this.btnDeleteStaff.Location = new System.Drawing.Point(736, 171);
-            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(206, 65);
             this.btnDeleteStaff.TabIndex = 7;
@@ -127,7 +131,7 @@
             // btnUnlockAccount
             // 
             this.btnUnlockAccount.Location = new System.Drawing.Point(736, 271);
-            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnUnlockAccount.Name = "btnUnlockAccount";
             this.btnUnlockAccount.Size = new System.Drawing.Size(206, 65);
             this.btnUnlockAccount.TabIndex = 8;
@@ -139,7 +143,7 @@
             this.btnLogOut.BackColor = System.Drawing.Color.Red;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogOut.Location = new System.Drawing.Point(899, 562);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 41);
             this.btnLogOut.TabIndex = 12;
@@ -151,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.btnLogOut);
@@ -164,7 +168,7 @@
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdminDashboard";
             this.Text = "frmAdminDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

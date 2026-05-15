@@ -12,12 +12,20 @@ namespace ATS_Group3_Project
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
-        {
-            //lblGreetings.Text = $"Greetings, {UserControl.FirstName}";
-            //lblRole.Text = $"Role: {UserControl.JobRole}";
+        private string StaffId;
+        private string firstName;
+        private string role;
 
+        public frmDashboard(string staffId, string firstName, string role)
+        {
             InitializeComponent();
+
+            this.StaffId = staffId;
+            this.firstName = firstName;
+            this.role = role;
+
+            lblGreetings.Text = $"Greetings, {firstName}";
+            lblRole.Text = $"Role: {role}";
         }
 
         private void btnAddFaultJob_Click(object sender, EventArgs e)
@@ -29,7 +37,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Add Fault Job Form instance
-                frmAddFaultJob addFaultJob = new frmAddFaultJob();
+                frmAddFaultJob addFaultJob = new frmAddFaultJob(StaffId, firstName, role);
 
                 // 3. Show the Add Fault Job Form
                 addFaultJob.Show();
@@ -50,7 +58,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Register New Account Form instance
-                frmRegisterNewAccount registerNewAccount = new frmRegisterNewAccount();
+                frmRegisterNewAccount registerNewAccount = new frmRegisterNewAccount(StaffId, firstName, role);
 
                 // 3. Show the Register New Account Form
                 registerNewAccount.Show();
@@ -70,7 +78,7 @@ namespace ATS_Group3_Project
             if(result == DialogResult.Yes)
             {
                 // 2. Create the View Assigned Jobs Form instance
-                frmViewAssignedJobs viewAssignedJobs = new frmViewAssignedJobs();
+                frmViewAssignedJobs viewAssignedJobs = new frmViewAssignedJobs(StaffId, firstName, role);
 
                 // 3. Show the View Assigned Jobs Form
                 viewAssignedJobs.Show();
@@ -89,7 +97,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Turbine Simulation Data Form instance
-                frmTurbSimData turbine_Simulation_Data = new frmTurbSimData();
+                frmTurbSimData turbine_Simulation_Data = new frmTurbSimData(StaffId, firstName, role);
 
                 // 3. Show the Turbine Simulation Data Form
                 turbine_Simulation_Data.Show();

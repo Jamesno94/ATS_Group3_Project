@@ -12,8 +12,9 @@ namespace ATS_Group3_Project.Views
 {
     public partial class frmAdminDashboard : Form
     {
-        public string FirstName { get; set; }
-        public string Role { get; set; }
+        private string FirstName;
+
+        private string Role;
 
         private string StaffId;
         public frmAdminDashboard(string StaffId, string firstName, string role)
@@ -21,6 +22,8 @@ namespace ATS_Group3_Project.Views
             InitializeComponent();
 
             this.StaffId = StaffId;
+            this.FirstName = firstName;
+            this.Role = role;
 
             lblGreetings.Text = $"Greetings, {firstName}";
             lblRole.Text = $"Role: {role}";
@@ -37,7 +40,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin();
+                frmLogin loginForm = new frmLogin(StaffId, FirstName, Role);
                 loginForm.Show();
 
                 this.Hide();
