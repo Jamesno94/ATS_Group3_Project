@@ -37,7 +37,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.DashboardLogoClick = new System.Windows.Forms.PictureBox();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnViewAllJobs = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.btnCreateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,17 +165,17 @@
             // 
             // DashboardLogoClick
             // 
-            this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
-            this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.DashboardLogoClick.Location = new System.Drawing.Point(990, 10);
-            this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.DashboardLogoClick.Name = "DashboardLogoClick";
-            this.DashboardLogoClick.Size = new System.Drawing.Size(113, 122);
-            this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DashboardLogoClick.TabIndex = 21;
-            this.DashboardLogoClick.TabStop = false;
-            this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
-            // 
+            //this.DashboardLogoClick.BackColor = System.Drawing.Color.Transparent;
+            //this.DashboardLogoClick.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
+            //this.DashboardLogoClick.Location = new System.Drawing.Point(990, 10);
+            //this.DashboardLogoClick.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            //this.DashboardLogoClick.Name = "DashboardLogoClick";
+            //this.DashboardLogoClick.Size = new System.Drawing.Size(113, 122);
+            //this.DashboardLogoClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.DashboardLogoClick.TabIndex = 21;
+            //this.DashboardLogoClick.TabStop = false;
+            //this.DashboardLogoClick.Click += new System.EventHandler(this.DashboardLogoClick_Click);
+            //// 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
@@ -290,7 +289,6 @@
             this.ClientSize = new System.Drawing.Size(765, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCompanyName);
-            this.Controls.Add(this.DashboardLogoClick);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.pictureBox1);
@@ -298,7 +296,7 @@
             this.Name = "frmAddFaultJob";
             this.Text = "Add Fault Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.DashboardLogoClick)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -317,7 +315,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSaveChanges;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.PictureBox DashboardLogoClick;
         private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCreateJob;

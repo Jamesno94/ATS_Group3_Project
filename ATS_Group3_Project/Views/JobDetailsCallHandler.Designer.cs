@@ -1,4 +1,4 @@
-﻿namespace ATS_Group3_Project.Views
+﻿namespace ATS_Group3_Project
 {
     partial class frmJobDetails
     {
@@ -48,14 +48,13 @@
             this.lblLocationHeading = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEngineer = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAssignedEngineerName = new System.Windows.Forms.TextBox();
             this.lblEngineerName = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAssignedEngineerId = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblFaultDescription = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFaultDescription = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.chkLiftReplaced = new System.Windows.Forms.CheckBox();
             this.chkLiftServiced = new System.Windows.Forms.CheckBox();
@@ -214,7 +213,7 @@
             this.panel1.Controls.Add(this.txtJobType);
             this.panel1.Controls.Add(this.txtJobId);
             this.panel1.Controls.Add(this.lblJobId);
-            this.panel1.Location = new System.Drawing.Point(46, 83);
+            this.panel1.Location = new System.Drawing.Point(45, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 229);
             this.panel1.TabIndex = 16;
@@ -236,7 +235,7 @@
             this.panel2.Controls.Add(this.lblTurbineId);
             this.panel2.Controls.Add(this.lblWindFarmID);
             this.panel2.Controls.Add(this.txtWindFarmId);
-            this.panel2.Location = new System.Drawing.Point(325, 83);
+            this.panel2.Location = new System.Drawing.Point(325, 121);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 127);
             this.panel2.TabIndex = 17;
@@ -254,11 +253,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.lblEngineer);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtAssignedEngineerName);
             this.panel3.Controls.Add(this.lblEngineerName);
             this.panel3.Controls.Add(this.lblStaffId);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(46, 340);
+            this.panel3.Controls.Add(this.txtAssignedEngineerId);
+            this.panel3.Location = new System.Drawing.Point(45, 359);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(251, 127);
             this.panel3.TabIndex = 18;
@@ -272,13 +271,13 @@
             this.lblEngineer.TabIndex = 16;
             this.lblEngineer.Text = "Engineer Information";
             // 
-            // textBox1
+            // txtAssignedEngineerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtAssignedEngineerName.Location = new System.Drawing.Point(111, 79);
+            this.txtAssignedEngineerName.Name = "txtAssignedEngineerName";
+            this.txtAssignedEngineerName.ReadOnly = true;
+            this.txtAssignedEngineerName.Size = new System.Drawing.Size(125, 20);
+            this.txtAssignedEngineerName.TabIndex = 15;
             // 
             // lblEngineerName
             // 
@@ -298,52 +297,41 @@
             this.lblStaffId.TabIndex = 13;
             this.lblStaffId.Text = "Staff ID:";
             // 
-            // textBox2
+            // txtAssignedEngineerId
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(125, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtAssignedEngineerId.Location = new System.Drawing.Point(111, 53);
+            this.txtAssignedEngineerId.Name = "txtAssignedEngineerId";
+            this.txtAssignedEngineerId.ReadOnly = true;
+            this.txtAssignedEngineerId.Size = new System.Drawing.Size(125, 20);
+            this.txtAssignedEngineerId.TabIndex = 7;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.lblFaultDescription);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Location = new System.Drawing.Point(565, 83);
+            this.panel4.Controls.Add(this.txtFaultDescription);
+            this.panel4.Location = new System.Drawing.Point(566, 121);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(486, 151);
+            this.panel4.Size = new System.Drawing.Size(486, 137);
             this.panel4.TabIndex = 19;
             // 
             // lblFaultDescription
             // 
             this.lblFaultDescription.AutoSize = true;
-            this.lblFaultDescription.Location = new System.Drawing.Point(70, 24);
+            this.lblFaultDescription.Location = new System.Drawing.Point(195, 19);
             this.lblFaultDescription.Name = "lblFaultDescription";
             this.lblFaultDescription.Size = new System.Drawing.Size(86, 13);
             this.lblFaultDescription.TabIndex = 16;
             this.lblFaultDescription.Text = "Fault Description";
             // 
-            // label3
+            // txtFaultDescription
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Fault Description:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(111, 53);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(336, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtFaultDescription.Location = new System.Drawing.Point(27, 45);
+            this.txtFaultDescription.Multiline = true;
+            this.txtFaultDescription.Name = "txtFaultDescription";
+            this.txtFaultDescription.ReadOnly = true;
+            this.txtFaultDescription.Size = new System.Drawing.Size(420, 74);
+            this.txtFaultDescription.TabIndex = 7;
             // 
             // panel5
             // 
@@ -363,9 +351,9 @@
             this.panel5.Controls.Add(this.lblYawMotor);
             this.panel5.Controls.Add(this.lblGearbox);
             this.panel5.Controls.Add(this.lblMainGenerator);
-            this.panel5.Location = new System.Drawing.Point(565, 268);
+            this.panel5.Location = new System.Drawing.Point(315, 270);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(419, 229);
+            this.panel5.Size = new System.Drawing.Size(447, 216);
             this.panel5.TabIndex = 17;
             // 
             // chkLiftReplaced
@@ -439,6 +427,31 @@
             this.chkMainGeneratorServiced.Size = new System.Drawing.Size(15, 14);
             this.chkMainGeneratorServiced.TabIndex = 15;
             this.chkMainGeneratorServiced.UseVisualStyleBackColor = true;
+
+            //checkbox load events
+            this.chkMainGeneratorServiced.CheckedChanged +=
+    new System.EventHandler(this.chkMainGeneratorServiced_CheckedChanged);
+
+            this.chkMainGeneratorReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkMainGeneratorReplaced_CheckedChanged);
+
+            this.chkGearboxServiced.CheckedChanged +=
+                new System.EventHandler(this.chkGearboxServiced_CheckedChanged);
+
+            this.chkGearboxReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkGearboxReplaced_CheckedChanged);
+
+            this.chkYawMotorServiced.CheckedChanged +=
+                new System.EventHandler(this.chkYawMotorServiced_CheckedChanged);
+
+            this.chkYawMotorReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkYawMotorReplaced_CheckedChanged);
+
+            this.chkLiftServiced.CheckedChanged +=
+                new System.EventHandler(this.chkLiftServiced_CheckedChanged);
+
+            this.chkLiftReplaced.CheckedChanged +=
+                new System.EventHandler(this.chkLiftReplaced_CheckedChanged);
             // 
             // lblReplaced
             // 
@@ -511,6 +524,7 @@
             this.btnBack.TabIndex = 20;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnUpdateJob
             // 
@@ -520,6 +534,7 @@
             this.btnUpdateJob.TabIndex = 21;
             this.btnUpdateJob.Text = "Update Job";
             this.btnUpdateJob.UseVisualStyleBackColor = true;
+            this.btnUpdateJob.Click += new System.EventHandler(this.btnUpdateJob_Click);
             // 
             // frmJobDetails
             // 
@@ -549,6 +564,8 @@
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
+            this.Load += new System.EventHandler(this.frmJobDetails_Load);
+
         }
 
         #endregion
@@ -573,14 +590,13 @@
         private System.Windows.Forms.Label lblLocationHeading;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEngineer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAssignedEngineerName;
         private System.Windows.Forms.Label lblEngineerName;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAssignedEngineerId;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblFaultDescription;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtFaultDescription;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblComponentDetails;
         private System.Windows.Forms.Label lblLift;

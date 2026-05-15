@@ -52,6 +52,8 @@ namespace ATS_Group3_Project.Views
             simDataForm.Show();
             this.Hide();
         }
+
+      
     }
 }
 

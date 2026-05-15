@@ -28,80 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstAvailableJobs = new System.Windows.Forms.ListBox();
-            this.lblAvailableJobs = new System.Windows.Forms.Label();
-            this.lblCompletedJobs = new System.Windows.Forms.Label();
-            this.lstCompletedJobs = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnOpenJobDetails = new System.Windows.Forms.Button();
             this.lblCompanyName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.DataGVJobs = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGVJobs)).BeginInit();
             this.SuspendLayout();
             // 
-            // lstAvailableJobs
+            // btnOpenJobDetails
             // 
-            this.lstAvailableJobs.FormattingEnabled = true;
-            this.lstAvailableJobs.Location = new System.Drawing.Point(95, 156);
-            this.lstAvailableJobs.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.lstAvailableJobs.Name = "lstAvailableJobs";
-            this.lstAvailableJobs.Size = new System.Drawing.Size(263, 277);
-            this.lstAvailableJobs.TabIndex = 0;
-            // 
-            // lblAvailableJobs
-            // 
-            this.lblAvailableJobs.AutoSize = true;
-            this.lblAvailableJobs.BackColor = System.Drawing.Color.Transparent;
-            this.lblAvailableJobs.ForeColor = System.Drawing.Color.Black;
-            this.lblAvailableJobs.Location = new System.Drawing.Point(92, 133);
-            this.lblAvailableJobs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAvailableJobs.Name = "lblAvailableJobs";
-            this.lblAvailableJobs.Size = new System.Drawing.Size(75, 13);
-            this.lblAvailableJobs.TabIndex = 1;
-            this.lblAvailableJobs.Text = "Available Jobs";
-            // 
-            // lblCompletedJobs
-            // 
-            this.lblCompletedJobs.AutoSize = true;
-            this.lblCompletedJobs.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompletedJobs.ForeColor = System.Drawing.Color.Black;
-            this.lblCompletedJobs.Location = new System.Drawing.Point(549, 133);
-            this.lblCompletedJobs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCompletedJobs.Name = "lblCompletedJobs";
-            this.lblCompletedJobs.Size = new System.Drawing.Size(82, 13);
-            this.lblCompletedJobs.TabIndex = 2;
-            this.lblCompletedJobs.Text = "Completed Jobs";
-            // 
-            // lstCompletedJobs
-            // 
-            this.lstCompletedJobs.FormattingEnabled = true;
-            this.lstCompletedJobs.Location = new System.Drawing.Point(551, 156);
-            this.lstCompletedJobs.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.lstCompletedJobs.Name = "lstCompletedJobs";
-            this.lstCompletedJobs.Size = new System.Drawing.Size(263, 277);
-            this.lstCompletedJobs.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(95, 458);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Assign Engineer";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
-            this.pictureBox2.Location = new System.Drawing.Point(874, 8);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 91);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.btnOpenJobDetails.Location = new System.Drawing.Point(952, 462);
+            this.btnOpenJobDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpenJobDetails.Name = "btnOpenJobDetails";
+            this.btnOpenJobDetails.Size = new System.Drawing.Size(99, 41);
+            this.btnOpenJobDetails.TabIndex = 4;
+            this.btnOpenJobDetails.Text = "Open Job Details";
+            this.btnOpenJobDetails.UseVisualStyleBackColor = true;
+            this.btnOpenJobDetails.Click += new System.EventHandler(this.btnOpenJobDetails_Click);
             // 
             // lblCompanyName
             // 
@@ -115,37 +58,50 @@
             this.lblCompanyName.TabIndex = 7;
             this.lblCompanyName.Text = "WindSync ATS";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(31, 462);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(92, 41);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // DataGVJobs
+            // 
+            this.DataGVJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGVJobs.Location = new System.Drawing.Point(71, 94);
+            this.DataGVJobs.Name = "DataGVJobs";
+            this.DataGVJobs.Size = new System.Drawing.Size(980, 328);
+            this.DataGVJobs.TabIndex = 11;
+            // 
             // frmViewAssignedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(985, 614);
+            this.ClientSize = new System.Drawing.Size(1106, 541);
+            this.Controls.Add(this.DataGVJobs);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCompanyName);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lstCompletedJobs);
-            this.Controls.Add(this.lblCompletedJobs);
-            this.Controls.Add(this.lblAvailableJobs);
-            this.Controls.Add(this.lstAvailableJobs);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.btnOpenJobDetails);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmViewAssignedJobs";
             this.Text = "View Assigned Jobs";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Load += new System.EventHandler(this.frmViewAssignedJobs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGVJobs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstAvailableJobs;
-        private System.Windows.Forms.Label lblAvailableJobs;
-        private System.Windows.Forms.Label lblCompletedJobs;
-        private System.Windows.Forms.ListBox lstCompletedJobs;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnOpenJobDetails;
         private System.Windows.Forms.Label lblCompanyName;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView DataGVJobs;
     }
 }

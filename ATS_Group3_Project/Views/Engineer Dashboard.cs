@@ -45,7 +45,17 @@ namespace ATS_Group3_Project.Views
                 this.Hide();
             }
         }
+
+        private void btnViewAssignedJobs_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnViewJobs_Click(object sender, EventArgs e)
+        {
+            frmViewAssignedJobs viewAssignedJobsForm = new frmViewAssignedJobs(StaffId, FirstName, Role);
+            viewAssignedJobsForm.Show(this);
+            this.Hide();
+        }
     }
-} 
-
-
+}
