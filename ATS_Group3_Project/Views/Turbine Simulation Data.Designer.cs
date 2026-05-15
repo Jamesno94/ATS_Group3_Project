@@ -362,12 +362,22 @@
             this.btnCreateJob.UseVisualStyleBackColor = false;
             this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             // 
+            // btnCreateJob
+            // 
+            this.btnCreateJob.Location = new System.Drawing.Point(469, 562);
+            this.btnCreateJob.Name = "btnCreateJob";
+            this.btnCreateJob.Size = new System.Drawing.Size(122, 39);
+            this.btnCreateJob.TabIndex = 35;
+            this.btnCreateJob.Text = "Create Job";
+            this.btnCreateJob.UseVisualStyleBackColor = true;
+            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
+            // 
             // frmTurbSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1030, 598);
             this.Controls.Add(this.panel2);

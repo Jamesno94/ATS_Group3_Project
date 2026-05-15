@@ -74,6 +74,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
             this.pictureBox2.Location = new System.Drawing.Point(454, 171);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -150,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background1_jpg;
+            this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(985, 614);
             this.Controls.Add(this.panel1);

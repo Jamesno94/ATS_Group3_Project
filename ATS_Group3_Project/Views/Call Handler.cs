@@ -54,13 +54,6 @@ namespace ATS_Group3_Project.Views
             simDataForm.Show();
             this.Hide();
         }
-
-        private void btnLogFaultJob_Click(object sender, EventArgs e)
-        {
-            frmAddFaultJob addFaultJobForm = new frmAddFaultJob(StaffId, firstName, role, turbineId, windFarmId);
-            addFaultJobForm.Show();
-            this.Hide();
-        }
     }
 }
 

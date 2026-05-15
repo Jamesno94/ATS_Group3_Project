@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,7 +58,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Dashboard form instance
-                frmDashboard dash = new frmDashboard(StaffId, firstName, role);
+                frmCallHandler dash = new frmCallHandler(StaffId, firstName, role);
 
                 // 3. Show the dashboard
                 dash.Show();
@@ -165,13 +166,13 @@ namespace ATS_Group3_Project
                     JobComplete = "Awaiting Engineer"
                 };
 
-                DispatchManager manager = new DispatchManager();
+                //DispatchManager manager = new DispatchManager();
 
-                bool success = manager.CreateFaultJob(
-                    turbineId,
-                    faultDescription,
-                    faultDateTime
-                );
+                //bool success = manager.CreateFaultJob(
+                //    turbineId,
+                //    faultDescription,
+                //    faultDateTime
+                //);
 
                 MessageBox.Show(
                     "Fault job created successfully.",

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATS_Group3_Project.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,7 @@ namespace ATS_Group3_Project
             if (result == DialogResult.Yes)
             {
                 // 2. Create the Dashboard form instance
-                frmDashboard dash = new frmDashboard(StaffId, firstName, role);
+                frmEngineerDashboard dash = new frmEngineerDashboard(StaffId, firstName, role);
 
                 // 3. Show the dashboard
                 dash.Show();
