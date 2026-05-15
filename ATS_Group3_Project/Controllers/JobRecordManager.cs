@@ -158,16 +158,27 @@ namespace ATS_Group3_Project
         }
 
         public bool MarkJobComplete(
-            int jobId,
-            bool mainGeneratorServiced,
-            bool gearboxServiced,
-            bool yawMotorServiced,
-            bool internalPassengerLiftServiced,
-            bool mainGeneratorReplaced,
-            bool gearboxReplaced,
-            bool yawMotorReplaced,
-            bool internalPassengerLiftReplaced)
+          int jobId,
+          bool mainGeneratorServiced,
+          bool gearboxServiced,
+          bool yawMotorServiced,
+          bool liftServiced,
+          bool mainGeneratorReplaced,
+          bool gearboxReplaced,
+          bool yawMotorReplaced,
+          bool liftReplaced)
         {
+            bool valid =
+                mainGeneratorServiced != mainGeneratorReplaced &&
+                gearboxServiced != gearboxReplaced &&
+                yawMotorServiced != yawMotorReplaced &&
+                liftServiced != liftReplaced;
+
+            if (!valid)
+            {
+                return false;
+            }
+
             using (var db = new ATSContext())
             {
                 var job = db.JobRecords
@@ -182,20 +193,23 @@ namespace ATS_Group3_Project
                 job.MainGeneratorServiced = mainGeneratorServiced;
                 job.GearboxServiced = gearboxServiced;
                 job.YawMotorServiced = yawMotorServiced;
-                job.InternalPassengerLiftServiced = internalPassengerLiftServiced;
+                job.InternalPassengerLiftServiced = liftServiced;
 
                 job.MainGeneratorReplaced = mainGeneratorReplaced;
                 job.GearboxReplaced = gearboxReplaced;
                 job.YawMotorReplaced = yawMotorReplaced;
-                job.InternalPassengerLiftReplaced = internalPassengerLiftReplaced;
+                job.InternalPassengerLiftReplaced = liftReplaced;
 
                 job.JobComplete = "Complete";
 
-                job.Turbine.Status = "Active";
-
-                if (job.JobType == "Scheduled Service")
+                if (job.Turbine != null)
                 {
-                    job.Turbine.RuntimeHours = 0;
+                    job.Turbine.Status = "Active";
+
+                    if (job.JobType == "Scheduled Service")
+                    {
+                        job.Turbine.RuntimeHours = 0;
+                    }
                 }
 
                 db.SaveChanges();

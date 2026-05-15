@@ -223,7 +223,7 @@ namespace ATS_Group3_Project
             this.Hide();
         }
 
-        private void btnCreateJob_Click(object sender, EventArgs e)
+        private void btnCreateSJob_Click(object sender, EventArgs e)
         {
             if (selectedTurbine == null)
             {
@@ -263,9 +263,12 @@ namespace ATS_Group3_Project
 
             MessageBox.Show("Service job created and engineer assigned.");
 
-            frmJobDetails jobDetails = new frmJobDetails(createdJob.JobId);
-            jobDetails.Show();
+            frmJobDetails jobDetails = new frmJobDetails(
+                createdJob.JobId,
+                StaffId
+            );
 
+            jobDetails.Show();
             this.Hide();
         }
     }// End class
