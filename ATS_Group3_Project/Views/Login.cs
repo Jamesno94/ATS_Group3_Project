@@ -20,8 +20,8 @@ namespace ATS_Group3_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string staffId = txtStaffId.Text.Trim();
-            string password = txtPassword.Text;
+            string staffId = txtStaffId.Text.Trim().ToUpper();
+            string password = txtPassword.Text.Trim();
 
             UserManager manager = new UserManager();
 

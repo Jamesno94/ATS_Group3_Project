@@ -116,6 +116,7 @@
             this.btnAddWindFarm.TabIndex = 6;
             this.btnAddWindFarm.Text = "Add Windfarm";
             this.btnAddWindFarm.UseVisualStyleBackColor = true;
+            this.btnAddWindFarm.Click += new System.EventHandler(this.btnAddWindFarm_Click);
             // 
             // btnLogFaultJob
             // 
@@ -126,6 +127,7 @@
             this.btnLogFaultJob.TabIndex = 7;
             this.btnLogFaultJob.Text = "Log Fault Job";
             this.btnLogFaultJob.UseVisualStyleBackColor = true;
+            this.btnLogFaultJob.Click += new System.EventHandler(this.btnLogFaultJob_Click);
             // 
             // btnAddShifts
             // 

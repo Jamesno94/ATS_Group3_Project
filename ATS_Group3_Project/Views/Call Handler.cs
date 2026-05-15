@@ -48,6 +48,34 @@ namespace ATS_Group3_Project.Views
             simDataForm.Show();
             this.Hide();
         }
+
+        private void btnSimulationDashboard_Click(object sender, EventArgs e)
+        {
+            frmTurbSimData form = new frmTurbSimData();
+            form.Show();
+        }
+
+        private void btnLogFaultJob_Click(object sender, EventArgs e)
+        {
+            frmAddFaultJob form = new frmAddFaultJob();
+            form.Show();
+        }
+
+        private void btnAddWindFarm_Click(object sender, EventArgs e)
+        {
+            WindFarm form = new WindFarm();
+            form.Show();
+
+            //One has to be a different button
+
+            //ManageWindFarms manageView = new ManageWindFarms();
+
+
+            //manageView.Show();
+
+
+            //this.Hide();
+        }
     }
 }
 

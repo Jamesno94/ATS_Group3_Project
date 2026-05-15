@@ -36,33 +36,40 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtCurrentHr = new System.Windows.Forms.TextBox();
             this.txtNewHr = new System.Windows.Forms.TextBox();
-            this.txtAutoJobService = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dtpDateRecorded = new System.Windows.Forms.DateTimePicker();
             this.cboWIndFarms = new System.Windows.Forms.ComboBox();
             this.dataGVTrubinStats = new System.Windows.Forms.DataGridView();
+            this.aTS_WindSyncDBDataSet = new ATS_Group3_Project.ATS_WindSyncDBDataSet();
+            this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
+            this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtAutoJobService = new System.Windows.Forms.Label();
+            this.aTS_WindSyncDBDataSet1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1();
+            this.turbinesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.turbinesTableAdapter1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter();
             this.turbineIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.runtimeHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastRecorded = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.windFarmIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turbinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aTS_WindSyncDBDataSet = new ATS_Group3_Project.ATS_WindSyncDBDataSet();
             this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
             this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCreateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -80,8 +87,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(935, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(977, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 30);
@@ -92,12 +100,12 @@
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.LightYellow;
+            this.btnBack.BackColor = System.Drawing.Color.Azure;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(885, 582);
+            this.btnBack.Location = new System.Drawing.Point(132, 317);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(93, 24);
+            this.btnBack.Size = new System.Drawing.Size(119, 41);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Cancel";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -105,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MintCream;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 19);
@@ -118,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.MintCream;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 131);
@@ -131,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.MintCream;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 227);
@@ -141,37 +149,11 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "New Runtime Value (Hours)";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.MintCream;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 324);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Date Recorded ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.MintCream;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(770, 484);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(181, 20);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Is Service Job Requierd:";
-            // 
             // txtCurrentHr
             // 
             this.txtCurrentHr.BackColor = System.Drawing.Color.Azure;
             this.txtCurrentHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentHr.Location = new System.Drawing.Point(2, 153);
+            this.txtCurrentHr.Location = new System.Drawing.Point(12, 153);
             this.txtCurrentHr.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentHr.Name = "txtCurrentHr";
             this.txtCurrentHr.Size = new System.Drawing.Size(134, 32);
@@ -181,45 +163,24 @@
             // 
             this.txtNewHr.BackColor = System.Drawing.Color.Azure;
             this.txtNewHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewHr.Location = new System.Drawing.Point(2, 249);
+            this.txtNewHr.Location = new System.Drawing.Point(12, 249);
             this.txtNewHr.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewHr.Name = "txtNewHr";
             this.txtNewHr.Size = new System.Drawing.Size(134, 32);
             this.txtNewHr.TabIndex = 22;
             // 
-            // txtAutoJobService
-            // 
-            this.txtAutoJobService.BackColor = System.Drawing.Color.Azure;
-            this.txtAutoJobService.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutoJobService.Location = new System.Drawing.Point(772, 505);
-            this.txtAutoJobService.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAutoJobService.Name = "txtAutoJobService";
-            this.txtAutoJobService.ReadOnly = true;
-            this.txtAutoJobService.Size = new System.Drawing.Size(179, 32);
-            this.txtAutoJobService.TabIndex = 26;
-            // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSave.BackColor = System.Drawing.Color.Azure;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(14, 582);
+            this.btnSave.Location = new System.Drawing.Point(12, 317);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 24);
+            this.btnSave.Size = new System.Drawing.Size(116, 41);
             this.btnSave.TabIndex = 28;
             this.btnSave.Text = "Save Changes";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dtpDateRecorded
-            // 
-            this.dtpDateRecorded.CalendarMonthBackground = System.Drawing.Color.Azure;
-            this.dtpDateRecorded.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateRecorded.Location = new System.Drawing.Point(2, 346);
-            this.dtpDateRecorded.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpDateRecorded.Name = "dtpDateRecorded";
-            this.dtpDateRecorded.Size = new System.Drawing.Size(187, 29);
-            this.dtpDateRecorded.TabIndex = 29;
             // 
             // cboWIndFarms
             // 
@@ -239,6 +200,8 @@
             // 
             // dataGVTrubinStats
             // 
+            this.dataGVTrubinStats.AllowUserToAddRows = false;
+            this.dataGVTrubinStats.AllowUserToDeleteRows = false;
             this.dataGVTrubinStats.AutoGenerateColumns = false;
             this.dataGVTrubinStats.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGVTrubinStats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -248,54 +211,15 @@
             this.modelDataGridViewTextBoxColumn,
             this.runtimeHoursDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
+            this.LastRecorded,
             this.windFarmIdDataGridViewTextBoxColumn});
-            this.dataGVTrubinStats.DataSource = this.turbinesBindingSource;
-            this.dataGVTrubinStats.Location = new System.Drawing.Point(264, 62);
+            this.dataGVTrubinStats.DataSource = this.turbinesBindingSource1;
+            this.dataGVTrubinStats.Location = new System.Drawing.Point(286, 65);
             this.dataGVTrubinStats.Name = "dataGVTrubinStats";
-            this.dataGVTrubinStats.Size = new System.Drawing.Size(628, 252);
+            this.dataGVTrubinStats.ReadOnly = true;
+            this.dataGVTrubinStats.Size = new System.Drawing.Size(732, 316);
             this.dataGVTrubinStats.TabIndex = 33;
             this.dataGVTrubinStats.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVTrubinStats_CellClick);
-            // 
-            // turbineIdColumn
-            // 
-            this.turbineIdColumn.DataPropertyName = "TurbineId";
-            this.turbineIdColumn.HeaderText = "TurbineId";
-            this.turbineIdColumn.Name = "turbineIdColumn";
-            // 
-            // makeDataGridViewTextBoxColumn
-            // 
-            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
-            this.makeDataGridViewTextBoxColumn.HeaderText = "Make";
-            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            // 
-            // runtimeHoursDataGridViewTextBoxColumn
-            // 
-            this.runtimeHoursDataGridViewTextBoxColumn.DataPropertyName = "RuntimeHours";
-            this.runtimeHoursDataGridViewTextBoxColumn.HeaderText = "RuntimeHours";
-            this.runtimeHoursDataGridViewTextBoxColumn.Name = "runtimeHoursDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // windFarmIdDataGridViewTextBoxColumn
-            // 
-            this.windFarmIdDataGridViewTextBoxColumn.DataPropertyName = "WindFarmId";
-            this.windFarmIdDataGridViewTextBoxColumn.HeaderText = "WindFarmId";
-            this.windFarmIdDataGridViewTextBoxColumn.Name = "windFarmIdDataGridViewTextBoxColumn";
-            // 
-            // turbinesBindingSource
-            // 
-            this.turbinesBindingSource.DataMember = "Turbines";
-            this.turbinesBindingSource.DataSource = this.aTS_WindSyncDBDataSet;
             // 
             // aTS_WindSyncDBDataSet
             // 
@@ -313,18 +237,104 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dtpDateRecorded);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtNewHr);
             this.panel1.Controls.Add(this.txtCurrentHr);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.cboWIndFarms);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 413);
+            this.panel1.Size = new System.Drawing.Size(263, 384);
             this.panel1.TabIndex = 34;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtAutoJobService);
+            this.panel2.Location = new System.Drawing.Point(286, 403);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(523, 83);
+            this.panel2.TabIndex = 35;
+            // 
+            // txtAutoJobService
+            // 
+            this.txtAutoJobService.AutoSize = true;
+            this.txtAutoJobService.BackColor = System.Drawing.Color.Transparent;
+            this.txtAutoJobService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutoJobService.ForeColor = System.Drawing.Color.Black;
+            this.txtAutoJobService.Location = new System.Drawing.Point(1, 26);
+            this.txtAutoJobService.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtAutoJobService.Name = "txtAutoJobService";
+            this.txtAutoJobService.Size = new System.Drawing.Size(181, 20);
+            this.txtAutoJobService.TabIndex = 18;
+            this.txtAutoJobService.Text = "Is Service Job Required:";
+            // 
+            // aTS_WindSyncDBDataSet1
+            // 
+            this.aTS_WindSyncDBDataSet1.DataSetName = "ATS_WindSyncDBDataSet1";
+            this.aTS_WindSyncDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // turbinesBindingSource1
+            // 
+            this.turbinesBindingSource1.DataMember = "Turbines";
+            this.turbinesBindingSource1.DataSource = this.aTS_WindSyncDBDataSet1;
+            // 
+            // turbinesTableAdapter1
+            // 
+            this.turbinesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // turbineIdColumn
+            // 
+            this.turbineIdColumn.DataPropertyName = "TurbineId";
+            this.turbineIdColumn.HeaderText = "Turbine Id";
+            this.turbineIdColumn.Name = "turbineIdColumn";
+            this.turbineIdColumn.ReadOnly = true;
+            // 
+            // makeDataGridViewTextBoxColumn
+            // 
+            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
+            this.makeDataGridViewTextBoxColumn.HeaderText = "Make";
+            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
+            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // runtimeHoursDataGridViewTextBoxColumn
+            // 
+            this.runtimeHoursDataGridViewTextBoxColumn.DataPropertyName = "RuntimeHours";
+            this.runtimeHoursDataGridViewTextBoxColumn.HeaderText = "Runtime Hours";
+            this.runtimeHoursDataGridViewTextBoxColumn.Name = "runtimeHoursDataGridViewTextBoxColumn";
+            this.runtimeHoursDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // LastRecorded
+            // 
+            this.LastRecorded.DataPropertyName = "LastRecorded";
+            this.LastRecorded.HeaderText = "Last Hours Recorded";
+            this.LastRecorded.Name = "LastRecorded";
+            this.LastRecorded.ReadOnly = true;
+            // 
+            // windFarmIdDataGridViewTextBoxColumn
+            // 
+            this.windFarmIdDataGridViewTextBoxColumn.DataPropertyName = "WindFarmId";
+            this.windFarmIdDataGridViewTextBoxColumn.HeaderText = "Windfarm Id";
+            this.windFarmIdDataGridViewTextBoxColumn.Name = "windFarmIdDataGridViewTextBoxColumn";
+            this.windFarmIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // btnCreateJob
             // 
@@ -344,13 +354,8 @@
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(986, 613);
-            this.Controls.Add(this.btnCreateJob);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtAutoJobService);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -360,11 +365,14 @@
             this.Load += new System.EventHandler(this.frmTurbSimData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTSWindSyncDBDataSetBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,26 +386,27 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCurrentHr;
         private System.Windows.Forms.TextBox txtNewHr;
-        private System.Windows.Forms.TextBox txtAutoJobService;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DateTimePicker dtpDateRecorded;
         private System.Windows.Forms.ComboBox cboWIndFarms;
         private System.Windows.Forms.DataGridView dataGVTrubinStats;
         private ATS_WindSyncDBDataSet aTS_WindSyncDBDataSet;
-        private System.Windows.Forms.BindingSource turbinesBindingSource;
         private ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter turbinesTableAdapter;
         private System.Windows.Forms.BindingSource aTSWindSyncDBDataSetBindingSource;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label txtAutoJobService;
+        private ATS_WindSyncDBDataSet1 aTS_WindSyncDBDataSet1;
+        private System.Windows.Forms.BindingSource turbinesBindingSource1;
+        private ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter turbinesTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn turbineIdColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn makeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn runtimeHoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastRecorded;
         private System.Windows.Forms.DataGridViewTextBoxColumn windFarmIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCreateJob;
     }
 }
