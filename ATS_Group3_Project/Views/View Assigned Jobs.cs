@@ -19,20 +19,28 @@ namespace ATS_Group3_Project
             this.firstName = firstName;
             this.role = role;
         }
+
         private void frmViewAssignedJobs_Load(object sender, EventArgs e)
         {
             LoadJobs();
         }
+
         private void LoadJobs()
         {
             using (var db = new ATSContext())
             {
-                var jobs = db.JobRecords
-                    .Where(j => j.StaffId == StaffId)
+                var query = db.JobRecords.AsQueryable();
+
+                if (role == "Engineer")
+                {
+                    query = query.Where(j => j.StaffId == StaffId);
+                }
+
+                var jobs = query
                     .Select(j => new
                     {
-                        StaffId = j.StaffId,
                         j.JobId,
+                        j.StaffId,
                         j.WindFarmId,
                         j.TurbineId,
                         j.JobType,
@@ -45,14 +53,9 @@ namespace ATS_Group3_Project
                 DataGVJobs.DataSource = jobs;
             }
 
-            DataGVJobs.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
-            DataGVJobs.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
+            DataGVJobs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGVJobs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGVJobs.ReadOnly = true;
-
             DataGVJobs.MultiSelect = false;
         }
 
@@ -64,9 +67,10 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            int jobId = Convert.ToInt32(
-                DataGVJobs.CurrentRow.Cells["JobId"].Value
-            );
+            string jobId = DataGVJobs.CurrentRow
+                .Cells["JobId"]
+                .Value
+                .ToString();
 
             frmJobDetails jobDetailsForm =
                 new frmJobDetails(jobId, StaffId);
@@ -87,26 +91,45 @@ namespace ATS_Group3_Project
 
             if (result == DialogResult.Yes)
             {
-                frmEngineerDashboard dash =
-                    new frmEngineerDashboard(StaffId, firstName, role);
-
-                dash.Show();
-                this.Hide();
+                GoBackToDashboard();
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmEngineerDashboard dash =
-                new frmEngineerDashboard(StaffId, firstName, role);
-
-            dash.Show();
-            this.Close();
+            GoBackToDashboard();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            LoadJobs();
+        }
 
+        private void GoBackToDashboard()
+        {
+            if (role == "Engineer")
+            {
+                frmEngineerDashboard dash =
+                    new frmEngineerDashboard(StaffId, firstName, role);
+
+                dash.Show();
+            }
+            else if (role == "Call Handler")
+            {
+                frmCallHandler dash =
+                    new frmCallHandler(StaffId, firstName, role);
+
+                dash.Show();
+            }
+            else if (role == "Admin")
+            {
+                frmAdminDashboard dash =
+                    new frmAdminDashboard(StaffId, firstName, role);
+
+                dash.Show();
+            }
+
+            this.Close();
         }
     }
 }
