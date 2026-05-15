@@ -13,7 +13,7 @@ namespace ATS_Group3_Project.Views
     public partial class frmJobDetails : Form
     {
         private int _jobId;
-        public frmJobDetails()
+        public frmJobDetails(string jobId)
         {
             InitializeComponent();
         }

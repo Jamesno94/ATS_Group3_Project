@@ -76,7 +76,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(454, 171);
+            this.pictureBox2.Location = new System.Drawing.Point(443, 157);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(248, 260);

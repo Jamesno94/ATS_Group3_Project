@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project.Views
 {
-    public partial class Turbines : Form
+    public partial class frmAddTurbines : Form
     {
         [Key]
         public string TurbineId { get; set; }
@@ -31,8 +31,8 @@ namespace ATS_Group3_Project.Views
         public int FarmId { get; set; }
 
         [ForeignKey("FarmId")]
-        public virtual WindFarm WindFarm { get; set; }
-        public Turbines()
+        public virtual frmAddWindFarm WindFarm { get; set; }
+        public frmAddTurbines()
         {
             InitializeComponent();
         }

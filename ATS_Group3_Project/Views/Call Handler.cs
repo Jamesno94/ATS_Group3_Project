@@ -15,8 +15,6 @@ namespace ATS_Group3_Project.Views
         private string StaffId;
         private string firstName;
         private string role;
-        private string turbineId;
-        private string windFarmId;
 
         public frmCallHandler(string StaffId, string firstName, string role)
         {
@@ -41,7 +39,7 @@ namespace ATS_Group3_Project.Views
 
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin(StaffId, firstName, role);
+                frmLogin loginForm = new frmLogin();
                 loginForm.Show();
 
                 this.Hide();

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace ATS_Group3_Project.Views
 {
 
-    public partial class WindFarm : Form
+    public partial class frmAddWindFarm : Form
     {
         [Key]
         public int FarmId { get; set; }
@@ -40,7 +40,7 @@ namespace ATS_Group3_Project.Views
 
 
 
-        public WindFarm()
+        public frmAddWindFarm()
         {
             InitializeComponent();
         }

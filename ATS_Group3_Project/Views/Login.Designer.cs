@@ -55,6 +55,7 @@
             // txtStaffId
             // 
             this.txtStaffId.BackColor = System.Drawing.Color.Azure;
+            this.txtStaffId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffId.Location = new System.Drawing.Point(18, 37);
             this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);

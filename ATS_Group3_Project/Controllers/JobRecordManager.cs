@@ -18,7 +18,7 @@ namespace ATS_Group3_Project
             }
         }
 
-        public JobRecord GetJobById(int jobId)
+        public JobRecord GetJobById(string jobId)
         {
             using (var db = new ATSContext())
             {
@@ -158,7 +158,7 @@ namespace ATS_Group3_Project
         }
 
         public bool MarkJobComplete(
-            int jobId,
+            string jobId,
             bool mainGeneratorServiced,
             bool gearboxServiced,
             bool yawMotorServiced,

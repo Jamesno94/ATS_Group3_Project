@@ -17,12 +17,9 @@ namespace ATS_Group3_Project
         private string firstName;
         private string role;
 
-        public frmLogin(string StaffId, string firstName, string role)
+        public frmLogin()
         {
             InitializeComponent();
-            this.StaffId = StaffId;
-            this.firstName = firstName;
-            this.role = role;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

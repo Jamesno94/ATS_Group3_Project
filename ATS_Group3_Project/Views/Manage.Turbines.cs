@@ -71,7 +71,7 @@ namespace ATS_Group3_Project.Views
         private void button3_Click(object sender, EventArgs e)
         {
            
-            Turbines addForm = new Turbines();
+            frmAddTurbines addForm = new frmAddTurbines();
 
            
             addForm.ShowDialog();

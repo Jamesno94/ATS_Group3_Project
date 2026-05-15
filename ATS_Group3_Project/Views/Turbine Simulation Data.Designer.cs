@@ -54,11 +54,10 @@
             this.turbinesTableAdapter = new ATS_Group3_Project.ATS_WindSyncDBDataSetTableAdapters.TurbinesTableAdapter();
             this.aTSWindSyncDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogAFault = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtAutoJobService = new System.Windows.Forms.Label();
             this.turbinesTableAdapter1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter();
-            this.btnLogAFault = new System.Windows.Forms.Button();
-            this.btnCreateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).BeginInit();
@@ -212,10 +211,10 @@
             this.LastRecorded,
             this.windFarmIdDataGridViewTextBoxColumn});
             this.dataGVTrubinStats.DataSource = this.turbinesBindingSource1;
-            this.dataGVTrubinStats.Location = new System.Drawing.Point(287, 56);
+            this.dataGVTrubinStats.Location = new System.Drawing.Point(272, 56);
             this.dataGVTrubinStats.Name = "dataGVTrubinStats";
             this.dataGVTrubinStats.ReadOnly = true;
-            this.dataGVTrubinStats.Size = new System.Drawing.Size(732, 316);
+            this.dataGVTrubinStats.Size = new System.Drawing.Size(734, 316);
             this.dataGVTrubinStats.TabIndex = 33;
             this.dataGVTrubinStats.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVTrubinStats_CellClick);
             // 
@@ -296,7 +295,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnCreateJob);
             this.panel1.Controls.Add(this.btnLogAFault);
             this.panel1.Controls.Add(this.txtNewHr);
             this.panel1.Controls.Add(this.txtCurrentHr);
@@ -308,15 +306,28 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 431);
+            this.panel1.Size = new System.Drawing.Size(257, 418);
             this.panel1.TabIndex = 34;
+            // 
+            // btnLogAFault
+            // 
+            this.btnLogAFault.BackColor = System.Drawing.Color.Azure;
+            this.btnLogAFault.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogAFault.Location = new System.Drawing.Point(44, 363);
+            this.btnLogAFault.Name = "btnLogAFault";
+            this.btnLogAFault.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLogAFault.Size = new System.Drawing.Size(165, 41);
+            this.btnLogAFault.TabIndex = 32;
+            this.btnLogAFault.Text = "Create a Fault Job";
+            this.btnLogAFault.UseVisualStyleBackColor = false;
+            this.btnLogAFault.Click += new System.EventHandler(this.btnLogAFault_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtAutoJobService);
-            this.panel2.Location = new System.Drawing.Point(287, 378);
+            this.panel2.Location = new System.Drawing.Point(272, 378);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(523, 62);
             this.panel2.TabIndex = 35;
@@ -338,40 +349,6 @@
             // 
             this.turbinesTableAdapter1.ClearBeforeFill = true;
             // 
-            // btnLogAFault
-            // 
-            this.btnLogAFault.BackColor = System.Drawing.Color.Azure;
-            this.btnLogAFault.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogAFault.Location = new System.Drawing.Point(7, 378);
-            this.btnLogAFault.Name = "btnLogAFault";
-            this.btnLogAFault.Size = new System.Drawing.Size(116, 41);
-            this.btnLogAFault.TabIndex = 32;
-            this.btnLogAFault.Text = "Log a Fault";
-            this.btnLogAFault.UseVisualStyleBackColor = false;
-            this.btnLogAFault.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCreateJob
-            // 
-            this.btnCreateJob.BackColor = System.Drawing.Color.Azure;
-            this.btnCreateJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateJob.Location = new System.Drawing.Point(127, 378);
-            this.btnCreateJob.Name = "btnCreateJob";
-            this.btnCreateJob.Size = new System.Drawing.Size(116, 41);
-            this.btnCreateJob.TabIndex = 33;
-            this.btnCreateJob.Text = "Create a Service";
-            this.btnCreateJob.UseVisualStyleBackColor = false;
-            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
-            // 
-            // btnCreateJob
-            // 
-            this.btnCreateJob.Location = new System.Drawing.Point(469, 562);
-            this.btnCreateJob.Name = "btnCreateJob";
-            this.btnCreateJob.Size = new System.Drawing.Size(122, 39);
-            this.btnCreateJob.TabIndex = 35;
-            this.btnCreateJob.Text = "Create Job";
-            this.btnCreateJob.UseVisualStyleBackColor = true;
-            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
-            // 
             // frmTurbSimData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,7 +356,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1030, 598);
+            this.ClientSize = new System.Drawing.Size(1026, 501);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
@@ -435,6 +412,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastRecorded;
         private System.Windows.Forms.DataGridViewTextBoxColumn windFarmIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnLogAFault;
-        private System.Windows.Forms.Button btnCreateJob;
     }
 }

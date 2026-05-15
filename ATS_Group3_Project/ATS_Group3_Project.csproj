@@ -150,11 +150,11 @@
     <Compile Include="Views\Turbine Simulation Data.Designer.cs">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Turbines.cs">
+    <Compile Include="Views\AddTurbines.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Turbines.Designer.cs">
-      <DependentUpon>Turbines.cs</DependentUpon>
+    <Compile Include="Views\AddTurbines.Designer.cs">
+      <DependentUpon>AddTurbines.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\View Assigned Jobs.cs">
       <SubType>Form</SubType>
@@ -162,11 +162,11 @@
     <Compile Include="Views\View Assigned Jobs.Designer.cs">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\WindFarm.cs">
+    <Compile Include="Views\AddWindFarm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\WindFarm.Designer.cs">
-      <DependentUpon>WindFarm.cs</DependentUpon>
+    <Compile Include="Views\AddWindFarm.Designer.cs">
+      <DependentUpon>AddWindFarm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Turbines.resx">
-      <DependentUpon>Turbines.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddTurbines.resx">
+      <DependentUpon>AddTurbines.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\View Assigned Jobs.resx">
       <DependentUpon>View Assigned Jobs.cs</DependentUpon>
@@ -239,8 +239,8 @@
     <None Include="ATS_WindSyncDBDataSet1.xss">
       <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
     </None>
-    <EmbeddedResource Include="Views\WindFarm.resx">
-      <DependentUpon>WindFarm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddWindFarm.resx">
+      <DependentUpon>AddWindFarm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

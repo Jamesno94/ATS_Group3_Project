@@ -6,6 +6,35 @@ namespace ATS_Group3_Project
 {
     public class DispatchManager
     {
+        public string GenerateJobId()
+        {
+            using (var db = new ATSContext())
+            {
+                string prefix = "JOB";
+
+                var lastJob = db.JobRecords
+                    .Where(j => j.JobId.StartsWith(prefix + "-"))
+                    .ToList()
+                    .OrderByDescending(s => int.Parse(s.JobId.Split('-')[1]))
+                    .FirstOrDefault();
+
+                int nextNumber = 9001;
+
+                if (lastJob != null)
+                {
+                    string[] parts = lastJob.JobId.Split('-');
+
+                    if (parts.Length == 2 &&
+                        int.TryParse(parts[1], out int number))
+                    {
+                        nextNumber = number + 1;
+                    }
+                }
+
+                return prefix + "-" + nextNumber.ToString("D4");
+            }
+        }
+
         public JobRecord CreateScheduledServiceJob(string turbineId)
         {
             using (var db = new ATSContext())
@@ -55,6 +84,7 @@ namespace ATS_Group3_Project
 
                 JobRecord job = new JobRecord
                 {
+                    JobId = GenerateJobId(),
                     JobDate = targetDate,
                     JobTime = jobTime,
                     WindFarmId = turbine.WindFarmId,

@@ -7,9 +7,10 @@ namespace ATS_Group3_Project
     public class JobRecord
     {
         [Key]
-        public int JobId { get; set; }
+        public string JobId { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime JobDate { get; set; }
 
         [Required]
@@ -69,7 +70,7 @@ namespace ATS_Group3_Project
         [ForeignKey("StaffId")]
         public virtual Staff Staff { get; set; }
 
-        public JobRecord(int jobId, DateTime jobDate, string jobTime, string windFarmId, string turbineId, string staffId, string jobType,
+        public JobRecord(string jobId, DateTime jobDate, string jobTime, string windFarmId, string turbineId, string staffId, string jobType,
                          string faultDescription, bool mainGeneratorServiced, bool gearboxServiced, bool yawMotorServiced,
                          bool internalPassengerLiftServiced, bool mainGeneratorReplaced, bool gearboxReplaced,
                          bool yawMotorReplaced, bool internalPassengerLiftReplaced, string jobComplete)
