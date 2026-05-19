@@ -189,7 +189,9 @@
     <EmbeddedResource Include="Views\Edit Staff.resx">
       <DependentUpon>Edit Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage Staff.resx" />
+    <EmbeddedResource Include="Views\Manage Staff.resx">
+      <DependentUpon>Manage Staff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

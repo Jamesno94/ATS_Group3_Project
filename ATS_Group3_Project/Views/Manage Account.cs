@@ -126,23 +126,23 @@ namespace ATS_Group3_Project.Views
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            // 1. Ask for confirmation
-            DialogResult result = MessageBox.Show("Are you sure you want to go to the Admin Dashboard?",
-                "Confirm Navigation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
+        //    // 1. Ask for confirmation
+        //    DialogResult result = MessageBox.Show("Are you sure you want to go to the Admin Dashboard?",
+        //        "Confirm Navigation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
-            {
-                // 2. Create the Admin Dashboard form instance
-                Manage_Account frm = new Manage_Account();
+        //    if (result == DialogResult.Yes)
+        //    {
+        //        // 2. Create the Admin Dashboard form instance
+        //        Manage_Account frm = new Manage_Account();
 
-                // 3. Show the dashboard
-                frm.Show();
+        //        // 3. Show the dashboard
+        //        frm.Show();
 
-                // 4. Hide Register New Account Form
-                this.Hide();
-            }
-        }
+        //        // 4. Hide Register New Account Form
+        //        this.Hide();
+        //    }
+        //}
     }
 }

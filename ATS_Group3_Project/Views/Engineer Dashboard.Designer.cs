@@ -43,18 +43,20 @@
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
-            this.lblGreetings.Location = new System.Drawing.Point(123, 48);
+            this.lblGreetings.Location = new System.Drawing.Point(92, 39);
+            this.lblGreetings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(71, 16);
+            this.lblGreetings.Size = new System.Drawing.Size(58, 13);
             this.lblGreetings.TabIndex = 1;
             this.lblGreetings.Text = "Greetings, ";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(123, 78);
+            this.lblRole.Location = new System.Drawing.Point(92, 63);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(39, 16);
+            this.lblRole.Size = new System.Drawing.Size(32, 13);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
@@ -62,10 +64,10 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::ATS_Group3_Project.Properties.Resources.Company_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(454, 171);
+            this.pictureBox2.Location = new System.Drawing.Point(410, 93);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(76, 82);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -74,10 +76,10 @@
             // 
             this.btnViewJobs.BackColor = System.Drawing.Color.Azure;
             this.btnViewJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewJobs.Location = new System.Drawing.Point(25, 130);
-            this.btnViewJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewJobs.Location = new System.Drawing.Point(19, 106);
+            this.btnViewJobs.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewJobs.Name = "btnViewJobs";
-            this.btnViewJobs.Size = new System.Drawing.Size(275, 80);
+            this.btnViewJobs.Size = new System.Drawing.Size(206, 65);
             this.btnViewJobs.TabIndex = 4;
             this.btnViewJobs.Text = "View Assigned Jobs";
             this.btnViewJobs.UseVisualStyleBackColor = false;
@@ -87,10 +89,10 @@
             // 
             this.btnJobDiary.BackColor = System.Drawing.Color.Azure;
             this.btnJobDiary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobDiary.Location = new System.Drawing.Point(25, 28);
-            this.btnJobDiary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJobDiary.Location = new System.Drawing.Point(19, 23);
+            this.btnJobDiary.Margin = new System.Windows.Forms.Padding(2);
             this.btnJobDiary.Name = "btnJobDiary";
-            this.btnJobDiary.Size = new System.Drawing.Size(275, 80);
+            this.btnJobDiary.Size = new System.Drawing.Size(206, 65);
             this.btnJobDiary.TabIndex = 5;
             this.btnJobDiary.Text = "View Job Diary";
             this.btnJobDiary.UseVisualStyleBackColor = false;
@@ -99,10 +101,10 @@
             // 
             this.btnManageAccount.BackColor = System.Drawing.Color.Azure;
             this.btnManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(25, 230);
-            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnManageAccount.Location = new System.Drawing.Point(19, 187);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(275, 80);
+            this.btnManageAccount.Size = new System.Drawing.Size(206, 65);
             this.btnManageAccount.TabIndex = 7;
             this.btnManageAccount.Text = "Manage Account ";
             this.btnManageAccount.UseVisualStyleBackColor = false;
@@ -112,13 +114,13 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Azure;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Red;
-            this.btnLogOut.Location = new System.Drawing.Point(115, 350);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Location = new System.Drawing.Point(86, 284);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(100, 50);
+            this.btnLogOut.Size = new System.Drawing.Size(75, 41);
             this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = "LOG OUT";
+            this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -130,23 +132,23 @@
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnJobDiary);
             this.panel1.Controls.Add(this.btnViewJobs);
-            this.panel1.Location = new System.Drawing.Point(189, 106);
+            this.panel1.Location = new System.Drawing.Point(142, 86);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 416);
+            this.panel1.Size = new System.Drawing.Size(249, 338);
             this.panel1.TabIndex = 9;
             // 
             // frmEngineerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1312, 653);
+            this.ClientSize = new System.Drawing.Size(984, 531);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblGreetings);
-            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEngineerDashboard";
             this.Text = "Engineer Dashboard";
