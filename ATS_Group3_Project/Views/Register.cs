@@ -1,57 +1,90 @@
 ﻿using ATS_Group3_Project.Views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ATS_Group3_Project
 {
+ 
     public partial class frmRegisterNewAccount : Form
     {
         private string StaffId;
         private string firstName;
         private string role;
 
+        private string editingStaffId = null;
+
+        // REQUIRED for WinForms Designer
+        public frmRegisterNewAccount()
+        {
+            InitializeComponent();
+        }
+
+        // Constructor for NEW staff
         public frmRegisterNewAccount(string StaffId, string firstName, string role)
         {
             InitializeComponent();
+
             this.StaffId = StaffId;
             this.firstName = firstName;
             this.role = role;
         }
 
+        // Constructor for EDITING existing staff
+        public frmRegisterNewAccount(string StaffId,
+                                     string firstName,
+                                     string role,
+                                     Staff staffToEdit)
+        {
+            InitializeComponent();
+
+            this.StaffId = StaffId;
+            this.firstName = firstName;
+            this.role = role;
+
+            editingStaffId = staffToEdit.StaffId;
+
+            // Populate fields with existing staff data
+            txtStaffId.Text = staffToEdit.StaffId;
+            txtFirstName.Text = staffToEdit.FirstName;
+            txtLastName.Text = staffToEdit.LastName;
+            txtWorkNumber.Text = staffToEdit.WorkMobile;
+            txtHomeNumber.Text = staffToEdit.HomeMobile;
+            txtWorkEmail.Text = staffToEdit.Email;
+            txtAddressLine1.Text = staffToEdit.Address1;
+            txtAddressLine2.Text = staffToEdit.Address2;
+            txtCity.Text = staffToEdit.City;
+            txtPostcode.Text = staffToEdit.Postcode;
+            txtSalary.Text = staffToEdit.Salary.ToString();
+            cboRole.Text = staffToEdit.Role;
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // 1. Ask for confirmation
-            DialogResult result = MessageBox.Show("Are you sure you want to go to the Dashboard?",
-                "Confirm Navigation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to go to the Dashboard?",
+                "Confirm Navigation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                // 2. Create the Dashboard form instance
-                frmAdminDashboard dash = new frmAdminDashboard(StaffId, firstName, role);
+                frmAdminDashboard dash =
+                    new frmAdminDashboard(StaffId, firstName, role);
 
-                // 3. Show the dashboard
                 dash.Show();
-
-                // 4. Hide Register New Account Form
                 this.Hide();
             }
         }
 
         private void btnRegisterNewAccount_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //Cheaking For Blank Fields
+            // Check for blank fields
             if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
                 string.IsNullOrWhiteSpace(txtLastName.Text) ||
                 string.IsNullOrWhiteSpace(txtWorkNumber.Text) ||
@@ -66,7 +99,7 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            // Validate salary input
+            // Validate salary
             decimal salary;
 
             if (!decimal.TryParse(txtSalary.Text, out salary))
@@ -81,7 +114,7 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            // Validate role selection
+            // Validate role
             if (cboRole.Text != "Engineer" &&
                 cboRole.Text != "Call Handler" &&
                 cboRole.Text != "Admin")
@@ -90,43 +123,91 @@ namespace ATS_Group3_Project
                 return;
             }
 
-            txtPassword.Text = "Password1"; // Default password for new accounts
+            string staffId;
+
+            StaffManager manager = new StaffManager();
+
+            // =========================
+            // EDIT MODE
+            // =========================
+            if (editingStaffId != null)
+            {
+                staffId = editingStaffId;
+
+                Staff updatedStaff = new Staff
+                {
+                    StaffId = staffId,
+                    FirstName = txtFirstName.Text.Trim(),
+                    LastName = txtLastName.Text.Trim(),
+                    WorkMobile = txtWorkNumber.Text.Trim(),
+                    HomeMobile = txtHomeNumber.Text.Trim(),
+                    Email = txtWorkEmail.Text.Trim(),
+                    Address1 = txtAddressLine1.Text.Trim(),
+                    Address2 = txtAddressLine2.Text.Trim(),
+                    City = txtCity.Text.Trim(),
+                    Postcode = txtPostcode.Text.Trim(),
+                    Salary = salary,
+                    Role = cboRole.Text.Trim()
+                };
+
+                bool success = manager.UpdateStaff(updatedStaff);
+
+                if (success)
+                {
+                    MessageBox.Show("Staff member updated successfully.");
+
+                    frmAdminDashboard dash =
+                        new frmAdminDashboard(StaffId, firstName, role);
+
+                    dash.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Failed to update staff member.\n" +
+                        "The email may already exist.");
+                }
+
+                return;
+            }
+
+            // =========================
+            // CREATE NEW STAFF
+            // =========================
+
+            // Generate new Staff ID
+            if (cboRole.Text == "Engineer")
+            {
+                staffId = manager.GenerateID("Engineer");
+            }
+            else if (cboRole.Text == "Call Handler")
+            {
+                staffId = manager.GenerateID("Call Handler");
+            }
+            else
+            {
+                staffId = manager.GenerateID("Admin");
+            }
+
+            txtStaffId.Text = staffId;
+
+            // Default password
+            txtPassword.Text = "Password1";
 
             // Validate password complexity
             if (txtPassword.Text.Length < 8 ||
                 !txtPassword.Text.Any(char.IsUpper) ||
                 !txtPassword.Text.Any(char.IsDigit))
             {
-                MessageBox.Show("Password must be at least 8 characters long and contain at least 1 uppercase letter and 1 number.");
+                MessageBox.Show(
+                    "Password must be at least 8 characters long " +
+                    "and contain at least 1 uppercase letter and 1 number.");
+
                 return;
             }
 
-            string staffId;
-
-            StaffManager manager = new StaffManager();
-
-            if (cboRole.Text == "Engineer")
-            {
-                staffId = manager.GenerateID("Engineer");
-                txtStaffId.Text = staffId;
-            }
-            else if (cboRole.Text == "Call Handler")
-            {
-                staffId = manager.GenerateID("Call Handler");
-                txtStaffId.Text = staffId;
-            }
-            else if (cboRole.Text == "Admin")
-            {
-                staffId = manager.GenerateID("Admin");
-                txtStaffId.Text = staffId;
-            }
-            else
-            {
-                staffId = txtStaffId.Text.Trim();
-            }
-
-            // If all validations pass, attempt to register the staff account
-            bool success = new StaffManager().RegisterStaffAccount(
+            bool createSuccess = manager.RegisterStaffAccount(
                 staffId,
                 txtFirstName.Text.Trim(),
                 txtLastName.Text.Trim(),
@@ -142,12 +223,11 @@ namespace ATS_Group3_Project
                 txtPassword.Text
             );
 
-            // Provide feedback to the user based on the success of the registration
-            if (success)
+            if (createSuccess)
             {
                 MessageBox.Show("Staff account created successfully.");
 
-                //Clear the form fields after successful registration
+                // Clear form
                 txtStaffId.Clear();
                 txtFirstName.Clear();
                 txtLastName.Clear();
@@ -159,16 +239,33 @@ namespace ATS_Group3_Project
                 txtCity.Clear();
                 txtPostcode.Clear();
                 txtSalary.Clear();
-                cboRole.SelectedIndex = -1;
                 txtPassword.Clear();
 
-                frmLogin login = new frmLogin();
-                login.Show();
-                this.Close();
+                cboRole.SelectedIndex = -1;
             }
             else
             {
-                MessageBox.Show("Account could not be created. Check all details and make sure the Staff ID and Email are unique.");
+                MessageBox.Show(
+                    "Account could not be created.\n" +
+                    "Staff ID or Email may already exist.");
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to go to the Dashboard?",
+                "Confirm Navigation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                frmAdminDashboard dash =
+                    new frmAdminDashboard(StaffId, firstName, role);
+
+                dash.Show();
+                this.Hide();
             }
         }
     }

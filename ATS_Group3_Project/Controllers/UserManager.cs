@@ -173,5 +173,16 @@ public class UserManager
             return true;
         }
     }
+    public bool IsUserLocked(string staffId)
+    {
+        using (var db = new ATSContext())
+        {
+            var user = db.Users.FirstOrDefault(u => u.StaffId == staffId);
 
+            if (user == null)
+                return false;
+
+            return user.IsLocked;
+        }
+    }
 }

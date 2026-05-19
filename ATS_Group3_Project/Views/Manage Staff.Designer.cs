@@ -41,7 +41,7 @@
             // btnEditStaff
             // 
             this.btnEditStaff.Location = new System.Drawing.Point(172, 403);
-            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditStaff.Name = "btnEditStaff";
             this.btnEditStaff.Size = new System.Drawing.Size(79, 45);
             this.btnEditStaff.TabIndex = 1;
@@ -52,7 +52,7 @@
             // btnDeleteStaff
             // 
             this.btnDeleteStaff.Location = new System.Drawing.Point(172, 474);
-            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(79, 45);
             this.btnDeleteStaff.TabIndex = 2;
@@ -63,7 +63,7 @@
             // btnCreateStaff
             // 
             this.btnCreateStaff.Location = new System.Drawing.Point(856, 403);
-            this.btnCreateStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateStaff.Name = "btnCreateStaff";
             this.btnCreateStaff.Size = new System.Drawing.Size(79, 45);
             this.btnCreateStaff.TabIndex = 3;
@@ -75,19 +75,20 @@
             // 
             this.btnUnlockAccount.DialogResult = System.Windows.Forms.DialogResult.No;
             this.btnUnlockAccount.Location = new System.Drawing.Point(856, 474);
-            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUnlockAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnUnlockAccount.Name = "btnUnlockAccount";
             this.btnUnlockAccount.Size = new System.Drawing.Size(79, 45);
             this.btnUnlockAccount.TabIndex = 4;
             this.btnUnlockAccount.Text = "Unlock Account";
             this.btnUnlockAccount.UseVisualStyleBackColor = true;
+            this.btnUnlockAccount.Click += new System.EventHandler(this.btnUnlockAccount_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ATS_Group3_Project.Properties.Resources.ATS_Logo_NoText;
             this.pictureBox1.Location = new System.Drawing.Point(991, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +100,7 @@
             // 
             this.dgStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgStaff.Location = new System.Drawing.Point(172, 23);
-            this.dgStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgStaff.Margin = new System.Windows.Forms.Padding(2);
             this.dgStaff.Name = "dgStaff";
             this.dgStaff.RowHeadersWidth = 51;
             this.dgStaff.RowTemplate.Height = 24;
@@ -120,7 +121,7 @@
             this.Controls.Add(this.btnCreateStaff);
             this.Controls.Add(this.btnDeleteStaff);
             this.Controls.Add(this.btnEditStaff);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmManageStaff";
             this.Text = "Manage Staff";
             this.Load += new System.EventHandler(this.frmManageStaff_Load);

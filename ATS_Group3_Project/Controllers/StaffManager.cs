@@ -174,6 +174,14 @@ namespace ATS_Group3_Project
                 if (staff == null)
                     return false;
 
+                // Check if another user already has this email
+                bool emailInUse = db.Staff.Any(s =>
+                    s.Email == updatedStaff.Email &&
+                    s.StaffId != updatedStaff.StaffId);
+
+                if (emailInUse)
+                    return false;
+
                 staff.FirstName = updatedStaff.FirstName;
                 staff.LastName = updatedStaff.LastName;
                 staff.WorkMobile = updatedStaff.WorkMobile;
@@ -195,20 +203,51 @@ namespace ATS_Group3_Project
         {
             using (var db = new ATSContext())
             {
-                var staff = db.Staff.Find(staffId);
+                using (var transaction = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var staff = db.Staff.Find(staffId);
 
-                if (staff == null)
-                    return false;
+                        if (staff == null)
+                            return false;
 
-                var user = db.Users.FirstOrDefault(u => u.StaffId == staffId);
+                        var user = db.Users
+                            .FirstOrDefault(u => u.StaffId == staffId);
 
-                if (user != null)
-                    db.Users.Remove(user);
+                        if (user != null)
+                            db.Users.Remove(user);
 
-                db.Staff.Remove(staff);
-                db.SaveChanges();
+                        // Remove related engineer shifts
+                        var shifts = db.EngineerShifts
+                            .Where(e => e.StaffId == staffId)
+                            .ToList();
 
-                return true;
+                        if (shifts.Any())
+                            db.EngineerShifts.RemoveRange(shifts);
+
+                        // Remove related jobs if needed
+                        var jobs = db.JobRecords
+                            .Where(j => j.StaffId == staffId)
+                            .ToList();
+
+                        if (jobs.Any())
+                            db.JobRecords.RemoveRange(jobs);
+
+                        db.Staff.Remove(staff);
+
+                        db.SaveChanges();
+
+                        transaction.Commit();
+
+                        return true;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return false;
+                    }
+                }
             }
         }
 

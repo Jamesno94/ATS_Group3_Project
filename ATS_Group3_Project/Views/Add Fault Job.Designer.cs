@@ -44,6 +44,7 @@
             this.txtTurbineId = new System.Windows.Forms.TextBox();
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.btnCreateJob = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +81,7 @@
             this.lblTurbine.BackColor = System.Drawing.Color.Transparent;
             this.lblTurbine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurbine.ForeColor = System.Drawing.Color.Black;
-            this.lblTurbine.Location = new System.Drawing.Point(18, 143);
+            this.lblTurbine.Location = new System.Drawing.Point(16, 143);
             this.lblTurbine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTurbine.Name = "lblTurbine";
             this.lblTurbine.Size = new System.Drawing.Size(101, 24);
@@ -93,7 +94,7 @@
             this.lblFaultDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblFaultDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaultDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblFaultDescription.Location = new System.Drawing.Point(16, 189);
+            this.lblFaultDescription.Location = new System.Drawing.Point(16, 183);
             this.lblFaultDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFaultDescription.Name = "lblFaultDescription";
             this.lblFaultDescription.Size = new System.Drawing.Size(155, 24);
@@ -116,11 +117,11 @@
             // 
             this.txtFaultDescription.BackColor = System.Drawing.Color.Azure;
             this.txtFaultDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaultDescription.Location = new System.Drawing.Point(20, 216);
+            this.txtFaultDescription.Location = new System.Drawing.Point(20, 210);
             this.txtFaultDescription.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFaultDescription.Multiline = true;
             this.txtFaultDescription.Name = "txtFaultDescription";
-            this.txtFaultDescription.Size = new System.Drawing.Size(387, 162);
+            this.txtFaultDescription.Size = new System.Drawing.Size(387, 80);
             this.txtFaultDescription.TabIndex = 14;
             // 
             // pictureBox1
@@ -177,6 +178,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtTurbineId);
@@ -190,14 +192,14 @@
             this.panel1.Controls.Add(this.lblJobType);
             this.panel1.Location = new System.Drawing.Point(60, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 457);
+            this.panel1.Size = new System.Drawing.Size(421, 487);
             this.panel1.TabIndex = 23;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Azure;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(295, 393);
+            this.btnBack.Location = new System.Drawing.Point(297, 425);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(99, 43);
             this.btnBack.TabIndex = 25;
@@ -209,12 +211,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 19);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(125, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 29);
+            this.label1.Size = new System.Drawing.Size(179, 29);
             this.label1.TabIndex = 24;
             this.label1.Text = "Logging a Fault";
             // 
@@ -244,13 +245,26 @@
             // 
             this.btnCreateJob.BackColor = System.Drawing.Color.Azure;
             this.btnCreateJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateJob.Location = new System.Drawing.Point(45, 393);
+            this.btnCreateJob.Location = new System.Drawing.Point(45, 425);
             this.btnCreateJob.Name = "btnCreateJob";
             this.btnCreateJob.Size = new System.Drawing.Size(99, 43);
             this.btnCreateJob.TabIndex = 19;
             this.btnCreateJob.Text = "Create Job";
             this.btnCreateJob.UseVisualStyleBackColor = false;
             this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(16, 302);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 24);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Fault Description:";
             // 
             // frmAddFaultJob
             // 
@@ -293,5 +307,6 @@
         private System.Windows.Forms.TextBox txtWindFarmId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label2;
     }
 }

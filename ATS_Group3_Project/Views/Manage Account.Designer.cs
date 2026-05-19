@@ -66,7 +66,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 41);
             this.pictureBox1.TabIndex = 114;
@@ -76,7 +76,7 @@
             // 
             this.txtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffId.Location = new System.Drawing.Point(613, 122);
-            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffId.Name = "txtStaffId";
             this.txtStaffId.ReadOnly = true;
             this.txtStaffId.Size = new System.Drawing.Size(193, 28);
@@ -99,7 +99,7 @@
             // 
             this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalary.Location = new System.Drawing.Point(613, 78);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.ReadOnly = true;
             this.txtSalary.Size = new System.Drawing.Size(193, 28);
@@ -122,7 +122,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(613, 172);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(193, 28);
             this.txtPassword.TabIndex = 107;
@@ -149,7 +149,7 @@
             "Call Handler",
             "Admin"});
             this.cboRole.Location = new System.Drawing.Point(613, 33);
-            this.cboRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboRole.Margin = new System.Windows.Forms.Padding(2);
             this.cboRole.Name = "cboRole";
             this.cboRole.Size = new System.Drawing.Size(193, 30);
             this.cboRole.TabIndex = 105;
@@ -170,7 +170,7 @@
             // btnSaveChanges
             // 
             this.btnSaveChanges.Location = new System.Drawing.Point(539, 402);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(192, 51);
             this.btnSaveChanges.TabIndex = 103;
@@ -182,7 +182,7 @@
             // 
             this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostcode.Location = new System.Drawing.Point(169, 429);
-            this.txtPostcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPostcode.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostcode.Name = "txtPostcode";
             this.txtPostcode.Size = new System.Drawing.Size(193, 28);
             this.txtPostcode.TabIndex = 102;
@@ -191,7 +191,7 @@
             // 
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(169, 375);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(193, 28);
             this.txtCity.TabIndex = 101;
@@ -200,7 +200,7 @@
             // 
             this.txtAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress2.Location = new System.Drawing.Point(169, 321);
-            this.txtAddress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(193, 28);
             this.txtAddress2.TabIndex = 100;
@@ -209,7 +209,7 @@
             // 
             this.txtAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress1.Location = new System.Drawing.Point(169, 271);
-            this.txtAddress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(193, 28);
             this.txtAddress1.TabIndex = 99;
@@ -218,7 +218,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(169, 220);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(193, 28);
             this.txtEmail.TabIndex = 98;
@@ -227,7 +227,7 @@
             // 
             this.txtHomeMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHomeMobile.Location = new System.Drawing.Point(169, 171);
-            this.txtHomeMobile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHomeMobile.Margin = new System.Windows.Forms.Padding(2);
             this.txtHomeMobile.Name = "txtHomeMobile";
             this.txtHomeMobile.Size = new System.Drawing.Size(193, 28);
             this.txtHomeMobile.TabIndex = 97;
@@ -236,7 +236,7 @@
             // 
             this.txtWorkMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWorkMobile.Location = new System.Drawing.Point(169, 122);
-            this.txtWorkMobile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWorkMobile.Margin = new System.Windows.Forms.Padding(2);
             this.txtWorkMobile.Name = "txtWorkMobile";
             this.txtWorkMobile.Size = new System.Drawing.Size(193, 28);
             this.txtWorkMobile.TabIndex = 96;
@@ -245,7 +245,7 @@
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(169, 76);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(193, 28);
             this.txtLastName.TabIndex = 95;
@@ -254,7 +254,7 @@
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(169, 36);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(193, 28);
             this.txtFirstName.TabIndex = 94;
@@ -393,7 +393,7 @@
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(613, 218);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(193, 28);
             this.txtConfirmPassword.TabIndex = 113;
@@ -443,7 +443,7 @@
             this.ClientSize = new System.Drawing.Size(1112, 659);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Manage_Account";
             this.Text = "Manage_Account";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

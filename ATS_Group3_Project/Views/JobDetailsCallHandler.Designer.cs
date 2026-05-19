@@ -202,6 +202,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblJobHeading);
             this.panel1.Controls.Add(this.lblJobStatus);
             this.panel1.Controls.Add(this.lblJobType);
@@ -230,6 +231,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblLocationHeading);
             this.panel2.Controls.Add(this.txtTurbineId);
             this.panel2.Controls.Add(this.lblTurbineId);
@@ -252,6 +254,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblEngineer);
             this.panel3.Controls.Add(this.txtAssignedEngineerName);
             this.panel3.Controls.Add(this.lblEngineerName);
@@ -308,6 +311,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.lblFaultDescription);
             this.panel4.Controls.Add(this.txtFaultDescription);
             this.panel4.Location = new System.Drawing.Point(566, 121);
@@ -336,6 +340,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.chkLiftReplaced);
             this.panel5.Controls.Add(this.chkLiftServiced);
             this.panel5.Controls.Add(this.chkYawMotorReplaced);
@@ -364,6 +369,7 @@
             this.chkLiftReplaced.Size = new System.Drawing.Size(15, 14);
             this.chkLiftReplaced.TabIndex = 22;
             this.chkLiftReplaced.UseVisualStyleBackColor = true;
+            this.chkLiftReplaced.CheckedChanged += new System.EventHandler(this.chkLiftReplaced_CheckedChanged);
             // 
             // chkLiftServiced
             // 
@@ -373,6 +379,7 @@
             this.chkLiftServiced.Size = new System.Drawing.Size(15, 14);
             this.chkLiftServiced.TabIndex = 21;
             this.chkLiftServiced.UseVisualStyleBackColor = true;
+            this.chkLiftServiced.CheckedChanged += new System.EventHandler(this.chkLiftServiced_CheckedChanged);
             // 
             // chkYawMotorReplaced
             // 
@@ -382,6 +389,7 @@
             this.chkYawMotorReplaced.Size = new System.Drawing.Size(15, 14);
             this.chkYawMotorReplaced.TabIndex = 20;
             this.chkYawMotorReplaced.UseVisualStyleBackColor = true;
+            this.chkYawMotorReplaced.CheckedChanged += new System.EventHandler(this.chkYawMotorReplaced_CheckedChanged);
             // 
             // chkYawMotorServiced
             // 
@@ -391,6 +399,7 @@
             this.chkYawMotorServiced.Size = new System.Drawing.Size(15, 14);
             this.chkYawMotorServiced.TabIndex = 19;
             this.chkYawMotorServiced.UseVisualStyleBackColor = true;
+            this.chkYawMotorServiced.CheckedChanged += new System.EventHandler(this.chkYawMotorServiced_CheckedChanged);
             // 
             // chkGearboxReplaced
             // 
@@ -400,6 +409,7 @@
             this.chkGearboxReplaced.Size = new System.Drawing.Size(15, 14);
             this.chkGearboxReplaced.TabIndex = 18;
             this.chkGearboxReplaced.UseVisualStyleBackColor = true;
+            this.chkGearboxReplaced.CheckedChanged += new System.EventHandler(this.chkGearboxReplaced_CheckedChanged);
             // 
             // chkGearboxServiced
             // 
@@ -409,6 +419,7 @@
             this.chkGearboxServiced.Size = new System.Drawing.Size(15, 14);
             this.chkGearboxServiced.TabIndex = 17;
             this.chkGearboxServiced.UseVisualStyleBackColor = true;
+            this.chkGearboxServiced.CheckedChanged += new System.EventHandler(this.chkGearboxServiced_CheckedChanged);
             // 
             // chkMainGeneratorReplaced
             // 
@@ -418,6 +429,7 @@
             this.chkMainGeneratorReplaced.Size = new System.Drawing.Size(15, 14);
             this.chkMainGeneratorReplaced.TabIndex = 16;
             this.chkMainGeneratorReplaced.UseVisualStyleBackColor = true;
+            this.chkMainGeneratorReplaced.CheckedChanged += new System.EventHandler(this.chkMainGeneratorReplaced_CheckedChanged);
             // 
             // chkMainGeneratorServiced
             // 
@@ -427,31 +439,7 @@
             this.chkMainGeneratorServiced.Size = new System.Drawing.Size(15, 14);
             this.chkMainGeneratorServiced.TabIndex = 15;
             this.chkMainGeneratorServiced.UseVisualStyleBackColor = true;
-
-            //checkbox load events
-            this.chkMainGeneratorServiced.CheckedChanged +=
-    new System.EventHandler(this.chkMainGeneratorServiced_CheckedChanged);
-
-            this.chkMainGeneratorReplaced.CheckedChanged +=
-                new System.EventHandler(this.chkMainGeneratorReplaced_CheckedChanged);
-
-            this.chkGearboxServiced.CheckedChanged +=
-                new System.EventHandler(this.chkGearboxServiced_CheckedChanged);
-
-            this.chkGearboxReplaced.CheckedChanged +=
-                new System.EventHandler(this.chkGearboxReplaced_CheckedChanged);
-
-            this.chkYawMotorServiced.CheckedChanged +=
-                new System.EventHandler(this.chkYawMotorServiced_CheckedChanged);
-
-            this.chkYawMotorReplaced.CheckedChanged +=
-                new System.EventHandler(this.chkYawMotorReplaced_CheckedChanged);
-
-            this.chkLiftServiced.CheckedChanged +=
-                new System.EventHandler(this.chkLiftServiced_CheckedChanged);
-
-            this.chkLiftReplaced.CheckedChanged +=
-                new System.EventHandler(this.chkLiftReplaced_CheckedChanged);
+            this.chkMainGeneratorServiced.CheckedChanged += new System.EventHandler(this.chkMainGeneratorServiced_CheckedChanged);
             // 
             // lblReplaced
             // 
@@ -552,6 +540,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmJobDetails";
             this.Text = "ATS Windsync";
+            this.Load += new System.EventHandler(this.frmJobDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -563,8 +552,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
-
-            this.Load += new System.EventHandler(this.frmJobDetails_Load);
 
         }
 

@@ -49,7 +49,8 @@ namespace ATS_Group3_Project.Views
 
         private void btnSimulationDashboard_Click(object sender, EventArgs e)
         {
-            frmTurbSimData simDataForm = new frmTurbSimData(StaffId, firstName, role);
+            frmTurbSimData simDataForm = 
+                new frmTurbSimData(StaffId, firstName, role);
             simDataForm.Show();
             this.Hide();
         }
@@ -57,11 +58,7 @@ namespace ATS_Group3_Project.Views
         private void btnViewAllJobs_Click(object sender, EventArgs e)
         {
             frmViewAssignedJobs viewJobs =
-                new frmViewAssignedJobs(
-                    StaffId,
-                    firstName,
-                    role
-                );
+                new frmViewAssignedJobs(StaffId, firstName, role);
 
             viewJobs.Show();
 

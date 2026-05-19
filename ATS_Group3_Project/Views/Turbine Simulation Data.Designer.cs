@@ -78,7 +78,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Azure;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(127, 317);
+            this.btnBack.Location = new System.Drawing.Point(172, 317);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(119, 41);
@@ -191,7 +191,7 @@
             this.LastRecorded,
             this.windFarmIdDataGridViewTextBoxColumn});
             this.dataGVTrubinStats.DataSource = this.turbinesBindingSource1;
-            this.dataGVTrubinStats.Location = new System.Drawing.Point(272, 56);
+            this.dataGVTrubinStats.Location = new System.Drawing.Point(310, 99);
             this.dataGVTrubinStats.Name = "dataGVTrubinStats";
             this.dataGVTrubinStats.ReadOnly = true;
             this.dataGVTrubinStats.Size = new System.Drawing.Size(734, 359);
@@ -286,14 +286,14 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 418);
+            this.panel1.Size = new System.Drawing.Size(295, 433);
             this.panel1.TabIndex = 34;
             // 
             // btnLogAFault
             // 
             this.btnLogAFault.BackColor = System.Drawing.Color.Azure;
             this.btnLogAFault.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogAFault.Location = new System.Drawing.Point(44, 363);
+            this.btnLogAFault.Location = new System.Drawing.Point(65, 375);
             this.btnLogAFault.Name = "btnLogAFault";
             this.btnLogAFault.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnLogAFault.Size = new System.Drawing.Size(165, 41);
@@ -313,7 +313,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImage = global::ATS_Group3_Project.Properties.Resources.ATS_Background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1026, 501);
+            this.ClientSize = new System.Drawing.Size(1056, 501);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
             this.Controls.Add(this.label3);

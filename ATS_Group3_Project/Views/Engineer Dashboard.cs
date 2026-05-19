@@ -48,7 +48,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnViewAssignedJobs_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void btnViewJobs_Click(object sender, EventArgs e)

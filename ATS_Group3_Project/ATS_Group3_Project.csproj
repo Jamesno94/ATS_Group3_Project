@@ -75,12 +75,6 @@
     <Compile Include="Controllers\WindFarmManager.cs" />
     <Compile Include="Data\ATSContext.cs" />
     <Compile Include="Data\ATSDbInititaliser.cs" />
-    <Compile Include="Views\Edit Staff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Edit Staff.Designer.cs">
-      <DependentUpon>Edit Staff.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Manage Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     <Compile Include="Views\AddWindFarm.Designer.cs">
       <DependentUpon>AddWindFarm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Edit Staff.resx">
-      <DependentUpon>Edit Staff.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage Staff.resx">
       <DependentUpon>Manage Staff.cs</DependentUpon>
     </EmbeddedResource>

@@ -60,7 +60,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(31, 462);
+            this.btnBack.Location = new System.Drawing.Point(71, 462);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(92, 41);
