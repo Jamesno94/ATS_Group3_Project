@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.txtPostcode = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRole = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,20 +139,6 @@
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 106;
             this.label2.Text = "Password:";
-            // 
-            // cboRole
-            // 
-            this.cboRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRole.FormattingEnabled = true;
-            this.cboRole.Items.AddRange(new object[] {
-            "Engineer",
-            "Call Handler",
-            "Admin"});
-            this.cboRole.Location = new System.Drawing.Point(613, 33);
-            this.cboRole.Margin = new System.Windows.Forms.Padding(2);
-            this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(193, 30);
-            this.cboRole.TabIndex = 105;
             // 
             // label1
             // 
@@ -400,6 +386,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtRole);
             this.panel1.Controls.Add(this.txtConfirmPassword);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtStaffId);
@@ -408,7 +395,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cboRole);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSaveChanges);
             this.panel1.Controls.Add(this.txtPostcode);
@@ -433,6 +419,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(868, 493);
             this.panel1.TabIndex = 115;
+            // 
+            // txtRole
+            // 
+            this.txtRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRole.Location = new System.Drawing.Point(613, 37);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.ReadOnly = true;
+            this.txtRole.Size = new System.Drawing.Size(193, 28);
+            this.txtRole.TabIndex = 114;
             // 
             // Manage_Account
             // 
@@ -461,7 +457,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveChanges;
         private System.Windows.Forms.TextBox txtPostcode;
@@ -485,5 +480,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtRole;
     }
 }

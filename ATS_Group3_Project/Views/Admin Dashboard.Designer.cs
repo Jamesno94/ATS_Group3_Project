@@ -31,7 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
-            this.btnViewAllStaff = new System.Windows.Forms.Button();
+            this.btnManageStaff = new System.Windows.Forms.Button();
             this.btnCreateNewStaff = new System.Windows.Forms.Button();
             this.btnEditAllStaff = new System.Windows.Forms.Button();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
@@ -77,15 +77,16 @@
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             // 
-            // btnViewAllStaff
+            // btnManageStaff
             // 
-            this.btnViewAllStaff.Location = new System.Drawing.Point(269, 28);
-            this.btnViewAllStaff.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViewAllStaff.Name = "btnViewAllStaff";
-            this.btnViewAllStaff.Size = new System.Drawing.Size(206, 65);
-            this.btnViewAllStaff.TabIndex = 4;
-            this.btnViewAllStaff.Text = "View All Staff";
-            this.btnViewAllStaff.UseVisualStyleBackColor = true;
+            this.btnManageStaff.Location = new System.Drawing.Point(269, 28);
+            this.btnManageStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManageStaff.Name = "btnManageStaff";
+            this.btnManageStaff.Size = new System.Drawing.Size(206, 65);
+            this.btnManageStaff.TabIndex = 4;
+            this.btnManageStaff.Text = "Manage Staff";
+            this.btnManageStaff.UseVisualStyleBackColor = true;
+            this.btnManageStaff.Click += new System.EventHandler(this.btnManageStaff_Click);
             // 
             // btnCreateNewStaff
             // 
@@ -136,7 +137,7 @@
             this.panel2.Controls.Add(this.btnUnlockAccount);
             this.panel2.Controls.Add(this.btnDeleteStaff);
             this.panel2.Controls.Add(this.btnCreateNewStaff);
-            this.panel2.Controls.Add(this.btnViewAllStaff);
+            this.panel2.Controls.Add(this.btnManageStaff);
             this.panel2.Controls.Add(this.btnEditAllStaff);
             this.panel2.Location = new System.Drawing.Point(146, 108);
             this.panel2.Name = "panel2";
@@ -149,7 +150,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
             this.btnLogOut.Location = new System.Drawing.Point(342, 243);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 41);
             this.btnLogOut.TabIndex = 10;
@@ -183,7 +184,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.Button btnViewAllStaff;
+        private System.Windows.Forms.Button btnManageStaff;
         private System.Windows.Forms.Button btnCreateNewStaff;
         private System.Windows.Forms.Button btnEditAllStaff;
         private System.Windows.Forms.Button btnDeleteStaff;

@@ -37,7 +37,7 @@
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogO = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,7 @@
             this.btnManageAccount.TabIndex = 10;
             this.btnManageAccount.Text = "Manage Account ";
             this.btnManageAccount.UseVisualStyleBackColor = false;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
             // 
             // btnLogOut
             // 
@@ -142,7 +143,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnManageAccount);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogO);
             this.panel1.Controls.Add(this.btnSimulationDashboard);
             this.panel1.Controls.Add(this.btnViewAllJobs);
             this.panel1.Controls.Add(this.btnAddTurbine);
@@ -151,18 +152,19 @@
             this.panel1.Size = new System.Drawing.Size(496, 307);
             this.panel1.TabIndex = 12;
             // 
-            // button1
+            // btnLogO
             // 
-            this.button1.BackColor = System.Drawing.Color.Azure;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(207, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogO.BackColor = System.Drawing.Color.Azure;
+            this.btnLogO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogO.ForeColor = System.Drawing.Color.Black;
+            this.btnLogO.Location = new System.Drawing.Point(207, 232);
+            this.btnLogO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogO.Name = "btnLogO";
+            this.btnLogO.Size = new System.Drawing.Size(75, 41);
+            this.btnLogO.TabIndex = 9;
+            this.btnLogO.Text = "Log Out";
+            this.btnLogO.UseVisualStyleBackColor = false;
+            this.btnLogO.Click += new System.EventHandler(this.btnLogO_Click);
             // 
             // frmCallHandler
             // 
@@ -197,6 +199,6 @@
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogO;
     }
 }

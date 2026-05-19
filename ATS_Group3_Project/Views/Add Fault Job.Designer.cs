@@ -39,12 +39,12 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTurbineId = new System.Windows.Forms.TextBox();
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.btnCreateJob = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -195,6 +195,19 @@
             this.panel1.Size = new System.Drawing.Size(421, 487);
             this.panel1.TabIndex = 23;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(16, 302);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 24);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Please Select Component(s):";
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Azure;
@@ -252,19 +265,6 @@
             this.btnCreateJob.Text = "Create Job";
             this.btnCreateJob.UseVisualStyleBackColor = false;
             this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(16, 302);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 24);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Fault Description:";
             // 
             // frmAddFaultJob
             // 

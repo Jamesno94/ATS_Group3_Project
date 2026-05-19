@@ -36,10 +36,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnCreateNewStaff_Click(object sender, EventArgs e)
         {
-            frmRegisterNewAccount Registerfrm = new frmRegisterNewAccount(StaffId, firstName, role);
-            Registerfrm.Show();
 
-            this.Hide();
         }
 
         private void btnLogOut_Click_1(object sender, EventArgs e)
@@ -58,6 +55,11 @@ namespace ATS_Group3_Project.Views
 
                 this.Hide();
             }
+        }
+
+        private void btnManageStaff_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

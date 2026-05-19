@@ -30,21 +30,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-            "Do you wish to log out?",
-            "Logout Confirmation",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question
-            );
-
-
-            if (result == DialogResult.Yes)
-            {
-                frmLogin loginForm = new frmLogin();
-                loginForm.Show();
-
-                this.Hide();
-            }
+            
         }
 
         private void btnSimulationDashboard_Click(object sender, EventArgs e)
@@ -63,6 +49,30 @@ namespace ATS_Group3_Project.Views
             viewJobs.Show();
 
             this.Hide();
+        }
+
+        private void btnManageAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogO_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Do you wish to log out?",
+            "Logout Confirmation",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+
+            if (result == DialogResult.Yes)
+            {
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show();
+
+                this.Hide();
+            }
         }
     }
 }

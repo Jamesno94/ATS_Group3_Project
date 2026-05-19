@@ -52,12 +52,11 @@ namespace ATS_Group3_Project.Views
                 txtPostcode.Text = staff.Postcode;
 
                 txtSalary.Text = staff.Salary.ToString();
-                cboRole.Text = staff.Role;
+                txtRole.Text = staff.Role;
 
                 txtStaffId.ReadOnly = true;
                 txtSalary.ReadOnly = true;
-                cboRole.Enabled = false;
-
+                txtRole.ReadOnly = true;
                 txtPassword.UseSystemPasswordChar = true;
                 txtConfirmPassword.UseSystemPasswordChar = true;
             }
@@ -90,7 +89,7 @@ namespace ATS_Group3_Project.Views
                 City = txtCity.Text.Trim(),
                 Postcode = txtPostcode.Text.Trim(),
                 Salary = decimal.Parse(txtSalary.Text),
-                Role = cboRole.Text.Trim()
+                Role = txtRole.Text.Trim()
             };
 
             bool staffUpdated = _staffManager.UpdateStaff(updatedStaff);
