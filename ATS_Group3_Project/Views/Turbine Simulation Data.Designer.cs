@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTurbSimData));
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogAFault = new System.Windows.Forms.Button();
             this.turbinesTableAdapter1 = new ATS_Group3_Project.ATS_WindSyncDBDataSet1TableAdapters.TurbinesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet1)).BeginInit();
@@ -76,20 +73,6 @@
             this.label3.Size = new System.Drawing.Size(208, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "WindSync ATS";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(977, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnBack
             // 
@@ -333,14 +316,12 @@
             this.ClientSize = new System.Drawing.Size(1026, 501);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGVTrubinStats);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTurbSimData";
             this.Text = "Turbine Simulation Data";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.frmTurbSimData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTrubinStats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turbinesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTS_WindSyncDBDataSet1)).EndInit();
@@ -356,7 +337,6 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

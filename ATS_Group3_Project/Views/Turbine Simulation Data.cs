@@ -39,14 +39,6 @@ namespace ATS_Group3_Project
             cboWIndFarms.SelectedItem = "All";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            frmLogin login = new frmLogin();
-            login.Show();
-
-            this.Hide();
-        }
-
         // Load turbines into DataGridView
         private void LoadTurbinesList(List<Turbine> turbines)
         {

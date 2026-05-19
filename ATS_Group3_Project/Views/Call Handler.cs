@@ -35,7 +35,8 @@ namespace ATS_Group3_Project.Views
             "Logout Confirmation",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question
-        );
+            );
+
 
             if (result == DialogResult.Yes)
             {
