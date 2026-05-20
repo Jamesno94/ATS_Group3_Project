@@ -8,7 +8,7 @@ namespace ATS_Group3_Project
     {
         public string GenerateJobId()
         {
-           
+            
             using (var db = new ATSContext())
             {
                 string prefix = "JOB";
@@ -114,7 +114,14 @@ namespace ATS_Group3_Project
             }
         }
 
-        public JobRecord CreateFaultJob(string turbineId, string faultDescription, DateTime reportedDateTime)
+        public JobRecord CreateFaultJob(
+    string turbineId,
+    string faultDescription,
+    DateTime reportedDateTime,
+    bool mainGeneratorFault,
+    bool gearboxFault,
+    bool yawMotorFault,
+    bool liftFault)
         {
             using (var db = new ATSContext())
             {
@@ -168,6 +175,13 @@ namespace ATS_Group3_Project
                     JobType = "Fault",
                     FaultDescription = faultDescription,
 
+                    // Fault component selections
+                    MainGeneratorFault = mainGeneratorFault,
+                    GearboxFault = gearboxFault,
+                    YawMotorFault = yawMotorFault,
+                    InternalPassengerLiftFault = liftFault,
+
+                    // Engineer actions
                     MainGeneratorServiced = false,
                     GearboxServiced = false,
                     YawMotorServiced = false,

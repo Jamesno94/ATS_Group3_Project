@@ -12,6 +12,11 @@ namespace ATS_Group3_Project
         private string _loggedInStaffId;
         private string _staffRole;
 
+        // Fault flags (source of truth)
+        private bool _mainGeneratorFault;
+        private bool _gearboxFault;
+        private bool _yawMotorFault;
+        private bool _liftFault;
 
         public frmJobDetails()
         {
@@ -27,6 +32,7 @@ namespace ATS_Group3_Project
 
             LoadLoggedInUserRole();
         }
+
         private void LoadLoggedInUserRole()
         {
             using (var db = new ATSContext())
@@ -64,7 +70,7 @@ namespace ATS_Group3_Project
                     return;
                 }
 
-                txtJobId.Text = job.JobId.ToString();
+                txtJobId.Text = job.JobId;
                 txtJobDate.Text = job.JobDate.ToShortDateString();
                 txtJobTime.Text = job.JobTime;
                 txtJobType.Text = job.JobType;
@@ -82,6 +88,13 @@ namespace ATS_Group3_Project
                     ? "N/A"
                     : job.FaultDescription;
 
+                // Store fault flags (IMPORTANT)
+                _mainGeneratorFault = job.MainGeneratorFault;
+                _gearboxFault = job.GearboxFault;
+                _yawMotorFault = job.YawMotorFault;
+                _liftFault = job.InternalPassengerLiftFault;
+
+                // Load checkbox states
                 chkMainGeneratorServiced.Checked = job.MainGeneratorServiced;
                 chkMainGeneratorReplaced.Checked = job.MainGeneratorReplaced;
 
@@ -100,6 +113,7 @@ namespace ATS_Group3_Project
         {
             bool isEngineer = _staffRole == "Engineer";
 
+            // Lock text fields
             txtJobId.ReadOnly = true;
             txtJobDate.ReadOnly = true;
             txtJobTime.ReadOnly = true;
@@ -111,17 +125,18 @@ namespace ATS_Group3_Project
             txtAssignedEngineerName.ReadOnly = true;
             txtFaultDescription.ReadOnly = true;
 
-            chkMainGeneratorServiced.Enabled = isEngineer;
-            chkMainGeneratorReplaced.Enabled = isEngineer;
+            // Fault-based access control
+            chkMainGeneratorServiced.Enabled = isEngineer && _mainGeneratorFault;
+            chkMainGeneratorReplaced.Enabled = isEngineer && _mainGeneratorFault;
 
-            chkGearboxServiced.Enabled = isEngineer;
-            chkGearboxReplaced.Enabled = isEngineer;
+            chkGearboxServiced.Enabled = isEngineer && _gearboxFault;
+            chkGearboxReplaced.Enabled = isEngineer && _gearboxFault;
 
-            chkYawMotorServiced.Enabled = isEngineer;
-            chkYawMotorReplaced.Enabled = isEngineer;
+            chkYawMotorServiced.Enabled = isEngineer && _yawMotorFault;
+            chkYawMotorReplaced.Enabled = isEngineer && _yawMotorFault;
 
-            chkLiftServiced.Enabled = isEngineer;
-            chkLiftReplaced.Enabled = isEngineer;
+            chkLiftServiced.Enabled = isEngineer && _liftFault;
+            chkLiftReplaced.Enabled = isEngineer && _liftFault;
 
             btnUpdateJob.Enabled = isEngineer;
             btnUpdateJob.Visible = isEngineer;
@@ -129,31 +144,38 @@ namespace ATS_Group3_Project
 
         private bool ValidateComponentSelections()
         {
-            if (chkMainGeneratorServiced.Checked == chkMainGeneratorReplaced.Checked)
+            if (_mainGeneratorFault)
             {
-                MessageBox.Show("Main Generator must be either serviced OR replaced.");
-                return false;
+                if (chkMainGeneratorServiced.Checked == chkMainGeneratorReplaced.Checked)
+                    return ShowError("Main Generator must be serviced OR replaced.");
             }
 
-            if (chkGearboxServiced.Checked == chkGearboxReplaced.Checked)
+            if (_gearboxFault)
             {
-                MessageBox.Show("Gearbox must be either serviced OR replaced.");
-                return false;
+                if (chkGearboxServiced.Checked == chkGearboxReplaced.Checked)
+                    return ShowError("Gearbox must be serviced OR replaced.");
             }
 
-            if (chkYawMotorServiced.Checked == chkYawMotorReplaced.Checked)
+            if (_yawMotorFault)
             {
-                MessageBox.Show("Yaw Motor must be either serviced OR replaced.");
-                return false;
+                if (chkYawMotorServiced.Checked == chkYawMotorReplaced.Checked)
+                    return ShowError("Yaw Motor must be serviced OR replaced.");
             }
 
-            if (chkLiftServiced.Checked == chkLiftReplaced.Checked)
+            if (_liftFault)
             {
-                MessageBox.Show("Internal Passenger Lift must be either serviced OR replaced.");
-                return false;
+                if (chkLiftServiced.Checked == chkLiftReplaced.Checked)
+                    return ShowError("Internal Passenger Lift must be serviced OR replaced.");
             }
 
             return true;
+        }
+
+        private bool ShowError(string message)
+        {
+            MessageBox.Show(message, "Validation Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
         }
 
         private void btnUpdateJob_Click(object sender, EventArgs e)
@@ -165,52 +187,42 @@ namespace ATS_Group3_Project
             }
 
             if (!ValidateComponentSelections())
-            {
                 return;
-            }
 
             JobRecordManager manager = new JobRecordManager();
 
             bool success = manager.MarkJobComplete(
                 _jobId,
-                chkMainGeneratorServiced.Checked,
-                chkGearboxServiced.Checked,
-                chkYawMotorServiced.Checked,
-                chkLiftServiced.Checked,
-                chkMainGeneratorReplaced.Checked,
-                chkGearboxReplaced.Checked,
-                chkYawMotorReplaced.Checked,
-                chkLiftReplaced.Checked
+
+                _mainGeneratorFault ? chkMainGeneratorServiced.Checked : false,
+                _gearboxFault ? chkGearboxServiced.Checked : false,
+                _yawMotorFault ? chkYawMotorServiced.Checked : false,
+                _liftFault ? chkLiftServiced.Checked : false,
+
+                _mainGeneratorFault ? chkMainGeneratorReplaced.Checked : false,
+                _gearboxFault ? chkGearboxReplaced.Checked : false,
+                _yawMotorFault ? chkYawMotorReplaced.Checked : false,
+                _liftFault ? chkLiftReplaced.Checked : false
             );
 
             if (success)
             {
-                DialogResult result = MessageBox.Show(
-                    "Job marked as complete.",
-                    "Job Complete",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
+                MessageBox.Show("Job marked as complete.");
 
-                if (result == DialogResult.OK)
+                using (var db = new ATSContext())
                 {
-                    using (var db = new ATSContext())
+                    var staff = db.Staff
+                        .FirstOrDefault(s => s.StaffId == _loggedInStaffId);
+
+                    if (staff != null)
                     {
-                        var staff = db.Staff
-                            .FirstOrDefault(s => s.StaffId == _loggedInStaffId);
+                        new frmEngineerDashboard(
+                            staff.StaffId,
+                            staff.FirstName,
+                            staff.Role
+                        ).Show();
 
-                        if (staff != null)
-                        {
-                            frmEngineerDashboard engineerDashboard =
-                                new frmEngineerDashboard(
-                                    staff.StaffId,
-                                    staff.FirstName,
-                                    staff.Role
-                                );
-
-                            engineerDashboard.Show();
-                            this.Close();
-                        }
+                        Close();
                     }
                 }
             }
@@ -220,6 +232,7 @@ namespace ATS_Group3_Project
             }
         }
 
+        // Checkbox exclusivity rules
         private void chkMainGeneratorServiced_CheckedChanged(object sender, EventArgs e)
         {
             if (chkMainGeneratorServiced.Checked)
@@ -272,49 +285,18 @@ namespace ATS_Group3_Project
         {
             using (var db = new ATSContext())
             {
-                var staff = db.Staff
-                    .FirstOrDefault(s => s.StaffId == _loggedInStaffId);
+                var staff = db.Staff.FirstOrDefault(s => s.StaffId == _loggedInStaffId);
 
-                if (staff == null)
-                {
-                    MessageBox.Show("User could not be found.");
-                    return;
-                }
+                Form dashboard;
 
                 if (staff.Role == "Engineer")
-                {
-                    frmEngineerDashboard engineerDashboard =
-                        new frmEngineerDashboard(
-                            staff.StaffId,
-                            staff.FirstName,
-                            staff.Role
-                        );
-
-                    engineerDashboard.Show();
-                }
+                    dashboard = new frmEngineerDashboard(staff.StaffId, staff.FirstName, staff.Role);
                 else if (staff.Role == "Call Handler")
-                {
-                    frmCallHandler callHandlerDashboard =
-                        new frmCallHandler(
-                            staff.StaffId,
-                            staff.FirstName,
-                            staff.Role
-                        );
+                    dashboard = new frmCallHandler(staff.StaffId, staff.FirstName, staff.Role);
+                else
+                    dashboard = new frmAdminDashboard(staff.StaffId, staff.FirstName, staff.Role);
 
-                    callHandlerDashboard.Show();
-                }
-                else if (staff.Role == "Admin")
-                {
-                    frmAdminDashboard adminDashboard =
-                        new frmAdminDashboard(
-                            staff.StaffId,
-                            staff.FirstName,
-                            staff.Role
-                        );
-
-                    adminDashboard.Show();
-                }
-
+                dashboard.Show();
                 this.Close();
             }
         }

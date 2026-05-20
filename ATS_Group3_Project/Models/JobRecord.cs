@@ -57,6 +57,14 @@ namespace ATS_Group3_Project
         [Required]
         public bool InternalPassengerLiftReplaced { get; set; }
 
+        public bool MainGeneratorFault { get; set; }
+
+        public bool GearboxFault { get; set; }
+
+        public bool YawMotorFault { get; set; }
+
+        public bool InternalPassengerLiftFault { get; set; }
+
         [Required]
         public string JobComplete { get; set; }
         // Awaiting Engineer or Complete

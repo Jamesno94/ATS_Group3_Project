@@ -35,15 +35,7 @@ namespace ATS_Group3_Project
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to leave this page?",
-            "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                frmTurbineHistory secondForm = new frmTurbineHistory(StaffId, firstName, role);
-                secondForm.Show();
-                this.Hide();
-            }
+         
         }
 
         private void DashboardLogoClick_Click(object sender, EventArgs e)
@@ -69,6 +61,23 @@ namespace ATS_Group3_Project
 
         private void btnCreateJob_Click(object sender, EventArgs e)
         {
+            bool componentSelected =
+                chkMainGenerator.Checked ||
+                chkGearbox.Checked ||
+                chkYawMotor.Checked ||
+                chkLift.Checked;
+
+            if (!componentSelected)
+            {
+                MessageBox.Show(
+                    "Please select at least one faulty component.",
+                    "Validation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
             string faultDescription = txtFaultDescription.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(faultDescription))
@@ -94,7 +103,11 @@ namespace ATS_Group3_Project
                 JobRecord createdJob = manager.CreateFaultJob(
                     turbineId,
                     faultDescription,
-                    faultDateTime
+                    faultDateTime,
+                    chkMainGenerator.Checked,
+                    chkGearbox.Checked,
+                    chkYawMotor.Checked,
+                    chkLift.Checked
                 );
 
                 if (createdJob == null)
@@ -115,6 +128,10 @@ namespace ATS_Group3_Project
                     MessageBoxIcon.Information);
 
                 txtFaultDescription.Clear();
+
+                frmTurbSimData frmTurbSimData = new frmTurbSimData(StaffId, firstName, role);
+                frmTurbSimData.Show();
+                this.Close();
             }
             catch (Exception ex)
             {
