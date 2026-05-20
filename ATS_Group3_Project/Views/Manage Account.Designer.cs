@@ -1,6 +1,6 @@
 ﻿namespace ATS_Group3_Project.Views
 {
-    partial class Manage_Account
+    partial class frmManageAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -430,7 +430,7 @@
             this.txtRole.Size = new System.Drawing.Size(193, 28);
             this.txtRole.TabIndex = 114;
             // 
-            // Manage_Account
+            // frmManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -440,7 +440,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Manage_Account";
+            this.Name = "frmManageAccount";
             this.Text = "Manage_Account";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -59,7 +59,23 @@ namespace ATS_Group3_Project.Views
 
         private void btnManageStaff_Click(object sender, EventArgs e)
         {
+            frmManageStaff manageStaffForm = new frmManageStaff(StaffId, firstName, role);
+            manageStaffForm.Show();
+            this.Hide();
+        }
 
+        private void btnManageAccounts_Click(object sender, EventArgs e)
+        {
+            frmManageAccount manageAccount = new frmManageAccount(StaffId);
+            manageAccount.Show();
+            this.Hide();
+        }
+
+        private void btnCallHandler_Click(object sender, EventArgs e)
+        {
+            frmCallHandler callHandler = new frmCallHandler(StaffId, firstName, role);
+            callHandler.Show();
+            this.Hide();
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ATS_Group3_Project.Views
 {
-    public partial class Manage_Account : Form
+    public partial class frmManageAccount : Form
     {
         private string _staffId;
         private string StaffId;
@@ -20,7 +20,7 @@ namespace ATS_Group3_Project.Views
         private StaffManager _staffManager = new StaffManager();
         private UserManager _userManager = new UserManager();
 
-        public Manage_Account(string staffId)
+        public frmManageAccount(string staffId)
         {
             InitializeComponent();
 

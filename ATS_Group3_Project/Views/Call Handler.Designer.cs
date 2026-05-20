@@ -38,6 +38,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogO = new System.Windows.Forms.Button();
+            this.btnBackToAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +143,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnBackToAdmin);
             this.panel1.Controls.Add(this.btnManageAccount);
             this.panel1.Controls.Add(this.btnLogO);
             this.panel1.Controls.Add(this.btnSimulationDashboard);
@@ -157,7 +159,7 @@
             this.btnLogO.BackColor = System.Drawing.Color.Azure;
             this.btnLogO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogO.ForeColor = System.Drawing.Color.Black;
-            this.btnLogO.Location = new System.Drawing.Point(207, 232);
+            this.btnLogO.Location = new System.Drawing.Point(209, 232);
             this.btnLogO.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogO.Name = "btnLogO";
             this.btnLogO.Size = new System.Drawing.Size(75, 41);
@@ -165,6 +167,20 @@
             this.btnLogO.Text = "Log Out";
             this.btnLogO.UseVisualStyleBackColor = false;
             this.btnLogO.Click += new System.EventHandler(this.btnLogO_Click);
+            // 
+            // btnBackToAdmin
+            // 
+            this.btnBackToAdmin.BackColor = System.Drawing.Color.Azure;
+            this.btnBackToAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnBackToAdmin.Location = new System.Drawing.Point(67, 232);
+            this.btnBackToAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackToAdmin.Name = "btnBackToAdmin";
+            this.btnBackToAdmin.Size = new System.Drawing.Size(116, 41);
+            this.btnBackToAdmin.TabIndex = 11;
+            this.btnBackToAdmin.Text = "Back to Admin Dashboard";
+            this.btnBackToAdmin.UseVisualStyleBackColor = false;
+            this.btnBackToAdmin.Click += new System.EventHandler(this.btnBackToAdmin_Click);
             // 
             // frmCallHandler
             // 
@@ -200,5 +216,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogO;
+        private System.Windows.Forms.Button btnBackToAdmin;
     }
 }

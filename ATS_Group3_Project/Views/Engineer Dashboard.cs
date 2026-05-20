@@ -60,7 +60,7 @@ namespace ATS_Group3_Project.Views
 
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
-            Manage_Account frm = new Manage_Account(StaffId);
+            frmManageAccount frm = new frmManageAccount(StaffId);
             frm.Show();
             this.Hide();
 
