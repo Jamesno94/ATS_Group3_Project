@@ -37,16 +37,18 @@
             // 
             // btnSendCode
             // 
+            this.btnSendCode.BackColor = System.Drawing.Color.Azure;
             this.btnSendCode.Location = new System.Drawing.Point(63, 107);
             this.btnSendCode.Name = "btnSendCode";
             this.btnSendCode.Size = new System.Drawing.Size(75, 23);
             this.btnSendCode.TabIndex = 0;
             this.btnSendCode.Text = "Send Code";
-            this.btnSendCode.UseVisualStyleBackColor = true;
+            this.btnSendCode.UseVisualStyleBackColor = false;
             this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
             // 
             // txtStaffId
             // 
+            this.txtStaffId.BackColor = System.Drawing.Color.Azure;
             this.txtStaffId.Location = new System.Drawing.Point(51, 59);
             this.txtStaffId.Name = "txtStaffId";
             this.txtStaffId.Size = new System.Drawing.Size(100, 25);
@@ -63,6 +65,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.lblStaffId);
             this.panel1.Controls.Add(this.txtStaffId);
             this.panel1.Controls.Add(this.btnSendCode);

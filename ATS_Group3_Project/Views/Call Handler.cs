@@ -55,8 +55,8 @@ namespace ATS_Group3_Project.Views
 
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
-            Manage_Account manageAccountForm =
-                new Manage_Account(StaffId);
+            frmManageAccount manageAccountForm =
+                new frmManageAccount(StaffId);
 
             manageAccountForm.Show();
 
