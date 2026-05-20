@@ -45,6 +45,14 @@
             this.txtTurbineId = new System.Windows.Forms.TextBox();
             this.txtWindFarmId = new System.Windows.Forms.TextBox();
             this.btnCreateJob = new System.Windows.Forms.Button();
+            this.lblLift = new System.Windows.Forms.Label();
+            this.lblYawMotor = new System.Windows.Forms.Label();
+            this.lblGearbox = new System.Windows.Forms.Label();
+            this.lblMainGenerator = new System.Windows.Forms.Label();
+            this.chkLift = new System.Windows.Forms.CheckBox();
+            this.chkYawMotor = new System.Windows.Forms.CheckBox();
+            this.chkGearbox = new System.Windows.Forms.CheckBox();
+            this.chkMainGenerator = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -178,6 +186,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.chkLift);
+            this.panel1.Controls.Add(this.chkYawMotor);
+            this.panel1.Controls.Add(this.chkGearbox);
+            this.panel1.Controls.Add(this.chkMainGenerator);
+            this.panel1.Controls.Add(this.lblLift);
+            this.panel1.Controls.Add(this.lblYawMotor);
+            this.panel1.Controls.Add(this.lblGearbox);
+            this.panel1.Controls.Add(this.lblMainGenerator);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label1);
@@ -212,7 +228,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Azure;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(297, 425);
+            this.btnBack.Location = new System.Drawing.Point(18, 413);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(99, 43);
             this.btnBack.TabIndex = 25;
@@ -258,13 +274,93 @@
             // 
             this.btnCreateJob.BackColor = System.Drawing.Color.Azure;
             this.btnCreateJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateJob.Location = new System.Drawing.Point(45, 425);
+            this.btnCreateJob.Location = new System.Drawing.Point(299, 413);
             this.btnCreateJob.Name = "btnCreateJob";
             this.btnCreateJob.Size = new System.Drawing.Size(99, 43);
             this.btnCreateJob.TabIndex = 19;
             this.btnCreateJob.Text = "Create Job";
             this.btnCreateJob.UseVisualStyleBackColor = false;
             this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
+            // 
+            // lblLift
+            // 
+            this.lblLift.AutoSize = true;
+            this.lblLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLift.Location = new System.Drawing.Point(209, 364);
+            this.lblLift.Name = "lblLift";
+            this.lblLift.Size = new System.Drawing.Size(115, 20);
+            this.lblLift.TabIndex = 30;
+            this.lblLift.Text = "Passenger Lift:";
+            // 
+            // lblYawMotor
+            // 
+            this.lblYawMotor.AutoSize = true;
+            this.lblYawMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYawMotor.Location = new System.Drawing.Point(209, 335);
+            this.lblYawMotor.Name = "lblYawMotor";
+            this.lblYawMotor.Size = new System.Drawing.Size(89, 20);
+            this.lblYawMotor.TabIndex = 29;
+            this.lblYawMotor.Text = "Yaw Motor:";
+            // 
+            // lblGearbox
+            // 
+            this.lblGearbox.AutoSize = true;
+            this.lblGearbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGearbox.Location = new System.Drawing.Point(17, 366);
+            this.lblGearbox.Name = "lblGearbox";
+            this.lblGearbox.Size = new System.Drawing.Size(74, 20);
+            this.lblGearbox.TabIndex = 28;
+            this.lblGearbox.Text = "Gearbox:";
+            // 
+            // lblMainGenerator
+            // 
+            this.lblMainGenerator.AutoSize = true;
+            this.lblMainGenerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainGenerator.Location = new System.Drawing.Point(17, 333);
+            this.lblMainGenerator.Name = "lblMainGenerator";
+            this.lblMainGenerator.Size = new System.Drawing.Size(124, 20);
+            this.lblMainGenerator.TabIndex = 27;
+            this.lblMainGenerator.Text = "Main Generator:";
+            // 
+            // chkLift
+            // 
+            this.chkLift.AutoSize = true;
+            this.chkLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkLift.Location = new System.Drawing.Point(330, 370);
+            this.chkLift.Name = "chkLift";
+            this.chkLift.Size = new System.Drawing.Size(15, 14);
+            this.chkLift.TabIndex = 34;
+            this.chkLift.UseVisualStyleBackColor = true;
+            // 
+            // chkYawMotor
+            // 
+            this.chkYawMotor.AutoSize = true;
+            this.chkYawMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkYawMotor.Location = new System.Drawing.Point(330, 339);
+            this.chkYawMotor.Name = "chkYawMotor";
+            this.chkYawMotor.Size = new System.Drawing.Size(15, 14);
+            this.chkYawMotor.TabIndex = 33;
+            this.chkYawMotor.UseVisualStyleBackColor = true;
+            // 
+            // chkGearbox
+            // 
+            this.chkGearbox.AutoSize = true;
+            this.chkGearbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkGearbox.Location = new System.Drawing.Point(147, 370);
+            this.chkGearbox.Name = "chkGearbox";
+            this.chkGearbox.Size = new System.Drawing.Size(15, 14);
+            this.chkGearbox.TabIndex = 32;
+            this.chkGearbox.UseVisualStyleBackColor = true;
+            // 
+            // chkMainGenerator
+            // 
+            this.chkMainGenerator.AutoSize = true;
+            this.chkMainGenerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMainGenerator.Location = new System.Drawing.Point(147, 338);
+            this.chkMainGenerator.Name = "chkMainGenerator";
+            this.chkMainGenerator.Size = new System.Drawing.Size(15, 14);
+            this.chkMainGenerator.TabIndex = 31;
+            this.chkMainGenerator.UseVisualStyleBackColor = true;
             // 
             // frmAddFaultJob
             // 
@@ -308,5 +404,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLift;
+        private System.Windows.Forms.Label lblYawMotor;
+        private System.Windows.Forms.Label lblGearbox;
+        private System.Windows.Forms.Label lblMainGenerator;
+        private System.Windows.Forms.CheckBox chkLift;
+        private System.Windows.Forms.CheckBox chkYawMotor;
+        private System.Windows.Forms.CheckBox chkGearbox;
+        private System.Windows.Forms.CheckBox chkMainGenerator;
     }
 }

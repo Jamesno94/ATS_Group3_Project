@@ -8,31 +8,7 @@ namespace ATS_Group3_Project
     {
         public string GenerateJobId()
         {
-            //using (var db = new ATSContext())
-            //{
-            //    string prefix = "JOB";
-
-            //    var lastJob = db.JobRecords
-            //        .Where(j => j.JobId.StartsWith(prefix + "-"))
-            //        .ToList()
-            //        .OrderByDescending(s => int.Parse(s.JobId.Split('-')[1]))
-            //        .FirstOrDefault();
-
-            //    int nextNumber = 9001;
-
-            //    if (lastJob != null)
-            //    {
-            //        string[] parts = lastJob.JobId.Split('-');
-
-            //        if (parts.Length == 2 &&
-            //            int.TryParse(parts[1], out int number))
-            //        {
-            //            nextNumber = number + 1;
-            //        }
-            //    }
-
-            //    return prefix + "-" + nextNumber.ToString("D4");
-            //}
+            
             using (var db = new ATSContext())
             {
                 string prefix = "JOB";
@@ -138,7 +114,14 @@ namespace ATS_Group3_Project
             }
         }
 
-        public JobRecord CreateFaultJob(string turbineId, string faultDescription, DateTime reportedDateTime)
+        public JobRecord CreateFaultJob(
+    string turbineId,
+    string faultDescription,
+    DateTime reportedDateTime,
+    bool mainGeneratorFault,
+    bool gearboxFault,
+    bool yawMotorFault,
+    bool liftFault)
         {
             using (var db = new ATSContext())
             {
@@ -192,6 +175,13 @@ namespace ATS_Group3_Project
                     JobType = "Fault",
                     FaultDescription = faultDescription,
 
+                    // Fault component selections
+                    MainGeneratorFault = mainGeneratorFault,
+                    GearboxFault = gearboxFault,
+                    YawMotorFault = yawMotorFault,
+                    InternalPassengerLiftFault = liftFault,
+
+                    // Engineer actions
                     MainGeneratorServiced = false,
                     GearboxServiced = false,
                     YawMotorServiced = false,
