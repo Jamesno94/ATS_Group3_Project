@@ -34,8 +34,8 @@
             this.btnManageStaff = new System.Windows.Forms.Button();
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnCallHandler = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -107,24 +107,11 @@
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnManageAccount);
             this.panel2.Controls.Add(this.btnManageStaff);
-            this.panel2.Location = new System.Drawing.Point(101, 108);
+            this.panel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(127, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(268, 328);
+            this.panel2.Size = new System.Drawing.Size(268, 350);
             this.panel2.TabIndex = 10;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.Azure;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(95, 283);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 41);
-            this.btnLogOut.TabIndex = 10;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // btnCallHandler
             // 
@@ -134,9 +121,23 @@
             this.btnCallHandler.Name = "btnCallHandler";
             this.btnCallHandler.Size = new System.Drawing.Size(206, 65);
             this.btnCallHandler.TabIndex = 11;
-            this.btnCallHandler.Text = "To Call Handler Dashboard";
+            this.btnCallHandler.Text = "Call Handler Dashboard";
             this.btnCallHandler.UseVisualStyleBackColor = false;
             this.btnCallHandler.Click += new System.EventHandler(this.btnCallHandler_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Azure;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Location = new System.Drawing.Point(90, 283);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 41);
+            this.btnLogOut.TabIndex = 10;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // frmAdminDashboard
             // 
