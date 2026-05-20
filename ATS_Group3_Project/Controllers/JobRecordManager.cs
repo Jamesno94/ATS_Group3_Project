@@ -158,27 +158,16 @@ namespace ATS_Group3_Project
         }
 
         public bool MarkJobComplete(
-          string jobId,
-          bool mainGeneratorServiced,
-          bool gearboxServiced,
-          bool yawMotorServiced,
-          bool liftServiced,
-          bool mainGeneratorReplaced,
-          bool gearboxReplaced,
-          bool yawMotorReplaced,
-          bool liftReplaced)
+    string jobId,
+    bool mainGeneratorServiced,
+    bool gearboxServiced,
+    bool yawMotorServiced,
+    bool liftServiced,
+    bool mainGeneratorReplaced,
+    bool gearboxReplaced,
+    bool yawMotorReplaced,
+    bool liftReplaced)
         {
-            bool valid =
-                mainGeneratorServiced != mainGeneratorReplaced &&
-                gearboxServiced != gearboxReplaced &&
-                yawMotorServiced != yawMotorReplaced &&
-                liftServiced != liftReplaced;
-
-            if (!valid)
-            {
-                return false;
-            }
-
             using (var db = new ATSContext())
             {
                 var job = db.JobRecords
@@ -189,6 +178,34 @@ namespace ATS_Group3_Project
                 {
                     return false;
                 }
+
+                // Validate ONLY faulted components
+
+                if (job.MainGeneratorFault)
+                {
+                    if (mainGeneratorServiced == mainGeneratorReplaced)
+                        return false;
+                }
+
+                if (job.GearboxFault)
+                {
+                    if (gearboxServiced == gearboxReplaced)
+                        return false;
+                }
+
+                if (job.YawMotorFault)
+                {
+                    if (yawMotorServiced == yawMotorReplaced)
+                        return false;
+                }
+
+                if (job.InternalPassengerLiftFault)
+                {
+                    if (liftServiced == liftReplaced)
+                        return false;
+                }
+
+                // Save engineer actions
 
                 job.MainGeneratorServiced = mainGeneratorServiced;
                 job.GearboxServiced = gearboxServiced;
@@ -202,6 +219,8 @@ namespace ATS_Group3_Project
 
                 job.JobComplete = "Complete";
 
+                // Update turbine state
+
                 if (job.Turbine != null)
                 {
                     job.Turbine.Status = "Active";
@@ -213,6 +232,7 @@ namespace ATS_Group3_Project
                 }
 
                 db.SaveChanges();
+
                 return true;
             }
         }

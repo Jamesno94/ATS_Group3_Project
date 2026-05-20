@@ -26,6 +26,8 @@ namespace ATS_Group3_Project.Views
 
             lblGreetings.Text = $"Greetings, {firstName}";
             lblRole.Text = $"Role: {role}";
+
+            btnBackToAdmin.Visible = role == "Admin";
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -78,6 +80,13 @@ namespace ATS_Group3_Project.Views
 
                 this.Hide();
             }
+        }
+
+        private void btnBackToAdmin_Click(object sender, EventArgs e)
+        {
+            frmAdminDashboard adminDashboard = new frmAdminDashboard(StaffId, firstName, role);
+            adminDashboard.Show();
+            this.Hide();
         }
     }
 }
