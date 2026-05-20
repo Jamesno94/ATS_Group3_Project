@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,6 +68,7 @@
       <DependentUpon>ATS_WindSyncDBDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controllers\DispatchManager.cs" />
+    <Compile Include="Controllers\EmailManager.cs" />
     <Compile Include="Controllers\JobRecordManager.cs" />
     <Compile Include="Controllers\ShiftManager.cs" />
     <Compile Include="Controllers\StaffManager.cs" />
@@ -75,6 +77,12 @@
     <Compile Include="Controllers\WindFarmManager.cs" />
     <Compile Include="Data\ATSContext.cs" />
     <Compile Include="Data\ATSDbInititaliser.cs" />
+    <Compile Include="Views\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manage Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +158,12 @@
     <Compile Include="Views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Turbine Simulation Data.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +188,9 @@
     <Compile Include="Views\AddWindFarm.Designer.cs">
       <DependentUpon>AddWindFarm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Manage Staff.resx">
       <DependentUpon>Manage Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turbine Simulation Data.resx">
       <DependentUpon>Turbine Simulation Data.cs</DependentUpon>

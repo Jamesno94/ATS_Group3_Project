@@ -53,7 +53,12 @@ namespace ATS_Group3_Project.Views
 
         private void btnManageAccount_Click(object sender, EventArgs e)
         {
+            Manage_Account manageAccountForm =
+                new Manage_Account(StaffId);
 
+            manageAccountForm.Show();
+
+            this.Hide();
         }
 
         private void btnLogO_Click(object sender, EventArgs e)

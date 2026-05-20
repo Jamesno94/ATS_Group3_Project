@@ -123,5 +123,12 @@ namespace ATS_Group3_Project
                 Application.Exit();
             }
         }
+
+        private void lnkForgotPassword_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPassword forgotPasswordForm = new frmForgotPassword(); 
+            forgotPasswordForm.Show();
+            this.Hide();            
+        }
     }
 }

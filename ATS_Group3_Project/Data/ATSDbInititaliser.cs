@@ -212,7 +212,7 @@ public class ATSDbInitializer : DropCreateDatabaseIfModelChanges<ATSContext>
     {
         context.Staff.AddRange(new[]
         {
-        new Staff { StaffId = "ENG-001", FirstName = "James", LastName = "Black", WorkMobile = "0712345601", HomeMobile = "01415551001", Email = "eng001@ats.com", Address1 = "12 Buchanan Street", Address2 = null, City = "Glasgow", Postcode = "G1 3LB", Salary = 45000, Role = "Engineer" },
+        new Staff { StaffId = "ENG-001", FirstName = "James", LastName = "Black", WorkMobile = "0712345601", HomeMobile = "01415551001", Email = "jamesno94@icloud.com", Address1 = "12 Buchanan Street", Address2 = null, City = "Glasgow", Postcode = "G1 3LB", Salary = 45000, Role = "Engineer" },
         new Staff { StaffId = "ENG-002", FirstName = "Callum", LastName = "McDonald", WorkMobile = "0712345602", HomeMobile = "01415551002", Email = "eng002@ats.com", Address1 = "45 Sauchiehall Street", Address2 = "Flat 2/1", City = "Glasgow", Postcode = "G2 3AT", Salary = 45000, Role = "Engineer" },
         new Staff { StaffId = "ENG-003", FirstName = "Sarah", LastName = "Miller", WorkMobile = "0712345603", HomeMobile = "07711223303", Email = "eng003@ats.com", Address1 = "8 Argyle Street", Address2 = null, City = "Glasgow", Postcode = "G2 8AD", Salary = 45000, Role = "Engineer" },
         new Staff { StaffId = "ENG-004", FirstName = "Alistair", LastName = "Graham", WorkMobile = "0712345604", HomeMobile = "01415551004", Email = "eng004@ats.com", Address1 = "102 Byres Road", Address2 = null, City = "Glasgow", Postcode = "G12 8TB", Salary = 45000, Role = "Engineer" },
@@ -233,7 +233,7 @@ public class ATSDbInitializer : DropCreateDatabaseIfModelChanges<ATSContext>
         new Staff { StaffId = "ENG-019", FirstName = "Grant", LastName = "Morrison", WorkMobile = "0712345619", HomeMobile = "07711223319", Email = "eng019@ats.com", Address1 = "62 Bath Street", Address2 = null, City = "Glasgow", Postcode = "G2 2HG", Salary = 45000, Role = "Engineer" },
         new Staff { StaffId = "ENG-020", FirstName = "Freya", LastName = "Cunningham", WorkMobile = "0712345620", HomeMobile = "01415551020", Email = "eng020@ats.com", Address1 = "20 Miller Street", Address2 = "Suite 4", City = "Glasgow", Postcode = "G1 1DT", Salary = 45000, Role = "Engineer" },
 
-        new Staff { StaffId = "CALL-001", FirstName = "Callum", LastName = "Hoodlum", WorkMobile = "0712345701", HomeMobile = "01415559999", Email = "call001@ats.com", Address1 = "1 Control Centre", Address2 = "George Square", City = "Glasgow", Postcode = "G2 1DU", Salary = 32000, Role = "Call Handler" },
+        new Staff { StaffId = "CALL-001", FirstName = "Callum", LastName = "Hoodlum", WorkMobile = "0712345701", HomeMobile = "01415559999", Email = "yellowmac17@gmail.com", Address1 = "1 Control Centre", Address2 = "George Square", City = "Glasgow", Postcode = "G2 1DU", Salary = 32000, Role = "Call Handler" },
 
         new Staff { StaffId = "ADM-001", FirstName = "Adam", LastName = "Min", WorkMobile = "07788519196", HomeMobile = "", Email = "admin1@ats.com", Address1 = "1 Control Centre", Address2 = "George Square", City = "Glasgow", Postcode = "G2 1DU", Salary = 60000, Role = "Admin" }
         });
