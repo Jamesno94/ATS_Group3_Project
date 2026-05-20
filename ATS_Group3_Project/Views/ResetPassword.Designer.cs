@@ -41,13 +41,14 @@
             // 
             // btnResetPassword
             // 
+            this.btnResetPassword.BackColor = System.Drawing.Color.Azure;
             this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPassword.Location = new System.Drawing.Point(83, 236);
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(118, 34);
             this.btnResetPassword.TabIndex = 0;
             this.btnResetPassword.Text = "Reset Password";
-            this.btnResetPassword.UseVisualStyleBackColor = true;
+            this.btnResetPassword.UseVisualStyleBackColor = false;
             this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // lblCode
@@ -82,6 +83,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.Azure;
             this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(65, 56);
             this.txtCode.Name = "txtCode";
@@ -90,6 +92,7 @@
             // 
             // txtNewPassword
             // 
+            this.txtNewPassword.BackColor = System.Drawing.Color.Azure;
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPassword.Location = new System.Drawing.Point(65, 124);
             this.txtNewPassword.Name = "txtNewPassword";
@@ -98,6 +101,7 @@
             // 
             // txtConfirmPassword
             // 
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.Azure;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(64, 195);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
@@ -106,6 +110,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.txtConfirmPassword);
             this.panel1.Controls.Add(this.txtNewPassword);
             this.panel1.Controls.Add(this.txtCode);
